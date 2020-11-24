@@ -29,4 +29,4 @@
 
 ### ССЫЛКИ
 Программы от YMP
-https://ymp-co.github.io/home/ymp/programms
+https://ymp-co.github.io/YMP_COMPANY/ymp/programms
