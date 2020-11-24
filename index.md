@@ -2,11 +2,12 @@
 
 Здесь на сайте YMP вы сможете найти:
 
-1.Программы от компании ymp
-2.Туториалы по программированию
+1.Программы от компании ymp.
+
+2.Туториалы по программированию.
 
 
-### Markdown
+### Почему мы?!
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
