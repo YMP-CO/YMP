@@ -28,5 +28,7 @@
 Дизайн сайта: Пушной Юрий & GITHUB
 
 ### ССЫЛКИ
-Программы от YMP
-https://ymp-co.github.io/YMP_COMPANY/ymp/programms
+
+
+
+[ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms)
