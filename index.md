@@ -1,4 +1,6 @@
 ## Welcome to YMP
+![YMP](/images/ym.png)
+
 
 Здесь на сайте YMP вы сможете найти:
 
