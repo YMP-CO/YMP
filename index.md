@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to YMP
 
 Здесь на сайте YMP вы сможете найти:
 
@@ -26,3 +26,7 @@
 Программист ПО: Пушной Юрий, 11лет
 Программист сайта: Пушной Юрий
 Дизайн сайта: Пушной Юрий & GITHUB
+
+### ССЫЛКИ
+Программы от YMP
+https://ymp-co.github.io/home/ymp/programms
