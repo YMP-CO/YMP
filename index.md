@@ -1,8 +1,10 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/YMP-CO/home/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Здесь на сайте YMP вы сможете найти:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1.Программы от компании ymp
+2.Туториалы по программированию
+
 
 ### Markdown
 
