@@ -16,16 +16,13 @@
 Мы - очень хорошая компания и никогда вы не
 найдете вирусы в наших программах!
 
-![GitHub Logo](https://drive.google.com/file/d/18JvzJcol6S0kvmR9ca1_mzNtAY-swNU2/view?usp=sharing)
-Format: ![Alt Text](url)
 
 
-(((ЛОГОТИП)))
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/YMP-CO/home/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Разработчики
+Программист ПО: Пушной Юрий, 11лет
+Программист сайта: Пушной Юрий
+Дизайн сайта: Пушной Юрий & GITHUB
