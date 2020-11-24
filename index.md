@@ -16,25 +16,11 @@
 Мы - очень хорошая компания и никогда вы не
 найдете вирусы в наших программах!
 
-```markdown
-Syntax highlighted code block
+![GitHub Logo](https://drive.google.com/file/d/18JvzJcol6S0kvmR9ca1_mzNtAY-swNU2/view?usp=sharing)
+Format: ![Alt Text](url)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+(((ЛОГОТИП)))
 
 ### Jekyll Themes
 
