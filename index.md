@@ -9,7 +9,12 @@
 
 ### Почему мы?!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Наша компания производит СВОБОДНОЕ программное
+обеспечение!
+При скачивании программы вы поддерживаете
+разработчика!
+Мы - очень хорошая компания и никогда вы не
+найдете вирусы в наших программах!
 
 ```markdown
 Syntax highlighted code block
