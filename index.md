@@ -36,7 +36,7 @@
 Если хотите - пройдите опрос на качество
 сайта)))
 
-![Пройти опрос](https://docs.google.com/forms/d/e/1FAIpQLSd3qUN7GB8kHV1KNd49-2ULUFfAv_uie7OZKRbUIOpU7cFRXw/viewform?usp=sf_link)
+[Пройти опрос](https://docs.google.com/forms/d/e/1FAIpQLSd3qUN7GB8kHV1KNd49-2ULUFfAv_uie7OZKRbUIOpU7cFRXw/viewform?usp=sf_link)
 ### ССЫЛКИ
 
 
