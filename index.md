@@ -35,3 +35,4 @@
 
 
 [ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms)
+[ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ](https://ymp-co.github.io/YMP_COMPANY/tutorials)
