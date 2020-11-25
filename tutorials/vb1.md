@@ -8,7 +8,7 @@
 
 1.Открыть **visual studio** и создать новый проект
 
-![foto](https://docs.microsoft.com/ru-ru/visualstudio/get-started/media/vs-2019/create-new-project-dark-theme.png?view=vs-2019)
+![foto](/images/Снимок экрана 2020-11-25 190541.png)
 
 2.Выбрать вид проекта и нажать "next".
 
