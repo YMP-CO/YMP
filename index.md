@@ -30,7 +30,8 @@
 Программист сайта: Пушной Юрий
 
 Дизайн сайта: Пушной Юрий & GITHUB
-
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ntkme/github-buttons/subscription" data-icon="octicon-eye" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a>
 ---
 
 Если хотите - пройдите опрос на качество
