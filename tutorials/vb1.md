@@ -6,3 +6,5 @@
 Для того что-бы начать, нужно:
 
 1.Открыть **visual studio**.
+![visual studio 2019](/images/start-window1.png)
+
