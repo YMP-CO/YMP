@@ -7,6 +7,13 @@
 Для того что-бы начать, нужно:
 
 1.Открыть **visual studio**.
+
 ![YMP](/images/start-window1.jpg)
+
 2.Создать новый проект
+
+![YMP](/images/start-window-create-new-project.png)
+
+3.Выбрать вид проекта и нажать "next"
+
 
