@@ -8,11 +8,11 @@
 
 1.Открыть **visual studio** и создать новый проект
 
-![foto](ymp-co.github.io/YMP_COMPANY/images/start-window.png)
+![foto](https://docs.microsoft.com/ru-ru/visualstudio/get-started/media/vs-2019/create-new-project-dark-theme.png?view=vs-2019)
 
 2.Выбрать вид проекта и нажать "next".
 
-![foto](ymp-co.github.io/YMP_COMPANY/images/configure-new-project.png)
+![foto](https://docs.microsoft.com/ru-ru/visualstudio/get-started/csharp/media/vs-2019/exploreide-nameproject.png?view=vs-2019)
 
 У нас запустился конструктор.
 
