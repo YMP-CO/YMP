@@ -7,7 +7,7 @@
 Для того что-бы начать, нужно:
 
 1.Открыть **visual studio**.
-![vs19](/images/start-windows1.png)
-Format: ![vs19](url)
+![GitHub Logo](/images/start-window1.png)
+
 
 
