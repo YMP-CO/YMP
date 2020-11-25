@@ -7,7 +7,7 @@
 Для того что-бы начать, нужно:
 
 1.Открыть **visual studio**.
-![GitHub Logo](/images/start-window1.png)
+![](/images/start-window1.png)
 
 
 
