@@ -15,3 +15,6 @@
 ![YMP](/images/configure-new-project.png)
 
 У нас запустился конструктор.
+
+
+![YMP](/images/configure-new-project.png)
