@@ -17,12 +17,12 @@
 У нас запустился конструктор.
 
 
-![foto](https://tekeye.uk/visual_studio/images/vs15-new-project.png)
+![foto](https://tekeye.uk/visual_studio/images/properties-in-visual-studio.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
 
-![foto](ymp-co.github.io/YMP_COMPANY/images/index.jpg)
+![foto](https://www.tekfansworld.com/wp-content/uploads/2018/05/vb_net_hello_world_message_box-300x216.png)
 
 4.Позже, 2 раза нажать на кнопку и мы попадаем
 в код кнопки.
