@@ -8,13 +8,28 @@
 
 1.Открыть **visual studio** и создать новый проект
 
-![YMP](/images/start-window.png)
+![ресурс: microsoft.com](/images/start-window.png)
 
-2.Выбрать вид проекта и нажать "next"
+2.Выбрать вид проекта и нажать "next".
 
-![YMP](/images/configure-new-project.png)
+![ресурс: microsoft.com](/images/configure-new-project.png)
 
 У нас запустился конструктор.
 
 
-![YMP](/images/properties-in-visual-studio.png)
+![ресурс: tekeye.uk](/images/properties-in-visual-studio.png)
+
+3.Теперь нам надо перетащить button из control box
+на нашу форму.
+
+![ресурс: tekfansworld.com](/images/index.jpg)
+
+4.Позже, 2 раза нажать на кнопку и мы попадаем
+в код кнопки.
+
+5.Скопируйте этот код и вставьте его в вашу программу.
+
+msgbox("hello world")
+
+6.Нажмите на "пуск" и наслаждайтесь.
+
