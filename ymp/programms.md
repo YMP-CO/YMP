@@ -4,7 +4,7 @@
 для разных целей программы:)
 
 #YMP SCHOOL
-https://drive.google.com/file/d/1Bi_ZAYV2lA7ljvlxWRmuwgmxTbShN25T/view?usp=sharing
+[Скачать](https://drive.google.com/file/d/1Bi_ZAYV2lA7ljvlxWRmuwgmxTbShN25T/view?usp=sharing)
 
 #YMP Blackboard
-https://drive.google.com/drive/folders/1pR-PseAecemwu5TMdRwQhbpmdZd6ByS5?usp=sharing
+[Скачать](https://drive.google.com/drive/folders/1pR-PseAecemwu5TMdRwQhbpmdZd6ByS5?usp=sharing)
