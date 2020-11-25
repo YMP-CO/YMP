@@ -26,10 +26,17 @@
 
 ### Разработчики
 Программист ПО: Пушной Юрий, 11лет
+
 Программист сайта: Пушной Юрий
+
 Дизайн сайта: Пушной Юрий & GITHUB
 
+---
 
+Если хотите - пройдите опрос на качество
+сайта)))
+
+![Пройти опрос](https://docs.google.com/forms/d/e/1FAIpQLSd3qUN7GB8kHV1KNd49-2ULUFfAv_uie7OZKRbUIOpU7cFRXw/viewform?usp=sf_link)
 ### ССЫЛКИ
 
 
