@@ -33,3 +33,12 @@ msgbox("hello world")
 
 6.Нажмите на "пуск" и наслаждайтесь.
 
+---
+
+---
+
+Использовались:
+ресурс: microsoft.com
+ресурс: microsoft.com
+ресурс: tekeye.uk
+ресурс: tekfansworld.com
