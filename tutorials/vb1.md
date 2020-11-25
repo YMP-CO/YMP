@@ -8,21 +8,21 @@
 
 1.Открыть **visual studio** и создать новый проект
 
-![ресурс: microsoft.com](/images/start-window.png)
+![](/images/start-window.png)
 
 2.Выбрать вид проекта и нажать "next".
 
-![ресурс: microsoft.com](/images/configure-new-project.png)
+![](/images/configure-new-project.png)
 
 У нас запустился конструктор.
 
 
-![ресурс: tekeye.uk](/images/properties-in-visual-studio.png)
+![](/images/properties-in-visual-studio.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
 
-![ресурс: tekfansworld.com](/images/index.jpg)
+![](/images/index.jpg)
 
 4.Позже, 2 раза нажать на кнопку и мы попадаем
 в код кнопки.
