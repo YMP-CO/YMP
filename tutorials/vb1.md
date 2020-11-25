@@ -38,7 +38,7 @@ msgbox("hello world")
 ---
 
 Использовались:
-ресурс: microsoft.com
-ресурс: microsoft.com
-ресурс: tekeye.uk
-ресурс: tekfansworld.com
+ресурс: microsoft.com;
+ ресурс: microsoft.com;
+ ресурс: tekeye.uk;
+ ресурс: tekfansworld.com;
