@@ -17,4 +17,4 @@
 У нас запустился конструктор.
 
 
-![YMP](/images/configure-new-project.png)
+![YMP](/images/properties-in-visual-studio.png)
