@@ -12,17 +12,17 @@
 
 2.Выбрать вид проекта и нажать "next".
 
-![foto](ymp-co.github.io/YMP_COMPANY//images/configure-new-project.png)
+![foto](ymp-co.github.io/YMP_COMPANY/images/configure-new-project.png)
 
 У нас запустился конструктор.
 
 
-![foto](ymp-co.github.io/YMP_COMPANY//images/properties-in-visual-studio.png)
+![foto](ymp-co.github.io/YMP_COMPANY/images/properties-in-visual-studio.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
 
-![foto](ymp-co.github.io/YMP_COMPANY//images/index.jpg)
+![foto](ymp-co.github.io/YMP_COMPANY/images/index.jpg)
 
 4.Позже, 2 раза нажать на кнопку и мы попадаем
 в код кнопки.
