@@ -3,4 +3,4 @@
 Здесь будут различные текстовые уроки
 по программированию.
 
-[1 урок visual basic](http://github.com)
+[1 урок visual basic](https://ymp-co.github.io/YMP_COMPANY/tutorials/vb1)
