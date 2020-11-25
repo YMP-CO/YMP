@@ -6,15 +6,11 @@
 ---
 Для того что-бы начать, нужно:
 
-1.Открыть **visual studio**.
+1.Открыть **visual studio** и создать новый проект
 
-![YMP](/images/start-window1.jpg)
+![YMP](/images/start-window.png)
 
-2.Создать новый проект
-
-![YMP](/images/start-window-create-new-project.png)
-
-3.Выбрать вид проекта и нажать "next"
+2.Выбрать вид проекта и нажать "next"
 
 ![YMP](/images/vb-create-new-project-search-winforms-filtered.png)
 
