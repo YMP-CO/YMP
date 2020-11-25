@@ -16,4 +16,4 @@
 
 3.Выбрать вид проекта и нажать "next"
 
-
+![YMP](/images/vb-create-new-project-search-winforms-filtered.png)
