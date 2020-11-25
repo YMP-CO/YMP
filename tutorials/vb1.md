@@ -7,7 +7,6 @@
 Для того что-бы начать, нужно:
 
 1.Открыть **visual studio**.
-![](/images/start-window1.png)
 
 
 
