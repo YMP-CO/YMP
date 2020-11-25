@@ -17,7 +17,7 @@
 У нас запустился конструктор.
 
 
-![foto](ymp-co.github.io/YMP_COMPANY/images/properties-in-visual-studio.png)
+![foto](https://tekeye.uk/visual_studio/images/vs15-new-project.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
