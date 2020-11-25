@@ -17,7 +17,7 @@
 У нас запустился конструктор.
 
 
-![foto](https://tekeye.uk/visual_studio/images/properties-in-visual-studio.png)
+![foto](https://tekeye.uk/visual_studio/images/visual-studio.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
