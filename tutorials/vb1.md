@@ -8,21 +8,21 @@
 
 1.Открыть **visual studio** и создать новый проект
 
-![](/images/start-window.png)
+![foto](/images/start-window.png)
 
 2.Выбрать вид проекта и нажать "next".
 
-![](/images/configure-new-project.png)
+![foto](/images/configure-new-project.png)
 
 У нас запустился конструктор.
 
 
-![](/images/properties-in-visual-studio.png)
+![foto](/images/properties-in-visual-studio.png)
 
 3.Теперь нам надо перетащить button из control box
 на нашу форму.
 
-![](/images/index.jpg)
+![foto](/images/index.jpg)
 
 4.Позже, 2 раза нажать на кнопку и мы попадаем
 в код кнопки.
