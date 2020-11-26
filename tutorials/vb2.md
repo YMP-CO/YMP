@@ -7,10 +7,21 @@
 
 И так начнем)))
 
-1.Создаем как всегда, новый проект и называем его как "ВЕБ БРАУЗЕР"
+1.Создаем как всегда, новый проект и называем его как "ВЕБ БРАУЗЕР".
 
 ![ФОТО](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-11-26%20164921.png)
 
+У нас появился конструктор.
+
+![ФОТО](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-11-25%20190648.png)
+
+2.Перетаскиваем компонент "WEB BROWSER" на **ФОРМУ**
+
+![ФОТО](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-11-26%20165552.png)
+
+3.Находим в правом верхнем компоненте стрелочку и нажимаем на неё.
+
+![ФОТО](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-11-26%20170200.png)
 
 
 
