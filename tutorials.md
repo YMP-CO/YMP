@@ -3,4 +3,6 @@
 Здесь будут различные текстовые уроки
 по программированию.
 
-[1 урок visual basic](https://ymp-co.github.io/YMP_COMPANY/tutorials/vb1)
+[1 урок visual basic (Создаем: HELLO WORLD](https://ymp-co.github.io/YMP_COMPANY/tutorials/vb1)
+
+[2 урок visual basic (Создаем: WEB BROWSER](https://ymp-co.github.io/YMP_COMPANY/tutorials/vb2)
