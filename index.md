@@ -46,4 +46,4 @@
 
 [СПИСОК ПРОГРАММ ДЛЯ ПРОГРАММИРОВАНИЯ](https://ymp-co.github.io/YMP_COMPANY/ymp/programms1)
 
-[ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ](https://ymp-co.github.io/YMP_COMPANY/tutorials)
+[ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ от YMP](https://ymp-co.github.io/YMP_COMPANY/tutorials)
