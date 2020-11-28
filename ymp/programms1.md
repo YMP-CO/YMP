@@ -2,6 +2,10 @@
 
 ---
 
+Список программ созданных для программирования от других разработчиков.
+
+---
+
 Visual studio [Ссылка](https://visualstudio.microsoft.com/ru/)
 
 Android studio [Ссылка](https://developer.android.com/studio)
