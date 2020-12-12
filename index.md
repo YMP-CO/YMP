@@ -40,10 +40,12 @@
 
 ### ССЫЛКИ
 
-[ССЫЛКИ НА ФОРУМЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/forums)
+
 
 [ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms)
 
 [СПИСОК ПРОГРАММ ДЛЯ ПРОГРАММИРОВАНИЯ](https://ymp-co.github.io/YMP_COMPANY/ymp/programms1)
 
 [ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ от YMP](https://ymp-co.github.io/YMP_COMPANY/tutorials)
+
+[ССЫЛКИ НА ФОРУМЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/forums)
