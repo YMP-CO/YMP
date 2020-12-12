@@ -40,7 +40,7 @@
 
 ### ССЫЛКИ
 
-
+[ССЫЛКИ НА ФОРУМЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/forums)
 
 [ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms)
 
