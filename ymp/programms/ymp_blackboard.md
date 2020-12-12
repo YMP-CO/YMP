@@ -1,3 +1,3 @@
 # YMP BLACKBOARD
 
-![](https://drive.google.com/file/d/1nfeWutqhguH7wK_EviggsYCRw6MyJNId/view?usp=sharing)
+![](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/ymp_blackboard.png)
