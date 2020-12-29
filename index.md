@@ -1,4 +1,4 @@
-## Welcome to YMP
+## Добро пожаловать в YMP🎄
 ![YMP](/images/ym.png)
 
 
