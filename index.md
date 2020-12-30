@@ -1,5 +1,5 @@
 ## Добро пожаловать в YMP🎄
-![YMP](/images/SPLASH.png)
+![YMP](https://raw.githubusercontent.com/YMP-CO/YMP_COMPANY/gh-pages/images/SPLASH.png)
 
 
 Здесь на сайте YMP вы сможете найти:
