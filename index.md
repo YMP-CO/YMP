@@ -3,7 +3,7 @@
 ## >>>Добро пожаловать в YMP🎄<<<
 
 ---
-Главноем меню сайта
+## Главное меню сайта
 
 [ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms) | [СПИСОК ПРИЛОЖЕНИЙ ДЛЯ ПРОГРАММИРОВАНИЯ](https://ymp-co.github.io/YMP_COMPANY/ymp/programms1) | 
 [ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ от YMP](https://ymp-co.github.io/YMP_COMPANY/tutorials) | [ССЫЛКИ НА ФОРУМЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/forums) | 
