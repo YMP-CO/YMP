@@ -10,7 +10,7 @@
 [Скачать](https://drive.google.com/drive/folders/1pR-PseAecemwu5TMdRwQhbpmdZd6ByS5?usp=sharing)
 
 #YMP INTERNET BROWSER(NEW)
-[Скачать](https://drive.google.com/drive/folders/1QC6As7Dc7Bl4Vedk_lXx151X85w3951D?usp=sharing)
+[Скачать](https://drive.google.com/drive/folders/1TD9rxrOHCwo9GU7rXbfJT0ybfI77ooHo?usp=sharing)
 
 ## Новогодние игры 2020 года от YMP🎄🎁
 
