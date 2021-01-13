@@ -7,7 +7,7 @@
 
 [ПРОГРАММЫ ОТ YMP](https://ymp-co.github.io/YMP_COMPANY/ymp/programms) | [СПИСОК ПРИЛОЖЕНИЙ ДЛЯ ПРОГРАММИРОВАНИЯ](https://ymp-co.github.io/YMP_COMPANY/ymp/programms1) | [ТУТОРИАЛЫ (УРОКИ) ПО ПРОГРАММИРОВАНИЮ от YMP](https://ymp-co.github.io/YMP_COMPANY/tutorials) 
 | [ССЫЛКИ НА ФОРУМЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/forums) | [ПЛАНЫ НА 2021 ГОД](https://ymp-co.github.io/YMP_COMPANY/PLAN2021) 
-| [ПАБЛИК ВК](https://vk.com/ymp_company) | [КОМПЬЮТЕРНЫЕ МЕМЫ,ШУТКИ И ПРИКОЛЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/mem) 
+| [ВК](https://vk.com/ymp_company) | [КОМПЬЮТЕРНЫЕ МЕМЫ,ШУТКИ И ПРИКОЛЫ](https://ymp-co.github.io/YMP_COMPANY/ymp/mem) 
 
 
 ---
@@ -70,4 +70,4 @@
 
 [ПЛАНЫ НА 2021 ГОД](https://ymp-co.github.io/YMP_COMPANY/PLAN2021))
 
-[ПАБЛИК ВК](https://vk.com/ymp_company)
+[ВК](https://vk.com/ymp_company)
