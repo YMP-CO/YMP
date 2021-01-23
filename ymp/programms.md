@@ -6,6 +6,9 @@
 #YMP SCHOOL
 [Скачать](https://drive.google.com/file/d/1Bi_ZAYV2lA7ljvlxWRmuwgmxTbShN25T/view?usp=sharing)
 
+#YMP SCHOOL (для Андроид)
+[Скачать](https://drive.google.com/file/d/1depI4Jx0YSyejS3IZNuqtA7FqrJJKb1C/view?usp=sharing)
+
 #YMP Blackboard
 [Скачать](https://drive.google.com/drive/folders/1pR-PseAecemwu5TMdRwQhbpmdZd6ByS5?usp=sharing)
 
