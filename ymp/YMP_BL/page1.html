@@ -137,7 +137,7 @@ ctx.fillRect(0, 0, 1024, 768);
           }
         }
  
-        document.querySelector('form.canvas-attrs').addEventListener('change', setStyle);
+        document.querySelector('form.tablet-attrs').addEventListener('change', setStyle);
         function setStyle() {
           ctx.strokeStyle = this.strokeStyle.value;
           ctx.lineWidth = this.lineWidth.value;
@@ -152,8 +152,8 @@ drawStart = function(ev) {
 
         // Calculate the current mouse X, Y coordinates with canvas offset
         var x, y;
-        x = ev.pageX - $(doodle.canvas).offset().left;
-        y = ev.pageY - $(doodle.canvas).offset().top;
+        x = ev.pageX - $(doodle.tablet).offset().left;
+        y = ev.pageY - $(doodle.tablet).offset().top;
       init();
 	  
     </script>
