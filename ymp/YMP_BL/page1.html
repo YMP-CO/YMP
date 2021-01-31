@@ -53,17 +53,7 @@
         </div>
     </div>
 </section>
-drawStart = function(ev) {
-        if(ev.originalEvent.touches && ev.originalEvent.touches.length) {
-            ev = ev.originalEvent.touches[0];
-        } else if(ev.originalEvent.changedTouches && ev.originalEvent.changedTouches.length) {
-            ev = ev.originalEvent.changedTouches[0];
-        }
 
-        // Calculate the current mouse X, Y coordinates with canvas offset
-        var x, y;
-        x = ev.pageX - $(doodle.canvas).offset().left;
-        y = ev.pageY - $(doodle.canvas).offset().top;
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Canvas</title>
@@ -153,7 +143,17 @@ ctx.fillRect(0, 0, 1024, 768);
           ctx.lineWidth = this.lineWidth.value;
         }
       }
+drawStart = function(ev) {
+        if(ev.originalEvent.touches && ev.originalEvent.touches.length) {
+            ev = ev.originalEvent.touches[0];
+        } else if(ev.originalEvent.changedTouches && ev.originalEvent.changedTouches.length) {
+            ev = ev.originalEvent.changedTouches[0];
+        }
 
+        // Calculate the current mouse X, Y coordinates with canvas offset
+        var x, y;
+        x = ev.pageX - $(doodle.canvas).offset().left;
+        y = ev.pageY - $(doodle.canvas).offset().top;
       init();
 	  
     </script>
