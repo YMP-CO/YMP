@@ -4,4 +4,4 @@
 
 ---
  
- [YMP BLACKBOARD](https://ymp-co.github.io/YMP_COMPANY/ymp/YMP_BL/index)
+[YMP BLACKBOARD](https://ymp-co.github.io/YMP_COMPANY/ymp/YMP_BL/index)
