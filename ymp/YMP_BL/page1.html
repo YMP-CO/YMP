@@ -92,8 +92,8 @@ ctx.fillRect(0, 0, 1024, 768);
     <form class="canvas-attrs">
 	Цвет кегля
       <select name="strokeStyle">
-        <option value="black">Черный</option>
-        <option value="white" selected="selected">Белый</option>
+        <option value="black" selected="selected">Черный</option>
+		          <option value="white" selected="selected">Белый</option>
         <option value="red">Красный</option>
         <option value="green">Зеленый</option>
       </select>
@@ -102,7 +102,7 @@ ctx.fillRect(0, 0, 1024, 768);
         <option value="1" selected="selected">Маленький</option>
         <option value="10">Средний</option>
         <option value="20">Большой</option>
-        <option value="45">Огромный</option>
+		        <option value="45">Огромный</option>
       </select>   
  <button name="Стёрка">стереть всю доску
   
@@ -136,30 +136,15 @@ ctx.fillRect(0, 0, 1024, 768);
             ctx.stroke();
           }
         }
-         document.querySelector('form.tablet-attrs').addEventListener('change', setStyle);
-        function setStyle() {
+ 
+        document.querySelector('form.canvas-attrs').addEventListener('change', setStyle);
         function setStyle() {
           ctx.strokeStyle = this.strokeStyle.value;
-          ctx.strokeStyle = this.strokeStyle.value;
           ctx.lineWidth = this.lineWidth.value;
-          ctx.lineWidth = this.lineWidth.value;
-@@ -152,8 +152,8 @@ <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><stron
+        }
+      }
 
-
-        // Calculate the current mouse X, Y coordinates with canvas offset
-        // Calculate the current mouse X, Y coordinates with canvas offset
-        var x, y;
-        var x, y;
-        x = ev.pageX - $(doodle.canvas).offset().left;
-        x = ev.pageX - $(doodle.tablet).offset().left;
-        y = ev.pageY - $(doodle.canvas).offset().top;
-        y = ev.pageY - $(doodle.tablet).offset().top;
       init();
-      init();
-
-
-    </script>
-    </script>
 	  
     </script>
   
