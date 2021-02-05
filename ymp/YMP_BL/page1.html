@@ -136,25 +136,30 @@ ctx.fillRect(0, 0, 1024, 768);
             ctx.stroke();
           }
         }
- 
-        document.querySelector('form.tablet-attrs').addEventListener('change', setStyle);
+         document.querySelector('form.tablet-attrs').addEventListener('change', setStyle);
+        function setStyle() {
         function setStyle() {
           ctx.strokeStyle = this.strokeStyle.value;
+          ctx.strokeStyle = this.strokeStyle.value;
           ctx.lineWidth = this.lineWidth.value;
-        }
-      }
-drawStart = function(ev) {
-        if(ev.originalEvent.touches && ev.originalEvent.touches.length) {
-            ev = ev.originalEvent.touches[0];
-        } else if(ev.originalEvent.changedTouches && ev.originalEvent.changedTouches.length) {
-            ev = ev.originalEvent.changedTouches[0];
-        }
+          ctx.lineWidth = this.lineWidth.value;
+@@ -152,8 +152,8 @@ <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><stron
+
 
         // Calculate the current mouse X, Y coordinates with canvas offset
+        // Calculate the current mouse X, Y coordinates with canvas offset
         var x, y;
+        var x, y;
+        x = ev.pageX - $(doodle.canvas).offset().left;
         x = ev.pageX - $(doodle.tablet).offset().left;
+        y = ev.pageY - $(doodle.canvas).offset().top;
         y = ev.pageY - $(doodle.tablet).offset().top;
       init();
+      init();
+
+
+    </script>
+    </script>
 	  
     </script>
   
