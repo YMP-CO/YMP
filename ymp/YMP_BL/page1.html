@@ -143,6 +143,12 @@ ctx.fillRect(0, 0, 1024, 768);
           ctx.lineWidth = this.lineWidth.value;
         }
       }
+	    var el = document.getElementsByTagName("canvas")[0];
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchmove", handleMove, false);
+  log("initialized.");
 
       init();
 	  
