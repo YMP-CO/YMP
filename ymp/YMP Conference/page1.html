@@ -140,6 +140,8 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
 
                 <section>
 
+                   
+
 
                     <input type="text" id="conference-name" placeholder="Имя конференции" style="width: 100%;">
 
@@ -171,7 +173,7 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
 
                 // Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/video-conferencing
 
-
+// С использованием проектов muaz-khan
 
                 var config = {
 
@@ -235,7 +237,7 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
 
                             width: (videosContainer.clientWidth / 2) - 50,
 
-                            buttons: ['mute-audio', 'mute-video', 'full-screen', 'volume-slider']
+                            buttons: ['mute-audio', 'mute-video', 'full-screen', 'volume-slider', 'delete-mediaElement']
 
                         });
 
@@ -318,6 +320,10 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
                         var joinButton = document.querySelector('button[data-roomToken="' + room.roomToken + '"]');
 
                         if (joinButton) {
+
+                        	mediaElement.close
+                        	media-box.close
+
 
                             // joinButton.parentNode === <li>
 
