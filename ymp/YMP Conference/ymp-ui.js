@@ -113,5 +113,6 @@ if (chatMessage)
 (function() {
     var uniqueToken = document.getElementById('unique-token');
     if (uniqueToken)
-     
+        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h3 style="text-align:center;"><a href="' + location.href + '" target="_blank">Поделиться ссылкой!</a></h3>';
+        else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace( /\./g , '-');
 })();
