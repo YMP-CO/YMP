@@ -102,7 +102,7 @@ if (chatMessage)
         hangoutUI.send(this.value);
         var tr = document.createElement('tr');
         tr.innerHTML =
-            '<td style="width:40%;">You:</td>' +
+            '<td style="width:40%;">Вы:</td>' +
                 '<td>' + chatMessage.value + '</td>';
 
         chatOutput.insertBefore(tr, chatOutput.firstChild);
