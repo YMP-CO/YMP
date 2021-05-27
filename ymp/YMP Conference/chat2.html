@@ -109,7 +109,18 @@
             <section class="experiment">
 
                 <!-- <HTML code for you> ::: just copy this section! -->
-               
+                              <table id="chat-output" class="hidden"></table>
+ <table class="visible">
+                    <tr>
+                        <td style="text-align: right;width:70%!important;">
+                            <input type="text" id="conference-name" placeholder="Введите имя">
+                        </td>
+
+                        <td style="width: 50%!important;">
+                            <button id="start-conferencing" href="#">Создать чат!</button>
+                        </td>
+                    </tr>
+                </table>
 
                 <table id="rooms-list" class="visible"></table>
 
@@ -123,7 +134,12 @@
                     </tr>
                 </table>
 
-                <table id="chat-table" class="center-table hidden">
+         
+                <blockquote>
+Войдите в чат конференции или создайте несколько своих чатов!
+                </blockquote>
+            </section>
+       <table id="chat-table" class="center-table hidden">
                     <tr>
                         <td style="text-align: center;">
                             <input type="text" id="chat-message" disabled>
@@ -131,23 +147,7 @@
                         </td>
                     </tr>
                 </table>
-                <table id="chat-output" class="hidden"></table>
- <table class="visible">
-                    <tr>
-                        <td style="text-align: right;width:70%!important;">
-                            <input type="text" id="conference-name" placeholder="Введите имя">
-                        </td>
-
-                        <td style="width: 50%!important;">
-                            <button id="start-conferencing" href="#">Создать чат!</button>
-                        </td>
-                    </tr>
-                </table>
-                <blockquote>
-Войдите в чат конференции или создайте несколько своих чатов!
-                </blockquote>
-            </section>
-
+ 
             <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
             <script src="https://www.webrtc-experiment.com/socket.io.js"> </script>
             <script src="https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js"> </script>
