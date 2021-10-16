@@ -49,7 +49,18 @@
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
-    "cookiesAlert": false,
+    "cookiesAlert": {
+      "customDialogSelector": false,
+      "colorText": "#424a4d",
+      "colorBg": "#eaeff1",
+      "colorButton": "",
+      "colorLink": "#424a4d",
+      "underlineLink": true,
+      "opacity": "99",
+      "opacityOverlay": "80",
+      "text": "Мы собираем данные о ваших посещениях этой страницы, а также ваши пользовательские события на этой веб-странице",
+      "textButton": "Ок."
+    },
     "gdpr": false
   },
   "pages": {
