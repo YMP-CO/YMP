@@ -32,7 +32,15 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
   
 </head>
 <body>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+var url = document.location.href;
+new Clipboard('.copy_link', {text: function(){ return url;}});
+$('.copy_k').click(function(){alert('Cсылка успешно скопирована в буфер обмена.');});
+});
+</script>
   <section class="contact1 cid-sw8HdDqvDE" id="contacts1-4">
 
     
@@ -147,6 +155,7 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
 
                     <button id="setup-new-room" class="btn btn-primary btn-form display-4">Настроить новую конференцию</button>
 
+                    <button class="copy_link copy_k"></a>">Копировать ссылку</button>
                 </section>
 
 
