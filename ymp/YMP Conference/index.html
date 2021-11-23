@@ -29,6 +29,15 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
   
 </head>
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+var url = document.location.href;
+new Clipboard('.copy_link', {text: function(){ return url;}});
+$('.copy_k').click(function(){alert('Cсылка успешно скопирована в буфер обмена.');});
+});
+</script>
   
   <section class="mbr-section 02 cid-svHYb17yls" id="content18-0">
 
@@ -52,6 +61,7 @@ body{font-family: Inter;}blockquote{border-color: #005af0;}div[submit-success] >
     <div class="container">
         <div class="mbr-row mbr-jc-c">
             <div class="mbr-section-btn mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8 align-center"><a class="btn btn-primary display-4" href="https://ymp-co.github.io/ymp/YMP Conference/page1">Создать новую конференцию</a></div>
+              <div class="mbr-section-btn mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8 align-center"><a class="copy_link copy_k"<🔗 Копировать ссылку</a>">Создать новую конференцию</a></div>
         </div>
     </div>
 </section>
