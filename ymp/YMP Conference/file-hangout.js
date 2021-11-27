@@ -45,7 +45,7 @@ function setUserInterface() {
                 div.parentNode.removeChild(div);
             },
             onFileProgress: function(e) {
-                statusDiv.innerHTML = e.sent + ' packets sent. ' + e.remaining + ' packets remaining.';
+                statusDiv.innerHTML = e.sent + ' packets sent. ' + e.remaining + ' пакетов осталось';
             }
         });
 
@@ -122,7 +122,7 @@ var config = {
     onChannelMessage: function(data) {
         if (data.sender && participants) {
             var tr = document.createElement('tr');
-            tr.innerHTML = '<td>' + data.sender + ' is ready to receive files!</td>';
+            tr.innerHTML = '<td>' + data.sender + ' готов к получению файлов!</td>';
             participants.insertBefore(tr, participants.firstChild);
         } else onMessageCallback(data);
     }
@@ -153,7 +153,7 @@ function onMessageCallback(data) {
 
 function getFileHTML(file) {
     var url = file.url || URL.createObjectURL(file);
-    var attachment = '<a href="' + url + '" download="">Нажмите для скачивания</a><br>';
+    var attachment = '<a href="' + url + '" Скачать="">Нажмите для скачивания</a><br>';
     attachment += '<iframe src="' + url + '" style="border:0;width:100%;min-height:300px;"></iframe></a>';
     return attachment;
 }
