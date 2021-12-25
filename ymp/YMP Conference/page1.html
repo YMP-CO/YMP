@@ -583,7 +583,7 @@ window.onclick = function(event) {
 
                         var tr = document.createElement('tr');
 
-                        tr.innerHTML = '<td align=center style="color: white"><strong>' + room.roomName + '</strong> начата!</td>' +
+                        tr.innerHTML = '<td id="nameroom" align=center style="color: white"><strong>' + room.roomName + '</strong> начата!</td>' +
 
                             '<td><button class="join btn btn-primary btn-form display-4" align=right>Войти</button></td>';
 
@@ -599,9 +599,12 @@ window.onclick = function(event) {
 
                         joinRoomButton.onclick = function() {
 
-                            this.disabled = true;
-
-
+                            this.hidden = true;
+   document.getElementById('conference-name').hidden = true;
+                    document.getElementById('label').hidden = true;   
+document.getElementById('copy').hidden = true;
+document.getElementById('contacts1-4').hidden = true;
+document.getElementById('nameroom').hidden = true;
 
                             var broadcaster = this.getAttribute('data-broadcaster');
 
@@ -620,6 +623,8 @@ window.onclick = function(event) {
                             }, function() {
 
                                 joinRoomButton.disabled = false;
+
+
 
                             });
 
