@@ -1,0 +1,2626 @@
+{
+  "settings": {
+    "name": "My Site",
+    "currentPage": "Welcome.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#5133ab",
+        "successColor": "#F7ED4A",
+        "infoColor": "#19a616",
+        "warningColor": "#ffffff",
+        "dangerColor": "#ff3366",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": true
+      },
+      "additionalSetColors": [
+        "#2800ff",
+        "#5133ab",
+        "#19a616",
+        "#333333"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [
+      {
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300i,400i,500i,600i,700i,800i,900i"
+      },
+      {
+        "css": "'Noto Emoji', sans-serif",
+        "name": "Noto Emoji",
+        "url": "https://fonts.googleapis.com/css?family=Noto+Emoji:300,400,500,600,700"
+      }
+    ],
+    "versionFirst": "4.7.6",
+    "uniqCompNum": 114,
+    "versionPublish": "4.12.4",
+    "imageResize": true,
+    "screenshot": "screenshot.png",
+    "favicon": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "gdpr": false,
+    "cookiesAlert": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "500"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<mbr-parameters>\n     \n    </mbr-parameters>\n    \n<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <h1><br><strong>ВЫБЕРИТЕ НУЖНУЮ КАТЕГОРИЮ:</strong></h1><br><br>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"all_daybooks.html\" target=\"_blank\">\n          <div class=\"tile purple\">\n        \n        <h3 class=\"title\">Эл. журналы</h3>\n        <p>Быстрый доступ к электронным дневникам и журналам</p>\n          </div>\n    </a></div><a href=\"all_services.html\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"/all_services.html\" target=\"_blank\">\n      </a><a href=\"all_services.html\" target=\"_blank\">\n          <div class=\"tile red\">\n              \n       <h3 class=\"title\">Сервисы для учебы</h3>\n        <p>Сборник полезных сервисов для обучения.</p>\n      </div>\n    </a></div><a href target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n      </a><a href=\"search.html\" target=\"_blank\">\n          <div class=\"tile orange\">\n        <h3 class=\"title\">Поиск</h3>\n        <p>Удобный поиск разных материалов для уроков</p>\n      </div>\n    </a></div><a href target=\"_blank\">\n  </a></div><a href target=\"_blank\">\n  </a><div class=\"row\"><a href target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n     </a><a href=\"https://ymp-co.github.io/ymp/YMP_BL/\" target=\"_blank\">\n         <div class=\"tile green\">\n        <h3 class=\"title\">Школьная доска</h3>\n        <p>Ваша виртуальная школьная доска прямо на экране!</p>\n      </div>\n    </a></div><a href target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n      </a><a href=\"all_conference.html\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">Видео конференции</h3>\n        <p>Сборник разных сервисов по созданию видео конференций</p>\n      </div>\n    </a></div><a href target=\"_blank\">    \n       </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n     </a><a href=\"find_error.html\" target=\"_blank\">\n         <div class=\"tile black\">\n        <h3 class=\"title\">Помощь с YMP</h3>\n        <p>У вас возникли вопросы по YMP School? Обратитесь к нам!</p>\n      </div>\n    </a></div><a href target=\"_blank\">    \n  </a></div><a href target=\"_blank\">\n</a></div></div>",
+          "_cid": "qTkA127IK8",
+          "_anchor": "header2-1",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "all_daybooks.html": {
+      "settings": {
+        "meta_descr": "Web Creator Description",
+        "title": "🎉 Все электронные дневники и журналы",
+        "order": 3
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-danger\" href=\"all_daybooks.html\" data-app-placeholder=\"Введите Текст\">Все<br>ресурсы<br></a>\n                    <a class=\"btn btn-black-outline\" href=\"popular_daybook.html\" data-app-placeholder=\"Введите Текст\">Самый популярный<br>ресурс<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content8-2r",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teZlqIboDQ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>🎉 Все дневники и эл. журналы</h2>\n  </div>\n</section>",
+          "_anchor": "casperHorizontalRule3-2y",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "tf2zAa08BG",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            },
+            "P": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://dnevnik.ru/\" target=\"_blank\">\n          <div class=\"tile red\">\n        \n        <h3 class=\"title\">Дневник.Ру</h3>\n        <p>Дневник.ру — цифровая образовательная платформа, которая делает образование в России качественным и доступным...<br></p>\n          </div>\n    </a></div><a href=\"https://dnevnik.ru/\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://elschool.ru\" target=\"_blank\">\n      </a><a href=\"https://elschool.ru\" target=\"_blank\">\n          <div class=\"tile red\">\n         \n       <h3 class=\"title\">ELSCHOOL</h3>\n        <p> ELSCHOOL - это единый бесплатный проект электронной школы, который позволяет: просматривать электронный дневник...<br></p>\n      </div>\n    </a></div><a href=\"https://elschool.ru\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://elschool.ru\" target=\"_blank\">\n      </a><a href=\"https://e-school.ryazangov.ru/\" target=\"_blank\">\n          <div class=\"tile red\">\n        <h3 class=\"title\">Bars Дневник</h3>\n        <p>Система «БАРС.Образование-Электронная Школа» — комплексная платформа для&nbsp;цифровизации деятельности в сфере образования...</p>\n      </div>\n    </a></div><a href=\"https://e-school.ryazangov.ru/\" target=\"_blank\">\n\n   </a><div class=\"col-sm-4\"><a href=\"https://e-school.ryazangov.ru/\" target=\"_blank\">\n      </a><a href=\"https://www.mos.ru/city/projects/mesh/\" target=\"_blank\">\n          <div class=\"tile red\">\n        <h3 class=\"title\">МЭШ</h3>\n        <p>«Московская электронная школа» — это проект для учителей, детей и родителей, направленный на создание высокотехнологичной образовательной среды в школах...\n<br></p>\n      </div>\n    </a></div><a href=\"https://www.mos.ru/city/projects/mesh/\" target=\"_blank\">\n\n </a></div></div></div>",
+          "_anchor": "header2-2t",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teZlSjxZIt",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "popular_daybook.html": {
+      "settings": {
+        "meta_descr": "Популярные дневники и журналы",
+        "title": "✨ Самый популярный дневник/эл. журнал",
+        "order": 4
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-danger-outline\" href=\"all_daybooks.html\" data-app-placeholder=\"Введите Текст\">Все<br>ресурсы<br></a>\n                    <a class=\"btn btn-black\" href=\"popular_daybook.html\" data-app-placeholder=\"Введите Текст\">Самый популярный<br>ресурс<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "tf2z5OpcPK",
+          "_anchor": "content8-2v",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            },
+            "P": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-1\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://dnevnik.ru\" target=\"_blank\">\n          <div class=\"tile black\">\n        \n        <h3 class=\"title\">Дневник.Ру</h3>\n        <p>Дневник.ру — цифровая образовательная платформа, которая делает образование в России качественным и доступным...<br></p>\n          </div>\n    </a></div><a href=\"https://dnevnik.ru\" target=\"_blank\">\n   \n </a></div></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "tf2z5OFXck",
+          "_anchor": "header2-2w",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "Conference_like_ymp.html": {
+      "settings": {
+        "meta_descr": "Site Builder Description",
+        "title": "✅ Лучший выриант по мнению YMP",
+        "order": 5
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "letter-spacing": ".2rem"
+            },
+            ".media-container-column": {
+              "background-color": "@bgText",
+              "@media (max-width: 767px)": {
+                "padding": "1rem !important"
+              }
+            },
+            "H1": {
+              "color": "#232323"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#333333"
+            }
+          },
+          "_name": "header10",
+          "_customHTML": "<section class=\"header10\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Полный экран\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" name=\"halfSize\" title=\"Half Size\" checked>\n        <select title=\"Align\" name=\"alignHalf\" condition=\"halfSize\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Стрелка\" name=\"showArrow\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Кнопки\" name=\"showButtons\" checked>\n        \n        <input type=\"color\" title=\"Bg Text\" name=\"bgText\" value=\"#ffffff\" condition=\"showTitle || showSubTitle || showText || showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"@PROJECT_PATH@/assets/images/mbr-1624x1080.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#5133ab\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-column mbr-white p-5 align-left\" mbr-class=\"{'col-lg-8 col-md-10': halfSize, 'm-auto': halfSize &&  alignHalf==2, 'ml-auto': halfSize &&  alignHalf==3}\">\n            <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Лучший вариант по мнению YMP</h1>\n            <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                Красивые мобильные сайты\n            </h3>\n            <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Google Meet&nbsp;</b>— популярный корпоративный сервис для создания видео и аудиозвонков через интернет.<br>✅ Бесплатный<br>✅ Стабильный<br>✅ Есть онлайн версия<br>✅ Без ограничения по времени<br></p>\n            <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-secondary\" href=\"https://meet.google.com/\" data-app-placeholder=\"Введите Текст\">Открыть Google Meet</a> <a class=\"btn btn-md btn-black-outline\" href=\"all_conference.html#top\" data-app-placeholder=\"Введите Текст\">Вернуться назад</a></div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "teAHGFWG5X",
+          "_anchor": "header10-2l",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "all_conference.html": {
+      "settings": {
+        "meta_descr": "Видео-конференции",
+        "title": "📹 Выбор видео-конференций",
+        "order": 6
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"all_conference.html\" data-app-placeholder=\"Введите Текст\">Популярные<br>ресурсы<br></a>\n                    <a class=\"btn btn-secondary-outline\" href=\"online_conference.html\" data-app-placeholder=\"Введите Текст\">Есть <br>онлайн-доступ</a> <a class=\"btn btn-info-outline\" href=\"Conference_no_time.html\" data-app-placeholder=\"Введите Текст\">Без ограничения <br>по времени</a> <a class=\"btn btn-danger-outline\" href=\"Conference_like_ymp.html\" data-app-placeholder=\"Введите Текст\">Лучший вариант<br>по мнению YMP</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content8-2o",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teB2TEHHA8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>🎉 Популярное</h2>\n  </div>\n</section>",
+          "_cid": "teACgoyMRh",
+          "_anchor": "casperHorizontalRule3-25",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://zoom.us\" target=\"_blank\">\n          <div class=\"tile blue\">\n        \n        <h3 class=\"title\">Zoom</h3>\n        <p>Zoom — популярный корпоративный сервис для создания видео- и аудиозвонков через интернет...</p>\n          </div>\n    </a></div><a href=\"https://www.microsoft.com/ru-ru/microsoft-teams/download-app\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://www.microsoft.com/ru-ru/microsoft-teams/download-app\" target=\"_blank\">\n      </a><a href=\"https://www.microsoft.com/ru-ru/microsoft-teams/download-app\" target=\"_blank\">\n          <div class=\"tile blue\">\n         \n       <h3 class=\"title\">Microsoft Teams</h3>\n        <p>Microsoft Teams обеспечивает обмен мгновенными сообщениями, аудио и видеозвонки...</p>\n      </div>\n    </a></div><a href=\"https://skype.com\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://skype.com\" target=\"_blank\">\n      </a><a href=\"https://skype.com\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">Skype</h3>\n        <p>Оставайтесь на связи с друзьями и коллегами: общайтесь с помощью бесплатного видеочата...</p>\n      </div>\n    </a></div><a href=\"https://www.microsoft.com/ru-ru/microsoft-teams/download-app\" target=\"_blank\">\n  </a></div><a href=\"https://www.microsoft.com/ru-ru/microsoft-teams/download-app\" target=\"_blank\">\n </a></div></div>",
+          "_anchor": "header2-27",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teACsrgdOI",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://meet.google.com/?pli=1\" target=\"_blank\">\n          <div class=\"tile blue\">\n        \n        <h3 class=\"title\">Google Meet</h3>\n        <p>Google Meet — сервис видео-телефонной связи и видеоконференций, разработанный компанией Google...</p>\n          </div>\n    </a></div><a href=\"https://discord.com/\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://discord.com/\" target=\"_blank\">\n      </a><a href=\"https://discord.com/\" target=\"_blank\">\n          <div class=\"tile blue\">\n         \n       <h3 class=\"title\">Discord</h3>\n        <p>Общайтесь с друзьями в голосовом и видеочате с рекордно низкой задержкой так, будто вы сидите в одной комнате...</p>\n      </div>\n    </a></div><a href=\"https://trueconf.ru/\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"https://trueconf.ru/\" target=\"_blank\">\n      </a><a href=\"https://trueconf.ru/\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">TrueConf</h3>\n        <p>TrueConf — видеосвязь для бизнеса и удаленной работы. Бесплатное приложение позволяет проводить видеоконференции...</p>\n      </div>\n    </a></div><a href=\"https://twitter.com/mobirise?lang=en-gb\" target=\"_blank\">\n  </a></div><a href=\"https://twitter.com/mobirise?lang=en-gb\" target=\"_blank\">\n </a></div></div>",
+          "_anchor": "header2-28",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teACGW0j6J",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "online_conference.html": {
+      "settings": {
+        "meta_descr": "Web Maker Description",
+        "title": "💻 С онлайн-доступом",
+        "order": 7
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary-outline\" href=\"all_conference.html\" data-app-placeholder=\"Введите Текст\">Популярные<br>ресурсы<br></a>\n                    <a class=\"btn btn-secondary\" href=\"page7.html#top\" data-app-placeholder=\"Введите Текст\">Есть <br>онлайн-доступ</a> <a class=\"btn btn-info-outline\" href=\"Conference_no_time.html\" data-app-placeholder=\"Введите Текст\">Без ограничения <br>по времени</a> <a class=\"btn btn-danger-outline\" href=\"Conference_like_ymp.html\" data-app-placeholder=\"Введите Текст\">Лучший вариант<br>по мнению YMP</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content8-2p",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teB5wfN9Uo",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>🌐 С онлайн-доступом</h2>\n  </div>\n</section>",
+          "_cid": "teAEtsbltg",
+          "_anchor": "casperHorizontalRule3-2b",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://zoom.us\" target=\"_blank\">\n          <div class=\"tile purple\">\n        \n        <h3 class=\"title\">Zoom</h3>\n        <p>Zoom — популярный корпоративный сервис для создания видео- и аудиозвонков через интернет...<br><br></p>\n          </div>\n    </a></div><a href target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n      </a><a href=\"https://meet.google.com\" target=\"_blank\">\n          <div class=\"tile purple\">\n         \n       <h3 class=\"title\">Google Meet</h3>\n        <p>Google Meet — сервис видео-телефонной связи и видеоконференций, разработанный компанией Google.</p>\n      </div>\n    </a></div><a href target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href target=\"_blank\">\n      </a><a href=\"https://skype.com\" target=\"_blank\">\n          <div class=\"tile purple\">\n        <h3 class=\"title\">Skype</h3>\n        <p>Оставайтесь на связи с друзьями и коллегами: общайтесь с помощью бесплатного видеочата...<br><br></p>\n      </div>\n    </a></div><a href target=\"_blank\">\n  </a></div><a href target=\"_blank\">\n </a></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teAEtsGBL9",
+          "_anchor": "header2-2c",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://teams.microsoft.com\" target=\"_blank\">\n          <div class=\"tile purple\">\n        \n        <h3 class=\"title\">Microsoft Teams</h3>\n        <p>Microsoft Teams обеспечивает обмен мгновенными сообщениями, аудио и видеозвонки...<br><br></p>\n          </div>\n    </a></div><a href=\"\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"b\" target=\"_blank\">\n      </a><a href=\"https://discord.com\" target=\"_blank\">\n          <div class=\"tile purple\">\n         \n       <h3 class=\"title\">Discord</h3>\n        <p>Общайтесь с друзьями в голосовом и видеочате с рекордно низкой задержкой так, будто вы сидите в одной комнате.</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n   \n </a></div></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teAEtt35YO",
+          "_anchor": "header2-2d",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "Conference_no_time.html": {
+      "settings": {
+        "meta_descr": "Web Maker Description",
+        "title": "🕘 Без ограничения по времени | Конференции | YMP School",
+        "order": 14
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary-outline\" href=\"all_conference.html#top\" data-app-placeholder=\"Введите Текст\">Популярные<br>ресурсы<br></a>\n                    <a class=\"btn btn-secondary-outline\" href=\"online_conference.html\" data-app-placeholder=\"Введите Текст\">Есть <br>онлайн-доступ</a> <a class=\"btn btn-info\" href=\"page12.html\" data-app-placeholder=\"Введите Текст\">Без ограничения <br>по времени</a> <a class=\"btn btn-danger-outline\" href=\"Conference_like_ymp.html#top\" data-app-placeholder=\"Введите Текст\">Лучший вариант<br>по мнению YMP</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content8-2q",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teB5zzGllZ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>🕘 Без ограничения \n<div>по времени</div></h2>\n  </div>\n</section>",
+          "_cid": "teAFd6Lg7u",
+          "_anchor": "casperHorizontalRule3-2g",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n\n      <a href=\"https://meet.google.com/\" target=\"_blank\">\n          <div class=\"tile green\">\n         \n       <h3 class=\"title\">Google Meet</h3>\n        <p>Google Meet — сервис видео-телефонной связи и видеоконференций, разработанный компанией Google.<br></p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n      </a><a href=\"https://skype.com\" target=\"_blank\">\n          <div class=\"tile green\">\n        <h3 class=\"title\">Skype</h3>\n        <p>Оставайтесь на связи с друзьями и коллегами: общайтесь с помощью бесплатного видеочата...<br><br></p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n   </a><div class=\"col-sm-4\"><a href=\"https://teams.microsoft.com\" target=\"_blank\">\n      \n          <div class=\"tile green\">\n        \n        <h3 class=\"title\">Microsoft Teams</h3>\n        <p>Microsoft Teams обеспечивает обмен мгновенными сообщениями, аудио и видеозвонки...<br><br></p>\n          </div>\n    </a></div><a href=\"\" target=\"_blank\">\n   \n        </a></div><a href=\"\" target=\"_blank\">\n </a></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teAFd7gqrI",
+          "_anchor": "header2-2h",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ac193d"
+            },
+            ".tile.red:hover": {
+              "background": "#7f132d"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#2672ec"
+            },
+            ".tile.blue:hover": {
+              "background": "#125acd"
+            },
+            ".tile.orange": {
+              "background": "#dc572e"
+            },
+            ".tile.orange:hover": {
+              "background": "#b8431f"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            "H3": {
+              "text-align": "left"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n    \n      </a><a href=\"https://twitter.com/mobirise?lang=en-gb\" target=\"_blank\">\n          <div class=\"tile green\">\n         \n       <h3 class=\"title\">Discord</h3>\n        <p>Общайтесь с друзьями в голосовом и видеочате с рекордно низкой задержкой так, будто вы сидите в одной комнате.</p>\n      </div>\n    </a></div><a href=\"https://twitter.com/mobirise?lang=en-gb\" target=\"_blank\">\n   \n </a></div></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teAFd7EGhO",
+          "_anchor": "header2-2i",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "all_services.html": {
+      "settings": {
+        "meta_descr": "Полезные сервисы для учебы.",
+        "title": "📚 Все сервисы и порталы",
+        "order": 9
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info-outline\" href=\"free_services.html\" data-app-placeholder=\"Введите Текст\">Только<br>бесплатные<br>сервисы<br></a> <a class=\"btn btn-secondary-outline\" href=\"servises_no_teachers.html\" data-app-placeholder=\"Введите Текст\">Подойдет для <br>самостоятельного<br>обучения<br></a> <a class=\"btn btn-black-outline\" href=\"services_vpr_ege_oge.html\" data-app-placeholder=\"Введите Текст\">Имеет<br>задания<br>из ВПР<br></a>  <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Введите Текст\">Все<br>сервисы и<br>порталы<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tevprKYLnU",
+          "_anchor": "content8-19",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>📕 Все сервисы и порталы</h2>\n  </div>\n</section>",
+          "_cid": "tevobMrkpK",
+          "_anchor": "casperHorizontalRule3-17",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ff6100"
+            },
+            ".tile.red:hover": {
+              "background": "#9d3d00"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#149dcc"
+            },
+            ".tile.blue:hover": {
+              "background": "#073b4c"
+            },
+            ".tile.orange": {
+              "background": "#be0202"
+            },
+            ".tile.orange:hover": {
+              "background": "#870000"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            ".tile.yellow": {
+              "background": "#FDDA0D"
+            },
+            ".tile.yellow:hover": {
+              "background": "#C4B454"
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "P": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://uchi.ru\" target=\"_blank\">\n          <div class=\"tile blue\">\n        \n        <h3 class=\"title\">\"Uchi.ru\"</h3>\n        <p>Учи. ру — это интерактивная образовательная платформа, полностью соответствующая ФГОС и ПООП...</p>\n          </div>\n    </a></div><a href=\"\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n      </a><a href=\"https://yaklass.ru\" target=\"_blank\">\n          <div class=\"tile blue\">\n         \n       <h3 class=\"title green\">\"ЯКласс\"</h3>\n        <p>«ЯКласс» - это платформа электронного образования для школ, а также обучающая онлайн-площадка для школьников и их родителей...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n      </a><a href=\"https://education.yandex.ru/main/\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"Яндекс.Учебник\"</h3>\n        <p>Бесплатная цифровая платформа для обучения основным школьным предметам на основе технологий Яндекса...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n\n  \n   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n      </a><a href=\"https://skyeng.ru/\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"SkyEng\"</h3>\n        <p>Skyeng — российская онлайн-школа по изучению английского языка. Обучение производит на учебной платформе Vimbox...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n           </a><div class=\"col-sm-4\"><a href=\"https://interneturok.ru/\" target=\"_blank\">\n      </a><a href=\"https://interneturok.ru/\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"ИнтернетУрок\"</h3>\n        <p>ИнтернетУрок — это крупнейшая общеобразовательная онлайн-школа с 1 по 11 классы и библиотека видеоуроков и других материалов...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://sdamgia.ru\" target=\"_blank\">\n       \n       \n       \n       \n       \n                  \n </a><a href=\"https://sdamgia.ru\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"Решу ВПР\"</h3>\n        <p>Тысячи заданий с решениями для подготовки к ВПР—2022 по всем предметам. Система тестов для подготовки и самоподготовки к ВПР...</p>\n  </div></a>\n      \n      </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"\" target=\"_blank\">\n          </a><div class=\"tile blue\"><a href=\"https://edu.sirius.online/#/\" target=\"_blank\">\n        <h3 class=\"title\">\"Сириус.Курсы\"</h3>\n        </a><p>Онлайн-курсы Образовательного центра Сириус. Дополнительное образование от ведущих преподавателей страны...</p><h5>\n  </h5></div>\n  \n        </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://foxford.ru\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"Фоксфорд\"</h3>\n        <p>Онлайн-подготовка к ЕГЭ, ОГЭ и олимпиадам. Улучшение знаний по школьным предметам с 1 по 11 класс с ведущими преподавателями...</p>\n  </div></a>\n  \n     </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://childrenscience.ru\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"Дети и наука\"</h3>\n        <p>Системное образование\n<br>для детей и родителей,\n<br>нацеленных на высокий\n<br>результат...<br></p>\n  </div></a>\n     </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://www.mos.ru/city/projects/mesh/\" target=\"_blank\">\n          <div class=\"tile blue\">\n        <h3 class=\"title\">\"РЭШ\"</h3>\n        <p>«Российская электронная школа» – это интерактивные уроки по всему школьному курсу с 1 по 11 класс от лучших учителей страны...</p>\n  </div></a></div></div></div></div>",
+          "_anchor": "header2-10",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teuabmTtLu",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "free_services.html": {
+      "settings": {
+        "meta_descr": "Бесплатные сервисы и порталы",
+        "title": "💲 Бесплатные сервисы и порталы",
+        "order": 10
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Введите Текст\">Только<br>бесплатные<br>сервисы<br></a> <a class=\"btn btn-secondary-outline\" href=\"servises_no_teachers.html\" data-app-placeholder=\"Введите Текст\">Подойдет для <br>самостоятельного<br>обучения<br></a> <a class=\"btn btn-black-outline\" href=\"services_vpr_ege_oge.html\" data-app-placeholder=\"Введите Текст\">Имеет<br>задания<br>из ВПР<br></a>  <a class=\"btn btn-primary-outline\" href=\"all_services.html\" data-app-placeholder=\"Введите Текст\">Все<br>сервисы и<br>порталы<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "teA1C4hfru",
+          "_anchor": "content8-1g",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>💲 Абсолютно бесплатные сервисы и порталы</h2>\n  </div>\n</section>",
+          "_cid": "teA1C4LA6T",
+          "_anchor": "casperHorizontalRule3-1h",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ff6100"
+            },
+            ".tile.red:hover": {
+              "background": "#9d3d00"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#149dcc"
+            },
+            ".tile.blue:hover": {
+              "background": "#073b4c"
+            },
+            ".tile.orange": {
+              "background": "#be0202"
+            },
+            ".tile.orange:hover": {
+              "background": "#870000"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            ".tile.yellow": {
+              "background": "#FDDA0D"
+            },
+            ".tile.yellow:hover": {
+              "background": "#C4B454"
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "P": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n\n       \n       \n       \n       \n       \n                  \n <a href=\"https://sdamgia.ru\" target=\"_blank\">\n          <div class=\"tile green\">\n        <h3 class=\"title\">\"Решу ВПР\"</h3>\n        <p>Тысячи заданий с решениями для подготовки к ВПР—2022 по всем предметам. Система тестов для подготовки и самоподготовки к ВПР...</p>\n  </div></a>\n     \n     </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://www.mos.ru/city/projects/mesh/\" target=\"_blank\">\n        <div class=\"tile green\">\n        <h3 class=\"title\">\"РЭШ\"</h3>\n        <p>«Российская электронная школа» – это интерактивные уроки по всему школьному курсу с 1 по 11 класс от лучших учителей страны...</p>\n  \n\n  \n     \n  </div></a>\n  \n  \n  \n  \n       </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://childrenscience.ru\" target=\"_blank\">\n        <div class=\"tile green\">\n        <h3 class=\"title\">\"Дети и наука\"</h3>\n        <p>Системное образование \n<br>для детей и родителей, \n<br>нацеленных на высокий \n<br>результат...</p>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  </div></a></div></div></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teA1C5S9k6",
+          "_anchor": "header2-1j",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>📚 Есть дополнительные платные курсы</h2>\n  </div>\n</section>",
+          "_anchor": "casperHorizontalRule3-1k",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teA2WotkBG",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ff6100"
+            },
+            ".tile.red:hover": {
+              "background": "#9d3d00"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#149dcc"
+            },
+            ".tile.blue:hover": {
+              "background": "#073b4c"
+            },
+            ".tile.orange": {
+              "background": "#be0202"
+            },
+            ".tile.orange:hover": {
+              "background": "#870000"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            ".tile.yellow": {
+              "background": "#FDDA0D"
+            },
+            ".tile.yellow:hover": {
+              "background": "#C4B454"
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "P": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://education.yandex.ru/main/\" target=\"_blank\">\n         <div class=\"tile green\">\n     \n  \n\n         \n        <h3 class=\"title\">\"Яндекс.Учебник\"</h3>\n        <p>Бесплатная цифровая платформа для обучения основным школьным предметам на основе технологий Яндекса...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n\n\n                       </a><div class=\"col-sm-4\"><a href=\"https://interneturok.ru/\" target=\"_blank\">\n\n\n        <div class=\"tile green\">\n             \n        <h3 class=\"title\">\"ИнтернетУрок\"</h3>\n        <p>ИнтернетУрок — это крупнейшая общеобразовательная онлайн-школа с 1 по 11 классы и библиотека видеоуроков и других материалов...</p>\n      </div>\n  \n     \n  </a></div></div></div></div>",
+          "_anchor": "header2-1n",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teA3Ty4s9H",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>➕ Есть дополнительная платная подписка</h2>\n  </div>\n</section>",
+          "_anchor": "casperHorizontalRule3-1m",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teA3sEqXuH",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ff6100"
+            },
+            ".tile.red:hover": {
+              "background": "#9d3d00"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#149dcc"
+            },
+            ".tile.blue:hover": {
+              "background": "#073b4c"
+            },
+            ".tile.orange": {
+              "background": "#be0202"
+            },
+            ".tile.orange:hover": {
+              "background": "#870000"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            ".tile.yellow": {
+              "background": "#FDDA0D"
+            },
+            ".tile.yellow:hover": {
+              "background": "#C4B454"
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "P": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://uchi.ru\" target=\"_blank\">\n        <div class=\"tile green\">\n        \n        <h3 class=\"title\">\"Uchi.ru\"</h3>\n        <p>Учи. ру — это интерактивная образовательная платформа, полностью соответствующая ФГОС и ПООП...</p>\n          </div>\n    </a></div><a href=\"\" target=\"_blank\">\n    </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n      </a><a href=\"https://yaklass.ru\" target=\"_blank\">\n          <div class=\"tile green\">\n         \n       <h3 class=\"title green\">\"ЯКласс\"</h3>\n        <p>«ЯКласс» - это платформа электронного образования для школ, а также обучающая онлайн-площадка для школьников и их родителей...</p>\n      </div>\n\n  </div></a></div></div></div></div>",
+          "_anchor": "header2-1o",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teA6J9mLLv",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "servises_no_teachers.html": {
+      "settings": {
+        "meta_descr": "Сервисы для сам. обучения",
+        "title": "💜 Для самостоятельного обучения",
+        "order": 11
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info-outline\" href=\"free_services.html\" data-app-placeholder=\"Введите Текст\">Только<br>бесплатные<br>сервисы<br></a> <a class=\"btn btn-secondary\" href=\"servises_no_teachers.html\" data-app-placeholder=\"Введите Текст\">Подойдет для <br>самостоятельного<br>обучения<br></a> <a class=\"btn btn-black-outline\" href=\"services_vpr_ege_oge.html\" data-app-placeholder=\"Введите Текст\">Имеет<br>задания<br>из ВПР<br></a>  <a class=\"btn btn-primary-outline\" href=\"all_services.html\" data-app-placeholder=\"Введите Текст\">Все<br>сервисы и<br>порталы<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "teAijmFp4n",
+          "_anchor": "content8-1p",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".divider": {
+              "display": "flex",
+              "&:before, &:after": {
+                "content": "\"\"",
+                "flex": "1"
+              }
+            },
+            ".line": {
+              "align-items": "center",
+              "margin": "1em -1em",
+              "&:before, &:after": {
+                "height": "1px",
+                "margin": "0 1em"
+              }
+            },
+            ".one-line": {
+              "&:before, &:after": {
+                "background": "black"
+              }
+            }
+          },
+          "_name": "casperHorizontalRule3",
+          "_customHTML": "<section class=\"casperHorizontalRule3\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Horizontal Rule</header>\n    <input type=\"color\" title=\"Color\" name=\"hrColor\" value=\"#000000\">\n    <input type=\"range\" title=\"Высота\" name=\"hrHeight\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <h2 class=\"divider line one-line\" contenteditable>💜 Подойдет для самостоятельного обучения</h2>\n  </div>\n</section>",
+          "_cid": "teAijngTLb",
+          "_anchor": "casperHorizontalRule3-1q",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "body": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "font-size": "14px",
+              "line-height": "1.5em",
+              "font-weight": "400"
+            },
+            "p, span, a, ul, li, button": {
+              "font-family": "inherit",
+              "font-size": "inherit",
+              "font-weight": "inherit",
+              "line-height": "inherit"
+            },
+            "strong": {
+              "font-weight": "400"
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              "font-family": "\"Open Sans\", \"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+              "line-height": "1.5em",
+              "font-weight": "300"
+            },
+            ".tile": {
+              "width": "100%",
+              "display": "inline-block",
+              "box-sizing": "border-box",
+              "background": "#fff",
+              "padding": "20px",
+              "margin-bottom": "30px"
+            },
+            ".tile .title": {
+              "margin-top": "0px"
+            },
+            ".tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.black": {
+              "color": "#fff"
+            },
+            ".tile.purple": {
+              "background": "#5133ab"
+            },
+            ".tile.purple:hover": {
+              "background": "#3e2784"
+            },
+            ".tile.red": {
+              "background": "#ff6100"
+            },
+            ".tile.red:hover": {
+              "background": "#9d3d00"
+            },
+            ".tile.green": {
+              "background": "#00a600"
+            },
+            ".tile.green:hover": {
+              "background": "#007300"
+            },
+            ".tile.blue": {
+              "background": "#149dcc"
+            },
+            ".tile.blue:hover": {
+              "background": "#073b4c"
+            },
+            ".tile.orange": {
+              "background": "#be0202"
+            },
+            ".tile.orange:hover": {
+              "background": "#870000"
+            },
+            ".tile.black": {
+              "background": "#000"
+            },
+            ".tile.black:hover": {
+              "background": "#012134"
+            },
+            ".tile.yellow": {
+              "background": "#FDDA0D"
+            },
+            ".tile.yellow:hover": {
+              "background": "#C4B454"
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "P": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<div id=\"custom-html-4\" custom-code=\"true\"><div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n  \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <a href=\"https://education.yandex.ru/main/\" target=\"_blank\">\n         <div class=\"tile purple\">\n     \n  \n\n         \n        <h3 class=\"title\">\"Яндекс.Учебник\"</h3>\n        <p>Бесплатная цифровая платформа для обучения основным школьным предметам на основе технологий Яндекса...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n\n\n                       </a><div class=\"col-sm-4\"><a href=\"https://interneturok.ru/\" target=\"_blank\">\n\n\n        <div class=\"tile purple\">\n             \n        <h3 class=\"title\">\"ИнтернетУрок\"</h3>\n        <p>ИнтернетУрок — это крупнейшая общеобразовательная онлайн-школа с 1 по 11 классы и библиотека видеоуроков и других материалов...</p>\n      </div>\n    </a></div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://www.mos.ru/city/projects/mesh/\" target=\"_blank\">\n        <div class=\"tile purple\">\n        <h3 class=\"title\">\"РЭШ\"</h3>\n        <p>«Российская электронная школа» – это интерактивные уроки по всему школьному курсу с 1 по 11 класс от лучших учителей страны...</p>\n  \n\n  \n     \n  </div></a>\n  \n  \n  \n  \n       </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"\" target=\"_blank\">\n        </a><div class=\"tile purple\"><a href=\"https://childrenscience.ru\" target=\"_blank\">\n        <h3 class=\"title\">\"Дети и наука\"</h3>\n        <p>Системное образование \n<br>для детей и родителей, \n<br>нацеленных на высокий \n<br>результат...</p>\n</a></div>\n\n    </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"https://yaklass.ru\" target=\"_blank\">\n        <div class=\"tile purple\">\n        <h3 class=\"title\">\"ЯКласс\"</h3>\n        <p>«ЯКласс» - это платформа электронного образования для школ, а также обучающая онлайн-площадка для школьников и их родителей...</p>\n  \n\n  \n     \n  </div></a>\n  \n  \n  \n  \n       </div><a href=\"\" target=\"_blank\">\n                   </a><div class=\"col-sm-4\"><a href=\"\" target=\"_blank\">\n </a><a href=\"\" target=\"_blank\">\n        </a><div class=\"tile purple\"><a href=\"https://uchi.ru\" target=\"_blank\">\n        <h3 class=\"title\">\"Учи. Ру\"</h3>\n        <p>Учи. ру — это интерактивная образовательная платформа, полностью соответствующая ФГОС и ПООП...</p>\n</a></div>\n      \n  </div></div></div></div>",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teAijphOmw",
+          "_anchor": "header2-1u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "Welcome.html": {
+      "settings": {
+        "meta_descr": "Web Generator Description",
+        "title": "Начало",
+        "order": 12
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "letter-spacing": ".2rem"
+            },
+            ".media-container-column": {
+              "background-color": "@bgText",
+              "@media (max-width: 767px)": {
+                "padding": "1rem !important"
+              }
+            },
+            "H1": {
+              "color": "#232323",
+              "text-align": "left"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#767676"
+            }
+          },
+          "_name": "header10",
+          "_customHTML": "<section class=\"header10\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Полный экран\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" name=\"halfSize\" title=\"Half Size\" checked>\n        <select title=\"Align\" name=\"alignHalf\" condition=\"halfSize\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Стрелка\" name=\"showArrow\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Кнопки\" name=\"showButtons\" checked>\n        \n        <input type=\"color\" title=\"Bg Text\" name=\"bgText\" value=\"#ffffff\" condition=\"showTitle || showSubTitle || showText || showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"@PROJECT_PATH@/assets/images/mbr-1618x1080.jpg\" parallax selected>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#55b4d4\">\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-column mbr-white p-5 align-left\" mbr-class=\"{'col-lg-8 col-md-10': halfSize, 'm-auto': halfSize &&  alignHalf==2, 'ml-auto': halfSize &&  alignHalf==3}\">\n            <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Добро пожаловать в YMP School</h1>\n            <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                Красивые мобильные сайты\n            </h3>\n            <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n               Начните работу или изучите возможности нашего веб-приложения</p>\n            <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"index.html\" data-app-placeholder=\"Введите Текст\">Начать работу</a>\n                <a class=\"btn btn-md btn-black-outline\" href=\"download.html\" data-app-placeholder=\"Введите Текст\">Подробнее...</a></div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_anchor": "header10-v",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "teu7SQPST8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "download.html": {
+      "settings": {
+        "meta_descr": "Website Creator Description",
+        "title": "Page 1",
+        "order": 13
+      },
+      "components": [
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-text,.typed-text,.mbr-section-text": {
+              "letter-spacing": "0.03rem"
+            },
+            ".btn": {
+              "margin-left": "4px !important"
+            },
+            ".animated-element": {
+              "color": "@wordsColor"
+            },
+            ".typed-cursor": {
+              "opacity": "1",
+              "-webkit-animation": "blink 0.7s infinite",
+              "-moz-animation": "blink 0.7s infinite",
+              "animation": "blink 0.7s infinite",
+              "color": "@wordsColor"
+            },
+            "@keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-webkit-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-moz-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffffff",
+              "text-align": "left"
+            },
+            ".mbr-section-text,.mbr-section-btn": {
+              "color": "#efefef"
+            }
+          },
+          "_name": "casperHeader5",
+          "_customHTML": "<section class=\"casperHeader5\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"Typed\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Полный экран\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Стрелка\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\" checked>\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Кнопки\" name=\"showButtons\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"@PROJECT_PATH@/assets/images/mbr-5-1620x1080.jpg\" title=\"Фоновое изображение\" parallax>\n            <input type=\"color\" value=\"#149dcc\" title=\"Цвет фона\" selected>\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" title=\"Фоновое видео\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <header codition=\"showSubtitle && showAnimatedText\">Animated Text Settings</header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle && showAnimatedText\">\n            <option value=\"title1\" selected>Основной 1</option>\n            <option value=\"title2\">Основной 2</option>\n            <option value=\"title3\">Основной 3</option>\n            <option value=\"text\">Текст</option>\n            <option value=\"menu\">Меню</option>\n        </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ffffff\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"46\" step=\"1\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"быстро\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"современно\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"удобно\" condition=\"showSubtitle && showAnimatedText\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"mbr-white col-md-12\">\n                <h1 class=\"mbr-section-title mbr-white mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h1>\n                <div class=\"typed-text pb-3\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-9':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style mbr-white\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle\">YMP School это</span>\n                    <span mbr-if=\"showAnimatedText\">\n                        <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-speed=\"{{typeSpeed}}\">\n                        </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">\n                    Все обучающие сервисы в одном приложении!</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn\"><a class=\"btn btn-md btn-white\" type=\"submit\" data-app-placeholder=\"Введите Текст\" href=\"Welcome.html\">Начать работу!</a> <a class=\"btn btn-md btn-black\" type=\"submit\" data-app-placeholder=\"Введите Текст\" href=\"download.html#casperHeader5-l\">Подробнее</a></div>\n            </div>\n        </div>\n    </div>\n    \n</section>",
+          "_cid": "tenAc0nua8",
+          "_anchor": "casperHeader5-l",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "h2": {
+              "text-align": "center"
+            },
+            "h3": {
+              "text-align": "center",
+              "font-weight": "300"
+            },
+            "p": {
+              "color": "#767676"
+            },
+            "img": {
+              "object-fit": "cover"
+            },
+            ".block-content": {
+              "display": "-webkit-flex",
+              "flex-direction": "column",
+              "-webkit-flex-direction": "column",
+              "flex-basis": "100%",
+              "-webkit-flex-basis": "100%"
+            },
+            ".mbr-figure": {
+              "align-self": "flex-start",
+              "-webkit-align-self": "flex-start",
+              "flex-shrink": "0",
+              "-webkit-flex-shrink": "0"
+            },
+            ".media-container-row": {
+              "word-wrap": "break-word",
+              "word-break": "break-word"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            ".card-title": {
+              "font-weight": "500"
+            },
+            ".card-img": {
+              "text-align": "inherit"
+            },
+            ".card-img span": {
+              "font-size": "48px",
+              "color": "#707070"
+            },
+            "@media (min-width: 992px)": {
+              ".mbr-figure": {
+                "padding-right": "2rem",
+                "padding-left": "2rem",
+                "height": "100%"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "& when (@showTitle), (@showText)": {
+                  "padding-bottom": "2rem"
+                },
+                "& when not (@showTitle) and not (@showText)": {
+                  "padding-bottom": "1rem"
+                },
+                "padding-top": "1rem"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".block-content": {
+                "flex-direction": "row",
+                "-webkit-flex-direction": "row",
+                "text-align": "center",
+                ".card": {
+                  "flex-basis": "100%",
+                  "-webkit-flex-basis": "100%"
+                }
+              },
+              ".card:nth-child(1) when (@cardsAmount > \"2\")": {
+                "padding-bottom": "0!important"
+              }
+            }
+          },
+          "_name": "features12",
+          "_customHTML": "<section class=\"features12\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Иконки\" name=\"showIcons\" checked>\n        <input type=\"range\" inline title=\"Размер медиа\" name=\"mediaSize\" min=\"10\" max=\"60\" step=\"1\" value=\"51\">\n        <select title=\"Число карт\" name=\"cardsAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title pb-2 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Возможности YMP School</h2>\n        <h3 class=\"mbr-section-subtitle pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Начните работу или изучите возможности нашего веб-приложения</h3>\n\n        <div class=\"media-container-row pt-5\">\n            <div class=\"block-content align-right\">\n                <div class=\"card pl-3 pr-3\" mbr-class=\"{'pb-5':cardsAmount > 2}\">\n                    <div class=\"mbr-card-img-title\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                             <span mbr-icon class=\"mbr-iconfont mbri-features\"></span>\n                        </div>\n                        <div class=\"mbr-crt-title\">\n                            <h4 class=\"card-title py-2 mbr-crt-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-crt-title\">Более 1000 полезных сервисов и эл. дневников</h4>\n                        </div>\n                    </div>                \n\n                    <div class=\"card-box\">\n                        <p class=\"mbr-text mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text\">Мы собрали для вас полезные и самые интересные сервисы для обучения</p>\n                    </div>\n                </div>\n\n                <div class=\"card pl-3 pr-3\" mbr-if=\"cardsAmount > 2\">\n                    <div class=\"mbr-card-img-title\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont mbri-protect\"></span>\n                        </div>\n                        <div class=\"mbr-crt-title\">\n                            <h4 class=\"card-title py-2 mbr-crt-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-crt-title\">\n                                Защита от нежелательных сайтов</h4>\n                        </div>\n                    </div>\n                    <div class=\"card-box\">\n                        <p class=\"mbr-text mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text\">Сайты, которые не предназначены для обучения бедут заменены на их обучающие аналоги.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"mbr-figure m-auto\" mbr-style=\"{'width': mediaSize + '%'}\">\n                <img src=\"@PROJECT_PATH@/assets/images/mbr-982x552.jpeg\" alt=\"Mobirise\" title>\n            </div>\n\n            <div class=\"block-content align-left\">\n                <div class=\"card pl-3 pr-3\" mbr-class=\"{'pb-5':cardsAmount > 2}\">\n                    <div class=\"mbr-card-img-title\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                             <span mbr-icon class=\"mbr-iconfont mbri-sites\"></span>\n                        </div>\n                        <div class=\"mbr-crt-title\">\n                            <h4 class=\"card-title py-2 mbr-crt-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-crt-title\">Встроенный браузер</h4>\n                        </div>\n                    </div>                \n\n                    <div class=\"card-box\">\n                        <p class=\"mbr-text mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text\">В нашем приложении вы можете спокойно посещать разные образовательные ресурсы.</p>\n                    </div>\n                </div>\n\n                <div class=\"card pl-3 pr-3\" mbr-if=\"cardsAmount > 2\">\n                    <div class=\"mbr-card-img-title\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbri-sites mbr-iconfont\"></span>\n                        </div>\n                        <div class=\"mbr-crt-title\">\n                            <h4 class=\"card-title py-2 mbr-crt-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-crt-title\">Видео конференции и другие функции</h4>\n                        </div>\n                    </div>\n                    <div class=\"card-box\">\n                        <p class=\"mbr-text mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text\">В нашем приложении можно создавать видео-конференции, записывать важные заметки, добавлять избранные ресурсы на рабочий стол и так далее.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tensBHdbEl",
+          "_anchor": "features12-e",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "h4": {
+              "text-align": "left",
+              "font-weight": "500"
+            },
+            "p": {
+              "color": "#767676",
+              "text-align": "left",
+              "margin-bottom": "0"
+            },
+            ".card-img": {
+              "text-align": "left",
+              "background-color": "@cardsBg",
+              "border-bottom-right-radius": "0",
+              "border-bottom-left-radius": "0",
+              "padding": "3rem 2.5rem 0 2.5rem"
+            },
+            ".card-img span": {
+              "font-size": "72px",
+              "color": "#707070"
+            },
+            ".card-box": {
+              "padding": "0rem 2.5rem 3rem 2.5rem",
+              "background-color": "@cardsBg"
+            }
+          },
+          "_name": "features6",
+          "_customHTML": "<section class=\"features6\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"color\" title=\"Карты - Фон\" name=\"cardsBg\" value=\"#ffffff\">\n        <select title=\"Число карт\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#55b4d4\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-website-theme\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">Встроенная <br>школьная доска</h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                       Вы можете создать виртуальную школьную доску прямо на компьютере!</p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbri-touch mbr-iconfont\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Адаптация под планшеты и интерактивные доски.<br></h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                       Наш интерфейс прекрасно подходит под планшеты, ноутбки и интерактивные доски.</p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-users\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">Поддержка и помощь в приложении</h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                       У вас возникли вопросы? Вы всегда можете обратиться к службе поддержки.</p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbri-desktop mbr-iconfont\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Безлимитно\n                    </h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                       Mobirise дает вам свободу разрабатывать столько сайтов, сколько вам нравится, при том что это настольное приложение.\n                    </p>\n                </div>\n            </div>\n\n        </div>\n\n    </div>\n\n</section>",
+          "_cid": "tenvxhorRC",
+          "_anchor": "features6-f",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "casper-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "left"
+            },
+            ".mbr-section-title": {
+              "text-align": "center"
+            },
+            ".reveal": {
+              "-webkit-transition": "all 400ms",
+              "transition": "all 400ms"
+            },
+            ".reveal span": {
+              "display": "inline-block",
+              "-webkit-transition": "all 400ms",
+              "transition": "all 400ms"
+            },
+            ".reveal span:after": {
+              "content": "\"\"",
+              "position": "absolute",
+              "font-size": "20px",
+              "font-weight": "700",
+              "bottom": "-10px",
+              "left": "50%",
+              "width": "200px",
+              "text-align": "center",
+              "opacity": "0",
+              "transform": "translateX(-50%) scale(0)",
+              "transition": "all 400ms"
+            },
+            ".reveal:hover": {
+              "color": "rgba(0, 0, 0, 0.1)"
+            },
+            ".reveal:hover span": {
+              "transform": "scale(2)",
+              "color": "#000",
+              "margin": "0 45px"
+            },
+            ".reveal:hover span:after": {
+              "opacity": "1",
+              "transform": "translateX(-50%) scale(1)"
+            }
+          },
+          "_name": "casperHeader18",
+          "_customHTML": "<section class=\"casperHeader18\" group=\"Casper Blocks\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n  'mbr-fullscreen': fullScreen,\n  'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Полный экран\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Полная ширина\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Ширина\" min=\"4\" max=\"12\" value=\"5\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value>Left</option>\n            <option value=\"justify-content-center\" selected>Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\" checked>\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1512x1080.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"align-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">Header Subtitle</h1>\n                <h2 class=\"mbr-section-title mbr-fonts-style mb-3 reveal\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\"><b>Начните&nbsp;<span>учиться</span>&nbsp; с удовольстивем!</b></h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\"><a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Введите Текст\">Начать!</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tenERoN2KO",
+          "_anchor": "casperHeader18-n",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            ".formoid": {
+              "margin": "auto"
+            },
+            ".form-control": {
+              "padding-left": "1.5rem",
+              "padding-right": "1.5rem"
+            },
+            ".input-group-btn .btn": {
+              "padding-top": "1rem",
+              "padding-bottom": "1rem",
+              "margin": "0 !important"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            "@media (max-width: 768px)": {
+              ".mbr-form .row": {
+                "-webkit-flex-direction": "column",
+                "flex-direction": "column",
+                "-webkit-align-items": "center",
+                "align-items": "center"
+              },
+              ".form-group, .input-group-btn, .input-group-btn .btn": {
+                "max-width": "300px",
+                "width": "100%"
+              }
+            },
+            "@media (min-width: 769px)": {
+              ".mbr-form .row > *": {
+                "padding": "0 0.5rem"
+              }
+            }
+          },
+          "_name": "form3",
+          "_customHTML": "<section class=\"mbr-section form3\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-12 col-lg-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-2 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    Подпишитесь на нашу рассылку!</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">Введите вашу почту:</h3>\n            </div>\n        </div>\n\n        <div class=\"row py-2 justify-content-center\">\n            <div mbr-form class=\"col-12 col-lg-6  col-md-8 \">\n                <!---Formbuilder Form--->\n                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                    <div class=\"row\">\n                        <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Спасибо за заполнение анкеты!</div>\n                        <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">\n                        </div>\n                    </div>\n                    <div class=\"dragArea row\">\n                        <div class=\"form-group col\" data-for=\"email\">\n                            <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                        </div>\n                        <div class=\"col-auto input-group-btn \" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                            <a type=\"submit\" class=\"btn btn-primary \">ПОДПИСАТЬСЯ</a>\n                        </div>\n                    </div>\n                </form><!---Formbuilder Form--->\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tenHnB5TCG",
+          "_anchor": "form3-o",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "find_error.html": {
+      "settings": {
+        "meta_descr": "Site Builder Description",
+        "title": "⚠ Нашли проблему? | YMP School",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".title": {
+              "margin-bottom": "2rem"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff",
+              "border-radius": "3px"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            "textarea.form-control": {
+              "min-height": "188px"
+            }
+          },
+          "_name": "form1",
+          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#c1c1c1\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-12 col-lg-8\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">ВОЗНИКЛА ПРОБЛЕМА?</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">Напишите нам сообщение и мы постараемся исправить вашу проблему!</h3>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"media-container-column col-lg-8\">\n                <!---Formbuilder Form--->\n                <form action=\"yuripoohnoy.ymp@gmail.com\" name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                    <div class=\"row\">\n                        <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Спасибо за поиск проблемы!</div>\n                        <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">\n                        </div>\n                    </div>\n                    <div class=\"dragArea row\">\n                        <div class=\"col-md-4  form-group\" data-for=\"name\">\n                            <label mbr-text mbr-theme-style=\"display-7\" for=\"name\" class=\"form-control-label mbr-fonts-style\">Ваше имя</label>\n                            <input type=\"text\" name=\"name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                        </div>\n                        <div class=\"col-md-4  form-group\" data-for=\"email\">\n                            <label mbr-text mbr-theme-style=\"display-7\" for=\"email\" class=\"form-control-label mbr-fonts-style\">Почта</label>\n                            <input type=\"email\" name=\"email\" data-form-field=\"Email\" mbr-theme-style=\"display-10\" required=\"required\" class=\"form-control\">\n                        </div>\n                        <div data-for=\"phone\" class=\"col-md-4  form-group\" hidden=\"hidden\">\n                            <label mbr-text mbr-theme-style=\"display-7\" for=\"phone\" class=\"form-control-label mbr-fonts-style\" hidden=\"hidden\">Телефон</label>\n                            <input type=\"tel\" name=\"phone\" data-form-field=\"Phone\" mbr-theme-style=\"display-7\" class=\"form-control\" hidden=\"hidden\">\n                        </div>\n                        <div data-for=\"message\" class=\"col-md-12 form-group\">\n                            <label mbr-text mbr-theme-style=\"display-7\" for=\"message\" class=\"form-control-label mbr-fonts-style\">Сообщение о проблеме</label>\n                            <textarea name=\"message\" data-form-field=\"Message\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n                        </div>\n                        <div class=\"col-md-12 input-group-btn align-center\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\"><a type=\"submit\" class=\"btn btn-primary btn-form\" data-app-placeholder=\"Введите Текст\"><span class=\"mobi-mbri mobi-mbri-letter mbr-iconfont mbr-iconfont-btn\"></span>ОТПРАВИТЬ</a></div>\n                    </div>\n                </form><!---Formbuilder Form--->\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tigPEaSsOC",
+          "_anchor": "form1-33",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "services_vpr_ege_oge.html": {
+      "settings": {
+        "meta_descr": "Сайты с заданиями",
+        "title": "📃 Имеет задания из ВПР",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Цвет фона\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-20\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info-outline\" href=\"free_services.html\" data-app-placeholder=\"Введите Текст\">Только<br>бесплатные<br>сервисы<br></a> <a class=\"btn btn-secondary-outline\" href=\"servises_no_teachers.html\" data-app-placeholder=\"Введите Текст\">Подойдет для <br>самостоятельного<br>обучения<br></a> <a class=\"btn btn-black\" href=\"services_vpr_ege_oge.html\" data-app-placeholder=\"Введите Текст\">Имеет<br>задания<br>из ВПР<br></a>  <a class=\"btn btn-primary-outline\" href=\"all_services.html\" data-app-placeholder=\"Введите Текст\">Все<br>сервисы и<br>порталы<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content8-34",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "tigUV0TRP8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Полный экран\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Кнопки\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Решу.ВПР</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Красивые мобильные сайты\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Лучший вариант для решения заданий из ВПР, ЕГЭ, ОГЭ</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-black-outline\" href=\"https://sdamgia.ru\" data-app-placeholder=\"Введите Текст\">Открыть</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "tigV0RKE6u",
+          "_anchor": "header16-35",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "search.html": {
+      "settings": {
+        "meta_descr": "Отличный поиск школьных руксурсов на основе Google.",
+        "title": "🔍 YMP Search School | YMP School",
+        "order": 8
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "h2": {
+              "text-align": "left"
+            },
+            "h4": {
+              "text-align": "left",
+              "font-weight": "500"
+            },
+            "p": {
+              "color": "#767676",
+              "text-align": "left"
+            },
+            ".aside-content": {
+              "flex-basis": "100%",
+              "-webkit-flex-basis": "100%"
+            },
+            ".block-content": {
+              "display": "-webkit-flex",
+              "flex-direction": "column",
+              "-webkit-flex-direction": "column",
+              "word-break": "break-word"
+            },
+            ".media": {
+              "margin": "initial",
+              "align-items": "center",
+              "-webkit-align-items": "center"
+            },
+            ".mbr-figure": {
+              "align-self": "flex-start",
+              "-webkit-align-self": "flex-start",
+              "-webkit-flex-shrink": "0",
+              "flex-shrink": "0"
+            },
+            ".card-img": {
+              "padding-right": "2rem",
+              "width": "auto"
+            },
+            ".card-img span": {
+              "font-size": "72px",
+              "color": "#707070"
+            },
+            "@media (min-width: 992px)": {
+              ".mbr-figure": {
+                "padding-right": "4rem",
+                "& when (@reverseContent)": {
+                  "padding-right": "0",
+                  "padding-left": "4rem"
+                }
+              },
+              ".media-container-row": {
+                "& when (@reverseContent)": {
+                  "-webkit-flex-direction": "row-reverse"
+                }
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "padding-right": "0",
+                "padding-bottom": "1rem",
+                "margin-bottom": "2rem",
+                "& when (@reverseContent)": {
+                  "padding-bottom": "0",
+                  "margin-bottom": "0",
+                  "padding-top": "1rem",
+                  "margin-top": "2rem"
+                }
+              },
+              ".media-container-row": {
+                "& when (@reverseContent)": {
+                  "-webkit-flex-direction": "column-reverse"
+                }
+              }
+            },
+            "@media (max-width: 300px)": {
+              ".card-img span": {
+                "font-size": "40px !important"
+              }
+            }
+          },
+          "_name": "features11",
+          "_customHTML": "<section class=\"features11\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Сверху\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Снизу\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n\n        <input type=\"checkbox\" title=\"Название\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Подзаголовок\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Текст заголовка\" name=\"showTextHead\" checked>\n        <input type=\"checkbox\" title=\"Текст\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Иконки\" name=\"showIcons\" checked>\n        <input type=\"checkbox\" title=\"Медиа Слева/Справа\" name=\"reverseContent\" checked>\n        <input type=\"range\" inline title=\"Размер медиа\" name=\"mediaSize\" min=\"20\" max=\"80\" step=\"5\" value=\"70\">\n        <select title=\"Число карт\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Фоновое изображение\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Цвет фона\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Фоновое видео\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Наложение\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Цвет наложения\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Прозрачность\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">   \n        <div class=\"col-md-222\">\n            <div class=\"media-container-row\">\n                <div class=\"mbr-figure m-auto\" mbr-style=\"{'width': mediaSize + '%'}\">\n                       <iframe src=\"https://ymp-co.github.io/ymp/search/school.html\" width=\"600\" height=\"600\" align=\"center\">\n    Ваш браузер не поддерживает плавающие фреймы!\n </iframe>\n                </div>\n                <div class=\" align-left aside-content\">\n                    <h2 class=\"mbr-title pt-2 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">YMP Search School</h2>\n                    <div class=\"mbr-section-text\">\n                        <p class=\"mbr-text mb-5 pt-3 mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-text\">\n                        Простой поисковик школьных материалов на основе Google<br></p>\n                    </div>\n\n                    <div class=\"block-content\" mbr-if=\"showTextHead||showText||showIcons\">\n                        <div class=\"card p-3 pr-3\">\n                            <div class=\"media\">\n                                <div class=\" align-self-center card-img pb-3\" mbr-if=\"showIcons\">\n                                    <span mbr-icon class=\"mbr-iconfont mbri-search\"></span>\n                                </div>     \n                                <div class=\"media-body\">\n                                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTextHead\">Поиск только по образовательным сайтам</h4>\n                                </div>\n                            </div>                \n\n                            <div class=\"card-box\">\n                                <p class=\"block-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                                   В базу данных поисковика были занесены образовательные ресурсы и порталы.</p>\n                            </div>\n                        </div>\n\n                        <div class=\"card p-3 pr-3\" mbr-if=\"cardsAmount > 1\">\n                            <div class=\"media\">\n                                <div class=\"align-self-center card-img pb-3\" mbr-if=\"showIcons\">\n                                    <span mbr-icon class=\"mbri-drag-n-drop2 mbr-iconfont\"></span>\n                                </div>     \n                                <div class=\"media-body\">\n                                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTextHead\">\n                                        Полезные рекомендации при поиске</h4>\n                                </div>\n                            </div>                \n\n                            <div class=\"card-box\">\n                                <p class=\"block-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                                    Вам будут показываться только полезные запросы, которые подойдут для учебы.</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div> \n    </div>          \n</section>",
+          "_cid": "tf2AE7QLnU",
+          "_anchor": "features11-30",
+          "_sourceTheme": "mobirise4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
