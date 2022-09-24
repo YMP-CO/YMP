@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "ymp-co.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "ymp-co.github",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
