@@ -2,10 +2,14 @@
 <html amp >
 <head>
 	<link rel="manifest" href="manifest.json" />
-	<script type="module">
-   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-   const el = document.createElement('pwa-update');
-   document.body.appendChild(el);
+	<script>
+  // проверяем поддержку сервис-воркеров
+  if ('serviceWorker' in navigator) {
+    // ожидаем полной загрузки страницы
+    window.addEventListener('load', () => {
+      navigator.serviceWorker?.register('./pwabuildar-sw.js');
+    });
+  }
 </script>
 
   <!-- Site made with Mobirise Website Builder v5.4.1, https://mobirise.com -->
