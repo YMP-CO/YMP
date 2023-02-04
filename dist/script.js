@@ -27,9 +27,10 @@ sendForm.addEventListener('submit', function(event) {
 function connect() {
   //
 }
+
 navigator.bluetooth.requestDevice({
   acceptAllDevices: true
-})
+});
 // Отключиться от подключенного устройства
 function disconnect() {
   //
