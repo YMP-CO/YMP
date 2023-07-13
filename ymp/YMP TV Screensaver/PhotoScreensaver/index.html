@@ -12,7 +12,14 @@
 
   <!-- Контейнер для отображения списка фотографий -->
   <div id="photo-list"></div>
-
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+<script>
+window.onLoadCallback = function(){
+  gapi.auth2.init({
+      client_id: '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com'
+    });
+}
+</script>
   <script>
     // Инициализация Google Sign-In
     function initGoogleSignIn() {
