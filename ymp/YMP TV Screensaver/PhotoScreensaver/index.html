@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Создание заставки с фото и часами</title>
+  <style>
+    /* Стили для заставки */
+    .background-image {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .clock {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Создание заставки с фото и часами</h1>
+
+  <!-- Кнопка для входа в аккаунт Google -->
+  <div id="google-login-button"></div>
+
+  <!-- Контейнер для отображения выбранной фотографии -->
+  <div class="background-image"></div>
+
+  <!-- Часы -->
+  <div class="clock"></div>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    // Инициализация Google Sign-In
+    function initGoogleSignIn() {
+      google.accounts.id.initialize({
+        client_id: '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com',
+        callback: handleGoogleSignIn
+      });
+      google.accounts.id.renderButton(
+        document.getElementById('google-login-button'),
+        { theme: 'filled_blue', size: 'large' }
+      );
+    }
+
+    // Обработка успешного входа в аккаунт Google
+    function handleGoogleSignIn(response) {
+      if (response.credential) {
+        // Вход успешен, получение доступа к Google Фото API
+        gapi.load('client:auth2', initGooglePhotosAPI);
+      } else {
+        // Вход не удался
+        console.log('Вход не удался');
+      }
+    }
+
+    // Инициализация Google Фото API
+    function initGooglePhotosAPI() {
+      gapi.client.init({
+        apiKey: 'YOUR_API_KEY',
+        clientId: 'YOUR_CLIENT_ID',
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/photoslibrary/v1/rest'],
+        scope: 'https://www.googleapis.com/auth/photoslibrary.readonly'
+      }).then(function() {
+        // Аутентификация пользователя
+        return gapi.auth2.getAuthInstance().signIn();
+      }).then(function() {
+        // Пользователь аутентифицирован, получение фотографий
+        return gapi.client.photoslibrary.mediaItems.list({
+          pageSize: 10
+        });
+      }).then(function(response) {
+        // Обработка списка фотографий
+        var photos = response.result.mediaItems;
+        if (photos && photos.length > 0) {
+          var randomIndex = Math.floor(Math.random() * photos.length);
+          var selectedPhoto = photos[randomIndex];
+          var imageUrl = selectedPhoto.baseUrl + '=w1920-h1080-no';
+
+          // Установка выбранной фотографии как фонового изображения
+          var background = document.querySelector('.background-image');
+          background.style.backgroundImage = 'url(' + imageUrl + ')';
+
+          // Обновление времени каждую секунду
+          setInterval(updateClock, 1000);
+        } else {
+          console.log('Нет доступных фотографий');
+        }
+      }, function(error) {
+        console.log('Произошла ошибка', error);
+      });
+    }
+
+    // Обновление часов
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var clockElement = document.querySelector('.clock');
+      clockElement.textContent = hours + ':' + padZero(minutes) + ':' + padZero(seconds);
+    }
+
+    // Добавление нуля перед числом, если оно меньше 10
+    function padZero(number) {
+      return (number < 10) ? '0' + number : number;
+    }
+
+    // Загрузка Google Sign-In и инициализация после загрузки
+    window.addEventListener('load', function() {
+      initGoogleSignIn();
+    });
+  </script>
+</body>
+</html>
