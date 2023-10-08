@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v5.8.4, mobirise.com">
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="assets/images/index_en-meta.png">
-  <meta property="og:image" content="assets/images/index_en-meta.png">
-  <meta name="twitter:title" content="New Screensavers | YMP TV Screensaver">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/1024-128x128.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
   <meta name="description" content="">
   
   
-  <title>New Screensavers | YMP TV Screensaver</title>
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
@@ -29,64 +29,276 @@
 </head>
 <body>
   
-  <section data-bs-version="5.1" class="features3 cid-tIhyrLHMIZ" id="features3-e">
+  <section data-bs-version="5.1" class="header4 cid-tyRIMrjOK5 mbr-fullscreen mbr-parallax-background" id="header4-1">
+
+    
+    <div class="mbr-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="content-wrap">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1">
+                    <strong>YMP TV Screensaver</strong></h1>
+                
+                <p class="mbr-fonts-style mbr-text mbr-white mb-3 display-5">Необычные заставки для вашего телевизора или компьютера</p>
+
+                <div class="mbr-section-btn"><a class="btn btn-success display-4" href="https://play.google.com/store/apps/details?id=com.ymp.tv.tvscreensaver" target="_blank"><span class="socicon socicon-play mbr-iconfont mbr-iconfont-btn"></span>Скачать в Play Market</a> <a class="btn btn-white display-4" href="https://4pda.to/forum/index.php?showtopic=1065360" target="_blank">Скачать на 4PDA</a></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="witsec-modal-window-block-v" data-rv-view="6">
+
+	<style>
+	/* Let's not animate the contents of modal windows */
+	.no-anim {
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	</style>
+
+	
+	
+	<div><div class="modal fade" id="donate-please" tabindex="-1" role="dialog" aria-labelledby="donate-pleaseLabel" aria-hidden="true">  <div class="modal-dialog  modal-dialog-centered" style="height:auto" role="document">    <div class="modal-content"><div class="modal-header">  <h5 class="no-anim modal-title display-7" id="donate-pleaseLabel"></h5><h3><strong>Поддержите мой проект!</strong><!--3--></h3>  <a href="#" class="no-anim close" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div><div class="modal-body display-7" id="donate-please_body"><img src="assets/images/ymp-tv-screenser.png">
+<h6>&nbsp;</h6>
+<h4>Тебе нравится мой проект?  Покажите свою поддержку, сделав пожертвование.
+Внесите свой вклад в YMP TV Screensaver!
+
+<a href="https://www.donationalerts.com/r/ymp_yuri" target="_blank">Поддержать и задонатить!</a></h4></div><div class="modal-footer"><div class="mbr-section-btn"><a href="#" class="no-anim btn btn-secondary display-4" data-bs-dismiss="modal" data-dismiss="modal">Закрыть</a></div></div>    </div>  </div></div><script> 
+document.addEventListener("DOMContentLoaded", function() { 
+  if(typeof jQuery === "function") {
+    $("#donate-please").on("hidden.bs.modal", function () { 
+      var html = $( "#donate-please_body" ).html(); 
+      $( "#donate-please_body" ).empty(); 
+      $( "#donate-please_body" ).append(html); 
+    }) 
+  } else { 
+      var mdw = document.getElementById("#donate-please") 
+      mdw.addEventListener("hidden.bs.modal", function(event) { 
+        mdw.innerHTML = mdw.innerHTML; 
+      }); 
+  } 
+}); 
+</script></div>
+
+	<script>
+	if (typeof OpenModal === 'undefined') {
+		OpenModal = function(modalName) {
+			if(typeof jQuery === "function") {
+				if ($('#' + modalName).length)
+					$('#' + modalName).modal('show');
+				else
+					alert("Sorry, but there is no modal for " + modalName);
+			} else {
+				let mdw = new bootstrap.Modal(document.getElementById(modalName), {});
+				mdw.show();
+			}
+		}
+	}
+
+	function modalSetCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function modalGetCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+	</script>
+
+</section><script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (modalGetCookie("donate-please_viewed") == "") {
+    setTimeout( function() {
+      if (document.cookie)
+        modalSetCookie("donate-please_viewed", true, 3600);
+      OpenModal("donate-please");
+    } , 10000);
+  }
+});
+</script>
+
+<section data-bs-version="5.1" class="gallery1 cid-tyRMZcABWZ" id="gallery1-5">
     
     
     <div class="container">
         <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>New screensavers</strong></h4>
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Additional screensavers for your TV!</h5>
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Примеры заставок</strong></h4>
+            
         </div>
         <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/-2023-06-11-140849-695x391.png" alt="" data-slide-to="0" data-bs-slide-to="0">
+                        <img src="assets/images/2023-03-5.png" alt="">
                     </div>
-                <center>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>"The Matrix Code."</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">This screensaver creates the effect of the future and fills the space with mystery and modernity.&nbsp;There is also a clock widget.</p>
-                    </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="https://play.google.com/store/apps/details?id=com.ymp.tv.screensaver.the_matrix_code" class="btn item-btn btn-success display-7" target="_blank">Download &gt;</a></div>
-                    </center>
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/-2023-06-11-184157-1-695x391.png" alt="" data-slide-to="1" data-bs-slide-to="1">
-                    </div>
-                <center>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>"Japan"</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Explore the world of Japan. Here you can immerse yourself in the unique culture, traditions and beauty of this amazing country.</p>
-                    </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="https://play.google.com/store/apps/details?id=com.ymp.tv.screensaver.Japan_theme" class="btn item-btn btn-success display-7" target="_blank">Download &gt;</a></div>
-                    </center>
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/mbr-695x468.jpg" alt="" data-slide-to="2" data-bs-slide-to="2">
-                    </div>
-                <center>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>Coming Soon!</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Exciting new screensavers will be available soon!</p>
-                    </div>
-               
-                    </center>
+                    
+                    
                 </div>
             </div>
-            
-            
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/2023-03-6.png" alt="">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/2023-03-10.png" alt="">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/2023-03-18.png" alt="" title="">
+                    </div>
+                    
+                    
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<section data-bs-version="5.1" class="content5 cid-tySRhC6Ukl" id="content5-a">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-2">
+                    Описание приложения</h4>
+                <p class="mbr-text mbr-fonts-style display-7"><strong>YMP TV Screensaver</strong> - это приложение, предоставляющие пользователям возможность использовать необычные заставки и изображения на своих устройствах. 
+<br>
+<br>В приложении предустановлено 5 активных заставок и изображений, которые можно использовать на рабочем столе. Кроме того, заставки могут отображать дополнительные виджеты: виджет погоды, виджет часов и другие. 
+<br>
+<br>Приложение предоставляет пользователям возможность быстро и легко устанавливать и изменять заставки.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15 cid-tySScTBkWr" id="content15-e">
+
+    
+
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-10">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5">
+                            <strong>Хотите поддержать юного разработчика?</strong></h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Вы можете поддержать его донатом, нажав на кнопку ниже:</p>
+                        <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="https://mobiri.se"><span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Поддержать автора</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="form5 cid-tyT4cE7M30" id="form5-k">
+    
+    
+    <div class="container-fluid">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Возникли проблемы?</strong></h3>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Мы вам поможем!</h4>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="tBjHpHWud7wX6FByv8AorLneeL8xwn1HG9nZMgB3zZJ+QPyaBWCyihhoEK7H0OOFljZ5TvVcIfyC1diiGcG62a/Lj3bA/dOrdXSa3RStN35Bm1zIF3Opr7lU2foCdt+e">
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Спасибо! Мы вам ответим!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Имя" data-form-field="name" class="form-control" value="" id="name-form5-k">
+                        </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="Почта" data-form-field="email" class="form-control" value="" id="email-form5-k">
+                        </div>
+                        
+                        <div class="col-12 form-group mb-3" data-for="textarea">
+                            <textarea name="textarea" placeholder="Сообщение об ошибке" data-form-field="textarea" class="form-control" id="textarea-form5-k"></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-white display-4"><span class="mobi-mbri mobi-mbri-paper-plane mbr-iconfont mbr-iconfont-btn"></span>Отправить</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-tyT2uu1AL2" once="footers" id="footer4-j">
+
+    
+    
+    <div class="container">
+        <div class="row mbr-white">
+            <div class="col-6 col-lg-3">
+                <div class="media-wrap col-md-8 col-12">
+                    <a href="index.html">
+                        <img src="assets/images/play-store-512-337x337.png" alt="YMP TV Screensaver">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>YMP TV Screensaver</strong></h5>
+                <p class="mbr-text mbr-fonts-style mb-4 display-4">Необычные заставки для вашего телевизора или компьютера!<br></p>
+                
+                
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Скачать приложение</strong></h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap"><a href="https://play.google.com/store/apps/details?id=com.ymp.tv.tvscreensaver" class="text-white" target="_blank">Google Play</a></li><li class="mbr-text item-wrap"><a href="https://4pda.to/forum/index.php?showtopic=1065360" class="text-white" target="_blank">4PDA</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Помощь и поддержка</strong></h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap"><a href="help.html" class="text-white text-primary">Связаться со мной</a></li><li class="mbr-text item-wrap"><a href="https://www.donationalerts.com/r/ymp_yuri" class="text-white text-primary" target="_blank">Поддержать автора</a></li><li class="mbr-text item-wrap"><a href="privacy_policy.html" class="text-white text-primary" target="_blank">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/1712001" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">Made with &#8204;</p><a style="z-index:1" href="https://mobirise.com/html-editor.html">HTML Editor</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
   
   
-</body>
+ <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+  </body>
 </html>
