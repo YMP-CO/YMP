@@ -14,25 +14,6 @@
       background-size: cover;
       background-position: center;
     }
-    #dialog {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-    #photo-container img {
-      width: 100px; /* Размер миниатюры */
-      margin: 5px;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -42,8 +23,8 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
   <script>
-    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html';
+    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com ';
+    const REDIRECT_URI = 'http://ymp-co.github.io/TvScreensaverPhotos/index.html';
     const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
     const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
     const API_KEY = 'AIzaSyAocyYlBmQmguCP7zEsqMmzHrqhig-aRX0';
@@ -58,6 +39,7 @@
 
     function onApiLoad() {
       gapi.load('auth', {'callback': onAuthApiLoad});
+      gapi.load('picker'); // Загрузка Picker API
     }
 
     function onAuthApiLoad() {
@@ -84,13 +66,11 @@
 
     selectPhotoButton.addEventListener('click', openPicker);
 
-    // Установка фона и кэширование
     function setBackground(imageUrl) {
       document.body.style.backgroundImage = `url(${imageUrl})`;
       localStorage.setItem('backgroundImage', imageUrl);
     }
 
-    // Восстановление фона из кэша при загрузке страницы
     window.onload = () => {
       const cachedImage = localStorage.getItem('backgroundImage');
       if (cachedImage) {
@@ -102,7 +82,6 @@
       }
     };
 
-    // Функция для получения токена доступа из URL после редиректа
     function getAccessTokenFromUrl() {
       const urlParams = new URLSearchParams(window.location.hash.substring(1));
       return urlParams.get('access_token');
