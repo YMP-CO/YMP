@@ -3,58 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Photos Auth</title>
+  <title>Выбор фото из Google Photos</title>
+  <style>
+    body {
+      transition: background-image 0.5s ease;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+    }
+    #dialog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    #photo-container img {
+      width: 100px; /* Размер миниатюры */
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Авторизация через Google</h1>
+  <h1>Выбор фото из Google Photos</h1>
   <button id="login-button">Войти через Google</button>
+  <button id="select-photo" style="display:none;">Выбрать фото из Google Photos</button>
 
-  <div id="photos-container"></div>
-
+  <script src="https://apis.google.com/js/api.js"></script>
   <script>
     const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html'; // Укажите редирект URI, тот же, что вы настроили в Google Console
+    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html';
     const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
     const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
+    const API_KEY = 'AIzaSyAocyYlBmQmguCP7zEsqMmzHrqhig-aRX0';
 
     const loginButton = document.getElementById('login-button');
+    const selectPhotoButton = document.getElementById('select-photo');
+
     loginButton.addEventListener('click', () => {
       const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
       window.location.href = authUrl;
     });
 
+    function onApiLoad() {
+      gapi.load('auth', {'callback': onAuthApiLoad});
+    }
+
+    function onAuthApiLoad() {
+      selectPhotoButton.style.display = 'block'; // Показать кнопку выбора фото
+    }
+
+    function openPicker() {
+      const picker = new google.picker.PickerBuilder()
+        .addView(google.picker.ViewId.PHOTO_PICKER)
+        .setOAuthToken(accessToken)
+        .setDeveloperKey(API_KEY)
+        .setCallback(pickerCallback)
+        .build();
+      picker.setVisible(true);
+    }
+
+    function pickerCallback(data) {
+      if (data[google.picker.Response.ACTION] === google.picker.Action.PICKED) {
+        const doc = data[google.picker.Response.DOCUMENTS][0];
+        const imageUrl = doc[google.picker.Document.URL];
+        setBackground(imageUrl);
+      }
+    }
+
+    selectPhotoButton.addEventListener('click', openPicker);
+
+    // Установка фона и кэширование
+    function setBackground(imageUrl) {
+      document.body.style.backgroundImage = `url(${imageUrl})`;
+      localStorage.setItem('backgroundImage', imageUrl);
+    }
+
+    // Восстановление фона из кэша при загрузке страницы
+    window.onload = () => {
+      const cachedImage = localStorage.getItem('backgroundImage');
+      if (cachedImage) {
+        setBackground(cachedImage);
+      }
+      const accessToken = getAccessTokenFromUrl();
+      if (accessToken) {
+        onApiLoad();
+      }
+    };
+
     // Функция для получения токена доступа из URL после редиректа
     function getAccessTokenFromUrl() {
       const urlParams = new URLSearchParams(window.location.hash.substring(1));
       return urlParams.get('access_token');
-    }
-
-    // Функция для получения фотографий с Google Photos
-    async function getPhotos(accessToken) {
-      const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-      const data = await response.json();
-      return data.mediaItems || [];
-    }
-
-    // Отобразить фотографии
-    function displayPhotos(photos) {
-      const container = document.getElementById('photos-container');
-      photos.forEach(photo => {
-        const img = document.createElement('img');
-        img.src = photo.baseUrl;
-        img.alt = photo.filename;
-        container.appendChild(img);
-      });
-    }
-
-    // Проверяем наличие токена доступа и загружаем фотографии
-    const accessToken = getAccessTokenFromUrl();
-    if (accessToken) {
-      getPhotos(accessToken).then(displayPhotos);
     }
   </script>
 </body>
