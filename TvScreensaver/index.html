@@ -488,9 +488,7 @@ function handlePhotoDialogNavigation(event) {
         case 'Left':
             selectedIndex = Math.max(selectedIndex - 1, 0);
             break;
-        case 'ArrowDown':
-        case 'Down':
-            selectedIndex = Math.min(selectedIndex + columns, photos.length - 1);
+          selectedIndex = Math.min(selectedIndex + columns, photos.length - 1);
             break;
         case 'ArrowUp':
         case 'Up':
@@ -560,6 +558,8 @@ document.getElementById('logout-button').addEventListener('click', logout);
 
 // Запуск приложения
 init();
+
+    
   </script>
 </body>
 
