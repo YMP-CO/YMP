@@ -287,6 +287,47 @@
     setInterval(updateTime, 1000);
     updateTime();
 
+// Функция для управления фокусом
+function handleGlobalNavigation(event) {
+    // Если открыто окно выбора фото, используем существующую навигацию
+    if (isDialogOpen) {
+        handlePhotoDialogNavigation(event);
+        return;
+    }
+    // Получаем все видимые кнопки
+    const visibleButtons = focusableElements
+        .map(id => document.getElementById(id))
+        .filter(element => element && element.style.display !== 'none');
+    // Если нет видимых кнопок, выходим
+    if (!visibleButtons.length) return;
+    // Если нет текущего фокуса, устанавливаем на первую кнопку
+    if (!focusedElement) {
+        focusedElement = visibleButtons[0];
+        focusedElement.focus();
+        return;
+    }
+    const currentIndex = visibleButtons.indexOf(focusedElement);
+    switch (event.key) {
+        case 'ArrowUp':
+        case 'Up':
+            event.preventDefault();
+            const prevIndex = (currentIndex - 1 + visibleButtons.length) % visibleButtons.length;
+            focusedElement = visibleButtons[prevIndex];
+            break;
+        case 'ArrowDown':
+        case 'Down':
+            event.preventDefault();
+            const nextIndex = (currentIndex + 1) % visibleButtons.length;
+            focusedElement = visibleButtons[nextIndex];
+            break;
+        case 'Enter':
+        case 'Return':
+            event.preventDefault();
+            focusedElement.click();
+            break;
+    }
+    focusedElement.focus();
+}
     function openAuth() {
       const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
       window.location.href = authUrl;
@@ -335,26 +376,22 @@
       });
     }
 
-    function selectPhoto(index, baseUrl) {
-      selectedIndex = index;
-      const highResolutionUrl = `${baseUrl}=d`;
-      document.body.style.backgroundImage = `url(${highResolutionUrl})`;
-      localStorage.setItem('backgroundImage', highResolutionUrl);
-      closePhotoDialog();
-    }
-
-    function handleGlobalNavigation(event) {
-      const visibleButtons = focusableElements
-        .map(id => document.getElementById(id))
-        .filter(element => element && element.style.display !== 'none');
-
-      if (!visibleButtons.length) return;
-
-      if (!focusedElement) {
-        focusedElement = visibleButtons[0];
-        focusedElement.focus();
-        return;
-      }
+function selectPhoto(index, baseUrl) {
+    selectedIndex = index;
+    const highResolutionUrl = `${baseUrl}=d`;
+    
+    // Сначала закрываем диалоговое окно
+    const dialog = document.getElementById('photo-dialog');
+    dialog.classList.remove('active');
+    document.removeEventListener('keydown', handlePhotoDialogNavigation);
+    
+    // После закрытия анимации устанавливаем фон и сохраняем в localStorage
+    setTimeout(() => {
+        dialog.style.display = 'none';
+        document.body.style.backgroundImage = `url(${highResolutionUrl})`;
+        localStorage.setItem('backgroundImage', highResolutionUrl);
+    }, 300);
+}
 
       const currentIndex = visibleButtons.indexOf(focusedElement);
 
@@ -383,24 +420,26 @@
       focusedElement.focus();
     }
 
-    function openPhotoDialog() {
-      const dialog = document.getElementById('photo-dialog');
-      dialog.style.display = 'flex';
-      setTimeout(() => {
-        dialog.classList.add('active');
-        document.getElementById('close-button').focus();
-      }, 10);
-    }
-
-    function closePhotoDialog() {
-      const dialog = document.getElementById('photo-dialog');
-      dialog.classList.remove('active');
-      setTimeout(() => {
+// Открыть диалог выбора фото
+function openPhotoDialog() {
+    isDialogOpen = true;
+    const dialog = document.getElementById('photo-dialog');
+    dialog.style.display = 'flex';
+    setTimeout(() => dialog.classList.add('active'), 10);
+    document.removeEventListener('keydown', handleGlobalNavigation);
+    document.addEventListener('keydown', handlePhotoDialogNavigation);
+}
+function closePhotoDialog() {
+    isDialogOpen = false;
+    const dialog = document.getElementById('photo-dialog');
+    dialog.classList.remove('active');
+    document.removeEventListener('keydown', handlePhotoDialogNavigation);
+    document.addEventListener('keydown', handleGlobalNavigation);
+    setTimeout(() => {
         dialog.style.display = 'none';
-      }, 300);
-      document.getElementById('choose-photo-button').focus();
-    }
-
+    }, 300);
+    document.getElementById('choose-photo-button').focus();
+  
     function logout() {
       localStorage.clear();
       accessToken = null;
