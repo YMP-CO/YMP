@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+<head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Фото Выбор</title>
@@ -22,9 +22,9 @@
     /* Часы */
     #time-container {
       position: absolute;
-      bottom: 16px;
-      left: 16px;
-      font-size: 50px;
+      bottom: 50px;
+      left: 15px;
+      font-size: 100px;
       font-weight: 300;
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -35,13 +35,13 @@
 
     #time-container .background {
       position: absolute;
-      top: 0;
+      top: 1;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100px;
       background-color: rgba(0, 0, 0, 0.5);
-      z-index: -1; /* Отправляем фон назад */
-      padding: 8px 16px; /* Отступы для фона */
+      z-index: 0; /* Отправляем фон назад */
+      padding: 20px 20px; /* Отступы для фона */
       box-sizing: border-box;
     }
 
@@ -347,40 +347,12 @@
       }, 300);
     }
 
-// Выйти из аккаунта
-function logout() {
-    // Очистка локального хранилища
-    localStorage.clear();
-    accessToken = null;
-
-    // Создаем URL для выхода из Google аккаунта
-    const googleLogoutUrl = 'https://accounts.google.com/Logout';
-    
-    // Создаем скрытый iframe для выполнения выхода из Google
-    const logoutFrame = document.createElement('iframe');
-    logoutFrame.style.display = 'none';
-    logoutFrame.src = googleLogoutUrl;
-    
-    document.body.appendChild(logoutFrame);
-    
-    // Ждем загрузки iframe и затем удаляем его
-    logoutFrame.onload = () => {
-        document.body.removeChild(logoutFrame);
-        
-        // Revoke OAuth token
-        const revokeUrl = `https://accounts.google.com/o/oauth2/revoke?token=${accessToken}`;
-        fetch(revokeUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).finally(() => {
-            // Перенаправляем на страницу входа Google для очистки всех сессий
-            window.location.href = 'https://accounts.google.com/Logout?continue=' + 
-                encodeURIComponent(window.location.origin + window.location.pathname);
-        });
-    };
-}
+    // Выйти из аккаунта
+    function logout() {
+      localStorage.clear(); // Очистка кеша
+      accessToken = null;
+      window.location.href = window.location.pathname; // Перезагрузка страницы
+    }
 
     // Загрузка сохраненного фона из кеша
     function loadCachedBackground() {
