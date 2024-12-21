@@ -9,27 +9,6 @@
       transition: background-image 0.5s ease;
       background-size: cover;
       background-position: center;
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-    }
-    h1 {
-      text-align: center;
-      margin: 20px;
-    }
-    button {
-      font-size: 16px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #6200ea;
-      color: white;
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    button:hover {
-      background-color: #3700b3;
     }
     #dialog {
       position: fixed;
@@ -38,35 +17,44 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 999;
+      overflow: auto;
     }
     #photo-container {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      padding: 10px;
-      overflow-y: auto;
-      max-height: 70%;
+      padding: 20px;
       width: 90%;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      max-height: 80%;
+      overflow-y: auto;
     }
     #photo-container img {
       width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #photo-container img:hover {
+      transform: scale(1.1);
     }
     #close-dialog {
-      background-color: #6200ea;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #6200ee;
+      border: none;
+      border-radius: 5px;
       color: white;
-      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #close-dialog:hover {
+      background-color: #3700b3;
     }
   </style>
 </head>
@@ -81,7 +69,7 @@
 
   <script>
     const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html'; //redirect
+    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html';
     const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
     const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
@@ -91,27 +79,24 @@
       window.location.href = authUrl;
     });
 
+    // Получение токена доступа из URL
     function getAccessTokenFromUrl() {
       const urlParams = new URLSearchParams(window.location.hash.substring(1));
       return urlParams.get('access_token');
     }
 
+    // Получение фотографий из Google Photos
     async function getPhotos(accessToken) {
-      const photos = [];
-      let nextPageToken = '';
-      do {
-        const response = await fetch(`https://photoslibrary.googleapis.com/v1/mediaItems?pageSize=25&pageToken=${nextPageToken}`, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        });
-        const data = await response.json();
-        photos.push(...(data.mediaItems || []));
-        nextPageToken = data.nextPageToken || '';
-      } while (nextPageToken);
-      return photos;
+      const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      const data = await response.json();
+      return data.mediaItems || [];
     }
 
+    // Открытие диалога выбора изображений
     function openDialog(photos) {
       const dialog = document.getElementById('dialog');
       const photoContainer = document.getElementById('photo-container');
@@ -119,29 +104,31 @@
 
       photos.forEach(photo => {
         const img = document.createElement('img');
-        img.src = photo.baseUrl + '=w200'; // Миниатюры
+        img.src = photo.baseUrl + '=w300'; // Уменьшение размера для миниатюры
         img.alt = photo.filename;
 
         img.addEventListener('click', () => {
-          setBackground(photo.baseUrl);
-          dialog.style.display = 'none';
+          setBackground(photo.baseUrl + '=d'); // Использование высокого качества
+          dialog.style.display = 'none'; // Закрыть диалог
         });
 
         photoContainer.appendChild(img);
       });
 
-      dialog.style.display = 'flex';
+      dialog.style.display = 'flex'; // Показать диалог
     }
 
     document.getElementById('close-dialog').addEventListener('click', () => {
       document.getElementById('dialog').style.display = 'none';
     });
 
+    // Установка фона
     function setBackground(imageUrl) {
-      document.body.style.backgroundImage = `url(${imageUrl}=d)`; // Полное качество
-      localStorage.setItem('backgroundImage', imageUrl);
+      document.body.style.backgroundImage = `url(${imageUrl})`;
+      localStorage.setItem('backgroundImage', imageUrl); // Кэширование в localStorage
     }
 
+    // Восстановление фона из кэша при загрузке страницы
     window.onload = () => {
       const cachedImage = localStorage.getItem('backgroundImage');
       if (cachedImage) {
