@@ -495,7 +495,6 @@ async function init() {
   const logoutButton = document.getElementById('logout-button');
 
   if (!accessToken) {
-    authButton.style.display = if (!accessToken) {
     authButton.style.display = 'block';
     choosePhotoButton.style.display = 'none';
     logoutButton.style.display = 'none';
@@ -530,6 +529,7 @@ async function init() {
 
 // Вызываем init при загрузке страницы
 document.addEventListener('DOMContentLoaded', init);
+
                          </script>
 </body>
 
