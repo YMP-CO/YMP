@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Фото Выбор</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #303030;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Часы */
+    #time-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 100px;
+      font-weight: 300;
+    }
+
+    #time-container .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* Кнопка авторизации или выбора изображения */
+    #auth-container {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      z-index: 10;
+    }
+
+    .mdl-button {
+      background-color: #4285f4;
+      color: white;
+      font-size: 16px;
+      text-transform: none;
+    }
+
+    .mdl-button:hover {
+      background-color: #357ae8;
+    }
+
+    /* Окно выбора фотографии */
+    #photo-dialog {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 400px;
+      height: 600px;
+      background-color: #424242;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: none;
+      flex-direction: column;
+      padding: 16px;
+      z-index: 20;
+    }
+
+    #photo-dialog.active {
+      display: flex;
+    }
+
+    #photo-dialog .title {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .photo-grid {
+      flex-grow: 1;
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, 1fr);
+      overflow-y: auto;
+    }
+
+    .photo-item {
+      position: relative;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .photo-item.selected {
+      outline: 3px solid #4285f4;
+    }
+
+    .photo-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Стилизация скроллбара */
+    .photo-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .photo-grid::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .photo-grid::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Часы -->
+  <div id="time-container">
+    <div class="background"></div>
+    <div id="clock"></div>
+  </div>
+
+  <!-- Кнопка авторизации или выбора изображения -->
+  <div id="auth-container">
+    <button id="auth-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      Войти через Google
+    </button>
+    <button id="choose-photo-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="display: none;">
+      Выбрать изображение
+    </button>
+  </div>
+
+  <!-- Окно выбора фотографии -->
+  <div id="photo-dialog">
+    <div class="title">Выберите изображение из Google Фото:</div>
+    <div class="photo-grid" id="photo-grid"></div>
+  </div>
+
+  <script>
+    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
+    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
+    const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
+    const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
+
+    let selectedIndex = 0;
+    let photos = [];
+    let accessToken = null;
+
+    // Обновление времени
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Открыть окно авторизации
+    function openAuth() {
+      const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
+      window.location.href = authUrl;
+    }
+
+    // Получить access_token из URL
+    function getAccessToken() {
+      const hash = window.location.hash.substring(1);
+      const params = new URLSearchParams(hash);
+      return params.get('access_token');
+    }
+
+    // Получить фотографии
+    async function fetchPhotos() {
+      try {
+        const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Не удалось загрузить фотографии');
+        }
+
+        const data = await response.json();
+        return data.mediaItems || [];
+      } catch (error) {
+        console.error('Ошибка:', error);
+        return [];
+      }
+    }
+
+    // Рендер фотографий
+    function renderPhotos() {
+      const photoGrid = document.getElementById('photo-grid');
+      photoGrid.innerHTML = '';
+
+      photos.forEach((photo, index) => {
+        const photoItem = document.createElement('div');
+        photoItem.classList.add('photo-item');
+        if (index === selectedIndex) {
+          photoItem.classList.add('selected');
+        }
+
+        const img = document.createElement('img');
+        img.src = `${photo.baseUrl}=w200-h200-c`;
+        img.alt = photo.filename || `Фото ${index + 1}`;
+
+        photoItem.appendChild(img);
+        photoItem.addEventListener('click', () => {
+          selectedIndex = index;
+          localStorage.setItem('backgroundImage', photo.baseUrl);
+          renderPhotos();
+        });
+
+        photoGrid.appendChild(photoItem);
+      });
+    }
+
+    // Инициализация
+    async function init() {
+      accessToken = getAccessToken();
+
+      if (!accessToken) {
+        document.getElementById('auth-button').style.display = 'block';
+        document.getElementById('choose-photo-button').style.display = 'none';
+      } else {
+        document.getElementById('auth-button').style.display = 'none';
+        document.getElementById('choose-photo-button').style.display = 'block';
+
+        photos = await fetchPhotos();
+        renderPhotos();
+      }
+    }
+
+    // Обработчики событий
+    document.getElementById('auth-button').addEventListener('click', openAuth);
+    document.getElementById('choose-photo-button').addEventListener('click', () => {
+      document.getElementById('photo-dialog').classList.toggle('active');
+    });
+
+    init();
+  </script>
+</body>
+</html>
