@@ -15,30 +15,22 @@
       background-color: #303030;
       color: white;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
     }
 
     /* Часы */
     #time-container {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 100px;
+      bottom: 16px;
+      left: 16px;
+      font-size: 50px;
       font-weight: 300;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
-    #time-container .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
-
-    /* Кнопка авторизации или выбора изображения */
+    /* Кнопки авторизации, выхода и выбора */
     #auth-container {
       position: absolute;
       bottom: 16px;
@@ -54,6 +46,19 @@
       color: white;
       font-size: 16px;
       text-transform: none;
+    }
+
+    .mdl-button.logout {
+      background-color: transparent;
+      color: #ccc;
+      font-size: 12px;
+      text-transform: none;
+      border: 1px solid #ccc;
+      margin-top: 8px;
+    }
+
+    .mdl-button.logout:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     .mdl-button:hover {
@@ -73,10 +78,13 @@
       flex-direction: column;
       padding: 16px;
       z-index: 20;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
     }
 
     #photo-dialog.active {
       display: flex;
+      transform: translateY(0);
     }
 
     #photo-dialog .title {
@@ -88,9 +96,10 @@
     .photo-grid {
       flex-grow: 1;
       display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Исправлено на 2 столбца */
       gap: 8px;
-      grid-template-columns: repeat(2, 1fr);
       overflow-y: auto;
+      padding-bottom: 16px;
     }
 
     .photo-item {
@@ -114,6 +123,23 @@
       transform: scale(1.05);
     }
 
+    /* Крестик для закрытия */
+    #close-button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+
+    #close-button:focus {
+      color: #4285f4;
+    }
+
     /* Стилизация скроллбара */
     .photo-grid::-webkit-scrollbar {
       width: 8px;
@@ -132,11 +158,10 @@
 <body>
   <!-- Часы -->
   <div id="time-container">
-    <div class="background"></div>
     <div id="clock"></div>
   </div>
 
-  <!-- Кнопка авторизации или выбора изображения -->
+  <!-- Кнопки авторизации, выбора и выхода -->
   <div id="auth-container">
     <button id="auth-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
       Войти через Google
@@ -144,17 +169,21 @@
     <button id="choose-photo-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="display: none;">
       Выбрать изображение
     </button>
+    <button id="logout-button" class="mdl-button logout mdl-js-button mdl-js-ripple-effect" style="display: none;">
+      Выйти из аккаунта
+    </button>
   </div>
 
   <!-- Окно выбора фотографии -->
   <div id="photo-dialog">
+    <button id="close-button" title="Закрыть">×</button>
     <div class="title">Выберите изображение из Google Фото:</div>
     <div class="photo-grid" id="photo-grid"></div>
   </div>
 
   <script>
-    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
+    const CLIENT_ID = 'ВАШ_CLIENT_ID';
+    const REDIRECT_URI = 'ВАШ_REDIRECT_URI';
     const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
     const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
@@ -225,12 +254,33 @@
         photoItem.appendChild(img);
         photoItem.addEventListener('click', () => {
           selectedIndex = index;
-          localStorage.setItem('backgroundImage', photo.baseUrl);
-          renderPhotos();
+          document.body.style.backgroundImage = `url(${photo.baseUrl})`;
+          closePhotoDialog();
         });
 
         photoGrid.appendChild(photoItem);
       });
+    }
+
+    // Открыть/закрыть окно выбора фотографий
+    function openPhotoDialog() {
+      document.getElementById('photo-dialog').classList.add('active');
+    }
+
+    function closePhotoDialog() {
+      const dialog = document.getElementById('photo-dialog');
+      dialog.classList.remove('active');
+      setTimeout(() => {
+        dialog.style.display = 'none';
+      }, 300);
+    }
+
+    // Выйти из аккаунта
+
+    function logout() {
+      localStorage.clear();
+      accessToken = null;
+      window.location.reload();
     }
 
     // Инициализация
@@ -240,9 +290,11 @@
       if (!accessToken) {
         document.getElementById('auth-button').style.display = 'block';
         document.getElementById('choose-photo-button').style.display = 'none';
+        document.getElementById('logout-button').style.display = 'none';
       } else {
         document.getElementById('auth-button').style.display = 'none';
         document.getElementById('choose-photo-button').style.display = 'block';
+        document.getElementById('logout-button').style.display = 'block';
 
         photos = await fetchPhotos();
         renderPhotos();
@@ -252,8 +304,13 @@
     // Обработчики событий
     document.getElementById('auth-button').addEventListener('click', openAuth);
     document.getElementById('choose-photo-button').addEventListener('click', () => {
-      document.getElementById('photo-dialog').classList.toggle('active');
+      const dialog = document.getElementById('photo-dialog');
+      dialog.style.display = 'flex';
+      setTimeout(() => dialog.classList.add('active'), 10);
     });
+
+    document.getElementById('close-button').addEventListener('click', closePhotoDialog);
+    document.getElementById('logout-button').addEventListener('click', logout);
 
     init();
   </script>
