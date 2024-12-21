@@ -16,14 +16,13 @@
     }
     .dialog {
       width: 90%;
-      max-width: 800px;
+      max-width: 600px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 16px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
     }
     .title {
       font-size: 18px;
@@ -32,16 +31,13 @@
     }
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 колонок */
-      grid-gap: 8px;
-      overflow-y: auto;
-      max-height: 70vh;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
     }
     .photo-grid img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 1; /* Сохраняем квадратную форму */
+      height: 100px;
+      object-fit: cover; /* Убедимся, что изображения не искажаются */
       border-radius: 4px;
       cursor: pointer;
       transition: transform 0.2s;
@@ -74,72 +70,42 @@
   </div>
 
   <script>
-    // Получить фотографии из Google Photos
+    // Получить фотографии из localStorage
     const photos = JSON.parse(localStorage.getItem('photos')) || [];
 
     const photoGrid = document.getElementById('photo-grid');
-    let selectedIndex = 0;
 
-function renderPhotos() {
-  photoGrid.innerHTML = '';
-  if (photos.length === 0) {
-    const message = document.createElement('div');
-    message.textContent = 'Нет фотографий для отображения';
-    photoGrid.appendChild(message);
-    return;
-  }
-  
-  photos.forEach((photo, index) => {
-    const img = document.createElement('img');
-    img.src = photo.baseUrl; // Пробуем без изменения размера
-    img.alt = photo.filename || `Photo ${index + 1}`;
-    img.tabIndex = 0;
-    img.dataset.index = index;
-
-    img.addEventListener('click', () => selectPhoto(photo.baseUrl));
-    img.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        selectPhoto(photo.baseUrl);
+    function renderPhotos() {
+      // Проверим, есть ли фотографии
+      if (photos.length === 0) {
+        const noPhotosMessage = document.createElement('div');
+        noPhotosMessage.textContent = 'Нет фотографий для отображения';
+        photoGrid.appendChild(noPhotosMessage);
+        return;
       }
-    });
 
-    // Обработка ошибок для изображений
-    img.onerror = function() {
-      console.log('Ошибка загрузки изображения:', img.src);
-      img.alt = 'Ошибка загрузки';
-    };
+      photoGrid.innerHTML = ''; // Очистить сетку
 
-    photoGrid.appendChild(img);
-  });
-  focusOnImage(selectedIndex); // Фокус на выбранное изображение
-}
+      photos.forEach((photo, index) => {
+        const img = document.createElement('img');
+        img.src = `${photo.baseUrl}=w300-h300-c`; // Показываем середину изображения
+        img.alt = photo.filename || `Photo ${index + 1}`;
+        img.tabIndex = 0; // Для управления с клавиатуры
 
+        img.addEventListener('click', () => selectPhoto(photo.baseUrl));
+        img.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            selectPhoto(photo.baseUrl);
+          }
+        });
+
+        photoGrid.appendChild(img);
+      });
+    }
 
     function selectPhoto(baseUrl) {
       localStorage.setItem('backgroundImage', baseUrl);
       window.location.href = 'display.html';
-    }
-
-    // Функции для навигации с клавиатуры или пульта
-    function focusOnImage(index) {
-      const images = photoGrid.querySelectorAll('img');
-      if (images[index]) {
-        images[index].focus();
-      }
-    }
-
-    function navigate(event) {
-      const images = photoGrid.querySelectorAll('img');
-      if (event.key === 'ArrowRight') {
-        selectedIndex = (selectedIndex + 1) % images.length;
-      } else if (event.key === 'ArrowLeft') {
-        selectedIndex = (selectedIndex - 1 + images.length) % images.length;
-      } else if (event.key === 'ArrowDown') {
-        selectedIndex = (selectedIndex + 5) % images.length;
-      } else if (event.key === 'ArrowUp') {
-        selectedIndex = (selectedIndex - 5 + images.length) % images.length;
-      }
-      focusOnImage(selectedIndex);
     }
 
     // Закрыть диалог
@@ -147,10 +113,7 @@ function renderPhotos() {
       window.history.back(); // Вернуться назад
     });
 
-    // Слушаем события клавиатуры
-    document.addEventListener('keydown', navigate);
-
-    renderPhotos();
+    renderPhotos(); // Вызовем функцию рендеринга
   </script>
 </body>
 </html>
