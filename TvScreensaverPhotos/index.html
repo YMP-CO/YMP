@@ -9,6 +9,27 @@
       transition: background-image 0.5s ease;
       background-size: cover;
       background-position: center;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #6200ea;
+      color: white;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    button:hover {
+      background-color: #3700b3;
     }
     #dialog {
       position: fixed;
@@ -17,17 +38,35 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
-      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 999;
     }
+    #photo-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 10px;
+      overflow-y: auto;
+      max-height: 70%;
+      width: 90%;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
     #photo-container img {
-      width: 100px; /* Размер миниатюры */
-      margin: 5px;
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
       cursor: pointer;
+    }
+    #close-dialog {
+      background-color: #6200ea;
+      color: white;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -42,7 +81,7 @@
 
   <script>
     const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaverPhotos/index.html'; // Укажите ваш redirect URI
+    const REDIRECT_URI = 'index.html'; // Укажите ваш redirect URI
     const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
     const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
@@ -52,24 +91,27 @@
       window.location.href = authUrl;
     });
 
-    // Получение токена доступа из URL
     function getAccessTokenFromUrl() {
       const urlParams = new URLSearchParams(window.location.hash.substring(1));
       return urlParams.get('access_token');
     }
 
-    // Получение фотографий из Google Photos
     async function getPhotos(accessToken) {
-      const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-      const data = await response.json();
-      return data.mediaItems || [];
+      const photos = [];
+      let nextPageToken = '';
+      do {
+        const response = await fetch(`https://photoslibrary.googleapis.com/v1/mediaItems?pageSize=25&pageToken=${nextPageToken}`, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+        const data = await response.json();
+        photos.push(...(data.mediaItems || []));
+        nextPageToken = data.nextPageToken || '';
+      } while (nextPageToken);
+      return photos;
     }
 
-    // Открытие диалога выбора изображений
     function openDialog(photos) {
       const dialog = document.getElementById('dialog');
       const photoContainer = document.getElementById('photo-container');
@@ -77,31 +119,29 @@
 
       photos.forEach(photo => {
         const img = document.createElement('img');
-        img.src = photo.baseUrl + '=w100'; // Уменьшение размера для миниатюры
+        img.src = photo.baseUrl + '=w200'; // Миниатюры
         img.alt = photo.filename;
 
         img.addEventListener('click', () => {
           setBackground(photo.baseUrl);
-          dialog.style.display = 'none'; // Закрыть диалог
+          dialog.style.display = 'none';
         });
 
         photoContainer.appendChild(img);
       });
 
-      dialog.style.display = 'flex'; // Показать диалог
+      dialog.style.display = 'flex';
     }
 
     document.getElementById('close-dialog').addEventListener('click', () => {
       document.getElementById('dialog').style.display = 'none';
     });
 
-    // Установка фона
     function setBackground(imageUrl) {
-      document.body.style.backgroundImage = `url(${imageUrl})`;
-      localStorage.setItem('backgroundImage', imageUrl); // Кэширование в localStorage
+      document.body.style.backgroundImage = `url(${imageUrl}=d)`; // Полное качество
+      localStorage.setItem('backgroundImage', imageUrl);
     }
 
-    // Восстановление фона из кэша при загрузке страницы
     window.onload = () => {
       const cachedImage = localStorage.getItem('backgroundImage');
       if (cachedImage) {
