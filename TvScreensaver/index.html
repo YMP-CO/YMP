@@ -347,12 +347,40 @@
       }, 300);
     }
 
-    // Выйти из аккаунта
-    function logout() {
-      localStorage.clear(); // Очистка кеша
-      accessToken = null;
-      window.location.href = window.location.pathname; // Перезагрузка страницы
-    }
+// Выйти из аккаунта
+function logout() {
+    // Очистка локального хранилища
+    localStorage.clear();
+    accessToken = null;
+
+    // Создаем URL для выхода из Google аккаунта
+    const googleLogoutUrl = 'https://accounts.google.com/Logout';
+    
+    // Создаем скрытый iframe для выполнения выхода из Google
+    const logoutFrame = document.createElement('iframe');
+    logoutFrame.style.display = 'none';
+    logoutFrame.src = googleLogoutUrl;
+    
+    document.body.appendChild(logoutFrame);
+    
+    // Ждем загрузки iframe и затем удаляем его
+    logoutFrame.onload = () => {
+        document.body.removeChild(logoutFrame);
+        
+        // Revoke OAuth token
+        const revokeUrl = `https://accounts.google.com/o/oauth2/revoke?token=${accessToken}`;
+        fetch(revokeUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }).finally(() => {
+            // Перенаправляем на страницу входа Google для очистки всех сессий
+            window.location.href = 'https://accounts.google.com/Logout?continue=' + 
+                encodeURIComponent(window.location.origin + window.location.pathname);
+        });
+    };
+}
 
     // Загрузка сохраненного фона из кеша
     function loadCachedBackground() {
