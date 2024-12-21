@@ -3,45 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Авторизация</title>
+  <title>Выбор изображения</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
     }
-    #login-button {
-      padding: 12px 24px;
-      background-color: #4285f4;
-      color: white;
-      font-size: 16px;
-      border: none;
+    .dialog {
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
       border-radius: 4px;
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
     }
-    #login-button:hover {
-      background-color: #357ae8;
+    .photo-grid img:hover {
+      transform: scale(1.05);
+    }
+    .close-button {
+      margin-top: 16px;
+      align-self: center;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    .close-button:hover {
+      background-color: #3700b3;
     }
   </style>
 </head>
 <body>
-  <button id="login-button">Sign in with Google</button>
+  <div class="dialog">
+    <div class="title">Выберите изображение:</div>
+    <div class="photo-grid" id="photo-grid"></div>
+    <button class="close-button" id="close-button">Закрыть</button>
+  </div>
 
   <script>
-    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/photo-dialog.html'; //тестируем редирект
-    const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
-    const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
+    // Получить фотографии из Google Photos
+    const photos = JSON.parse(localStorage.getItem('photos')) || [];
 
-    document.getElementById('login-button').addEventListener('click', () => {
-      const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
-      window.location.href = authUrl;
+    const photoGrid = document.getElementById('photo-grid');
+
+    function renderPhotos() {
+      photoGrid.innerHTML = '';
+      photos.forEach((photo, index) => {
+        const img = document.createElement('img');
+        img.src = `${photo.baseUrl}=w300-h300-c`; // Показывать середину изображения
+        img.alt = photo.filename || `Photo ${index + 1}`;
+        img.tabIndex = 0; // Для управления с клавиатуры
+
+        img.addEventListener('click', () => selectPhoto(photo.baseUrl));
+        img.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            selectPhoto(photo.baseUrl);
+          }
+        });
+
+        photoGrid.appendChild(img);
+      });
+    }
+
+    function selectPhoto(baseUrl) {
+      localStorage.setItem('backgroundImage', baseUrl);
+      window.location.href = 'display.html';
+    }
+
+    // Закрыть диалог
+    document.getElementById('close-button').addEventListener('click', () => {
+      window.history.back(); // Вернуться назад
     });
+
+    renderPhotos();
   </script>
 </body>
 </html>
