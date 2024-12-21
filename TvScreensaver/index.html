@@ -341,18 +341,6 @@ function selectPhoto(index, baseUrl) {
   closePhotoDialog();
 }
 
-function handleGlobalNavigation(event) {
-  const visibleButtons = focusableElements
-    .map(id => document.getElementById(id))
-    .filter(element => element && element.style.display !== 'none');
-
-  if (!visibleButtons.length) return;
-
-  if (!focusedElement) {
-    focusedElement = visibleButtons[0];
-    focusedElement.focus();
-    return;
-  }
 
   const currentIndex = visibleButtons.indexOf(focusedElement);
 
@@ -442,7 +430,6 @@ async function init() {
     }
   }
 
-  document.addEventListener('keydown', handleGlobalNavigation);
 }
 
 document.getElementById('auth-button').addEventListener('click', openAuth);
