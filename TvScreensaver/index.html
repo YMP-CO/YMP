@@ -481,6 +481,105 @@ document.getElementById('photo-dialog').addEventListener('keydown', (event) => {
     case 'Return':
       event.preventDefault();
       if (document.activeElement.classList.contains
+          case 'Enter':
+    case 'Return':
+      event.preventDefault();
+      if (document.activeElement.classList.contains('photo-item')) {
+        const index = focusablePhotos.indexOf(document.activeElement);
+        const photo = photos[index];
+        selectPhoto(index, photo.baseUrl);
+      }
+      break;
+    case 'Escape':
+      event.preventDefault();
+      closePhotoDialog();
+      break;
+  }
+});
+
+window.onload = init;
+
+// Добавим функцию для обновления выделения текущей фотографии
+function updatePhotoSelection() {
+  const photoItems = document.querySelectorAll('.photo-item');
+  photoItems.forEach((item, index) => {
+    if (index === selectedIndex) {
+      item.classList.add('selected');
+    } else {
+      item.classList.remove('selected');
+    }
+  });
+}
+
+// Модифицируем функцию renderPhotos для добавления выделения
+function renderPhotos() {
+  const photoGrid = document.getElementById('photo-grid');
+  photoGrid.innerHTML = '';
+
+  photos.forEach((photo, index) => {
+    const photoItem = document.createElement('div');
+    photoItem.classList.add('photo-item');
+    if (index === selectedIndex) {
+      photoItem.classList.add('selected');
+    }
+    photoItem.tabIndex = 0;
+
+    const img = document.createElement('img');
+    img.src = `${photo.baseUrl}=w300-h300-c`;
+    img.alt = photo.filename || `Фото ${index + 1}`;
+
+    photoItem.appendChild(img);
+    photoItem.addEventListener('click', () => {
+      selectPhoto(index, photo.baseUrl);
+    });
+    photoItem.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        selectPhoto(index, photo.baseUrl);
+      }
+    });
+
+    photoGrid.appendChild(photoItem);
+  });
+}
+
+// Модифицируем функцию selectPhoto для обновления выделения
+function selectPhoto(index, baseUrl) {
+  selectedIndex = index;
+  const highResolutionUrl = `${baseUrl}=d`;
+  document.body.style.backgroundImage = `url(${highResolutionUrl})`;
+  localStorage.setItem('backgroundImage', highResolutionUrl);
+  updatePhotoSelection();
+  closePhotoDialog();
+}
+
+// Добавим обработчик для клавиши Tab в диалоге выбора фото
+document.getElementById('photo-dialog').addEventListener('keydown', (event) => {
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    const focusableElements = [
+      document.getElementById('close-button'),
+      ...Array.from(document.querySelectorAll('.photo-item'))
+    ];
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey) {
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+      } else {
+        const currentIndex = focusableElements.indexOf(document.activeElement);
+        focusableElements[currentIndex - 1].focus();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+      } else {
+        const currentIndex = focusableElements.indexOf(document.activeElement);
+        focusableElements[currentIndex + 1].focus();
+      }
+    }
+  }
+});
                          </script>
 </body>
 
