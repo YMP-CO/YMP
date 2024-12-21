@@ -61,8 +61,25 @@
       z-index: 10;
     }
 
+  /* Кнопка входа */
+.mdl-button {
+  background-color: #303030;
+  color: #4285f4;
+  font-size: 16px;
+  text-transform: none;
+  border: 2px solid #4285f4;
+  transition: all 0.3s ease;
+}
+
+.mdl-button:hover,
+.mdl-button:focus {
+  background-color: #4285f4;
+  color: white;
+}
+
+/* Кнопка выхода */
 .mdl-button.logout {
-  background-color: #666666;
+  background-color: #303030;
   color: white;
   font-size: 12px;
   text-transform: none;
@@ -73,11 +90,17 @@
 
 .mdl-button.logout:hover,
 .mdl-button.logout:focus {
-  background-color: #808080; 
+  background-color: #404040;
 }
 
 .mdl-button.logout:active {
-  background-color: #999999;
+  background-color: #505050;
+}
+
+/* Выбранная фотография */
+.photo-item.selected {
+  outline: 3px solid #4285f4;
+  background-color: #4285f4;
 }
 
     /* Окно выбора фотографии */
@@ -152,7 +175,6 @@
 
     /* Крестик для закрытия */
     #close-button {
-      background-color: #303030;
       position: absolute;
       top: 8px;
       right: 8px;
