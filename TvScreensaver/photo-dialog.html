@@ -16,13 +16,14 @@
     }
     .dialog {
       width: 90%;
-      max-width: 600px;
+      max-width: 800px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 16px;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
     .title {
       font-size: 18px;
@@ -31,13 +32,16 @@
     }
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+      grid-gap: 8px;
+      overflow-y: auto;
+      max-height: 70vh;
     }
     .photo-grid img {
       width: 100%;
-      height: 100px;
+      height: 100%;
       object-fit: cover;
+      aspect-ratio: 1; /* Сохраняем квадратную форму */
       border-radius: 4px;
       cursor: pointer;
       transition: transform 0.2s;
@@ -66,7 +70,7 @@
   <div class="dialog">
     <div class="title">Выберите изображение:</div>
     <div class="photo-grid" id="photo-grid"></div>
-
+    <button class="close-button" id="close-button">Закрыть</button>
   </div>
 
   <script>
@@ -74,6 +78,7 @@
     const photos = JSON.parse(localStorage.getItem('photos')) || [];
 
     const photoGrid = document.getElementById('photo-grid');
+    let selectedIndex = 0;
 
     function renderPhotos() {
       photoGrid.innerHTML = '';
@@ -82,6 +87,7 @@
         img.src = `${photo.baseUrl}=w300-h300-c`; // Показывать середину изображения
         img.alt = photo.filename || `Photo ${index + 1}`;
         img.tabIndex = 0; // Для управления с клавиатуры
+        img.dataset.index = index; // Сохраняем индекс для выбора
 
         img.addEventListener('click', () => selectPhoto(photo.baseUrl));
         img.addEventListener('keydown', (event) => {
@@ -92,6 +98,7 @@
 
         photoGrid.appendChild(img);
       });
+      focusOnImage(selectedIndex); // Фокус на выбранное изображение
     }
 
     function selectPhoto(baseUrl) {
@@ -99,10 +106,35 @@
       window.location.href = 'display.html';
     }
 
+    // Функции для навигации с клавиатуры или пульта
+    function focusOnImage(index) {
+      const images = photoGrid.querySelectorAll('img');
+      if (images[index]) {
+        images[index].focus();
+      }
+    }
+
+    function navigate(event) {
+      const images = photoGrid.querySelectorAll('img');
+      if (event.key === 'ArrowRight') {
+        selectedIndex = (selectedIndex + 1) % images.length;
+      } else if (event.key === 'ArrowLeft') {
+        selectedIndex = (selectedIndex - 1 + images.length) % images.length;
+      } else if (event.key === 'ArrowDown') {
+        selectedIndex = (selectedIndex + 5) % images.length;
+      } else if (event.key === 'ArrowUp') {
+        selectedIndex = (selectedIndex - 5 + images.length) % images.length;
+      }
+      focusOnImage(selectedIndex);
+    }
+
     // Закрыть диалог
     document.getElementById('close-button').addEventListener('click', () => {
       window.history.back(); // Вернуться назад
     });
+
+    // Слушаем события клавиатуры
+    document.addEventListener('keydown', navigate);
 
     renderPhotos();
   </script>
