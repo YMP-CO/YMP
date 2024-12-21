@@ -61,20 +61,24 @@
       z-index: 10;
     }
 
-    .mdl-button {
-      background-color: #4285f4;
-      color: white;
-      font-size: 16px;
-      text-transform: none;
-    }
+.mdl-button.logout {
+  background-color: #666666;
+  color: white;
+  font-size: 12px;
+  text-transform: none;
+  border: none;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
 
-    .mdl-button.logout {
-     background-color: #303030;
-      font-size: 12px;
-      text-transform: none;
-      border: 1px solid #ccc;
-      margin-top: 8px;
-    }
+.mdl-button.logout:hover,
+.mdl-button.logout:focus {
+  background-color: #808080; 
+}
+
+.mdl-button.logout:active {
+  background-color: #999999;
+}
 
     /* Окно выбора фотографии */
     #photo-dialog {
