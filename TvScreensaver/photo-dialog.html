@@ -31,18 +31,23 @@
     }
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       gap: 8px;
+      margin-bottom: 16px;
     }
     .photo-grid img {
       width: 100%;
       height: 100px;
-      object-fit: cover; /* Убедимся, что изображения не искажаются */
+      object-fit: cover;
       border-radius: 4px;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, border 0.2s;
     }
     .photo-grid img:hover {
+      transform: scale(1.05);
+    }
+    .photo-grid img.selected {
+      border: 3px solid #6200ea; /* Визуальное выделение выбранной фотографии */
       transform: scale(1.05);
     }
     .close-button {
@@ -72,11 +77,13 @@
   <script>
     // Получить фотографии из localStorage
     const photos = JSON.parse(localStorage.getItem('photos')) || [];
-
     const photoGrid = document.getElementById('photo-grid');
+    let selectedPhoto = null;
 
     function renderPhotos() {
-      // Проверим, есть ли фотографии
+      photoGrid.innerHTML = ''; // Очистить сетку
+
+      // Проверка на наличие фотографий
       if (photos.length === 0) {
         const noPhotosMessage = document.createElement('div');
         noPhotosMessage.textContent = 'Нет фотографий для отображения';
@@ -84,18 +91,17 @@
         return;
       }
 
-      photoGrid.innerHTML = ''; // Очистить сетку
-
       photos.forEach((photo, index) => {
         const img = document.createElement('img');
         img.src = `${photo.baseUrl}=w300-h300-c`; // Показываем середину изображения
-        img.alt = photo.filename || `Photo ${index + 1}`;
+        img.alt = photo.filename || `Фото ${index + 1}`;
         img.tabIndex = 0; // Для управления с клавиатуры
 
-        img.addEventListener('click', () => selectPhoto(photo.baseUrl));
+        // Добавляем обработчик клика
+        img.addEventListener('click', () => selectPhoto(photo.baseUrl, img));
         img.addEventListener('keydown', (event) => {
           if (event.key === 'Enter' || event.key === ' ') {
-            selectPhoto(photo.baseUrl);
+            selectPhoto(photo.baseUrl, img);
           }
         });
 
@@ -103,9 +109,18 @@
       });
     }
 
-    function selectPhoto(baseUrl) {
+    function selectPhoto(baseUrl, imgElement) {
+      // Снимаем выделение с предыдущего изображения, если оно было
+      if (selectedPhoto) {
+        selectedPhoto.classList.remove('selected');
+      }
+      
+      // Выделяем выбранную фотографию
+      imgElement.classList.add('selected');
+      selectedPhoto = imgElement;
+
+      // Сохраняем выбранное изображение
       localStorage.setItem('backgroundImage', baseUrl);
-      window.location.href = 'display.html';
     }
 
     // Закрыть диалог
@@ -113,7 +128,7 @@
       window.history.back(); // Вернуться назад
     });
 
-    renderPhotos(); // Вызовем функцию рендеринга
+    renderPhotos();
   </script>
 </body>
 </html>
