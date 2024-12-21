@@ -12,39 +12,44 @@
     }
     #dialog {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 500px;
+      height: 70%;
+      background-color: rgba(0, 0, 0, 0.9);
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       z-index: 999;
-      overflow: auto;
+      overflow: hidden;
+      border-radius: 10px;
     }
     #photo-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       padding: 20px;
-      width: 90%;
-      max-height: 80%;
+      width: 100%;
+      height: calc(100% - 50px);
       overflow-y: auto;
     }
     #photo-container img {
       width: 100%;
-      border-radius: 8px;
+      aspect-ratio: 1;
+      border-radius: 5px;
       cursor: pointer;
       transition: transform 0.2s;
     }
-    #photo-container img:hover {
+    #photo-container img:hover, #photo-container img:focus {
       transform: scale(1.1);
+      outline: 2px solid #ffffff;
     }
     #close-dialog {
-      margin-top: 10px;
+      margin: 10px;
       padding: 10px 20px;
       background-color: #6200ee;
       border: none;
@@ -63,7 +68,7 @@
   <button id="login-button">Войти через Google</button>
 
   <div id="dialog" style="display: none;">
-    <div id="photo-container"></div>
+    <div id="photo-container" tabindex="0"></div>
     <button id="close-dialog">Закрыть</button>
   </div>
 
@@ -104,18 +109,19 @@
 
       photos.forEach(photo => {
         const img = document.createElement('img');
-        img.src = photo.baseUrl + '=w300'; // Уменьшение размера для миниатюры
+        img.src = photo.baseUrl + '=w300';
         img.alt = photo.filename;
+        img.tabIndex = 0;
 
         img.addEventListener('click', () => {
-          setBackground(photo.baseUrl + '=d'); // Использование высокого качества
-          dialog.style.display = 'none'; // Закрыть диалог
+          setBackground(photo.baseUrl + '=d');
+          dialog.style.display = 'none';
         });
 
         photoContainer.appendChild(img);
       });
 
-      dialog.style.display = 'flex'; // Показать диалог
+      dialog.style.display = 'flex';
     }
 
     document.getElementById('close-dialog').addEventListener('click', () => {
@@ -125,7 +131,7 @@
     // Установка фона
     function setBackground(imageUrl) {
       document.body.style.backgroundImage = `url(${imageUrl})`;
-      localStorage.setItem('backgroundImage', imageUrl); // Кэширование в localStorage
+      localStorage.setItem('backgroundImage', imageUrl);
     }
 
     // Восстановление фона из кэша при загрузке страницы
