@@ -352,14 +352,23 @@
       updateSelection();
     }
     // Выбор фото
-    function selectPhoto(index, baseUrl) {
-      selectedIndex = index;
-      const highResolutionUrl = `${baseUrl}=d`;
-      document.body.style.backgroundImage = `url(${
-        highResolutionUrl})`;
-      localStorage.setItem('backgroundImage', highResolutionUrl);
-      closePhotoDialog();
-    }
+  // Выбор фото
+function selectPhoto(index, baseUrl) {
+    selectedIndex = index;
+    const highResolutionUrl = `${baseUrl}=d`;
+    
+    // Сначала закрываем диалоговое окно
+    const dialog = document.getElementById('photo-dialog');
+    dialog.classList.remove('active');
+    document.removeEventListener('keydown', handleKeyNavigation);
+    
+    // После закрытия анимации устанавливаем фон и сохраняем в localStorage
+    setTimeout(() => {
+        dialog.style.display = 'none';
+        document.body.style.backgroundImage = `url(${highResolutionUrl})`;
+        localStorage.setItem('backgroundImage', highResolutionUrl);
+    }, 300); // 300ms соответствует длительности анимации закрытия
+}
     // Обновление выделения фотографий
     function updateSelection() {
       const photoItems = document.querySelectorAll('.photo-item');
