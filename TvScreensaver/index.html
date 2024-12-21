@@ -289,6 +289,7 @@
     <div class="photo-grid" id="photo-grid"></div>
   </div>
   <script>
+
 const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
 const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
@@ -314,56 +315,6 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 updateTime();
-
-// Функция для управления фокусом
-function handleGlobalNavigation(event) {
-    // Если открыто окно выбора фото, используем существующую навигацию
-    if (isDialogOpen) {
-        handlePhotoDialogNavigation(event);
-        return;
-    }
-
-    // Получаем все видимые кнопки
-    const visibleButtons = focusableElements
-        .map(id => document.getElementById(id))
-        .filter(element => element && element.style.display !== 'none');
-
-    // Если нет видимых кнопок, выходим
-    if (!visibleButtons.length) return;
-
-    // Если нет текущего фокуса, устанавливаем на первую кнопку
-    if (!focusedElement) {
-        focusedElement = visibleButtons[0];
-        focusedElement.focus();
-        return;
-    }
-
-    const currentIndex = visibleButtons.indexOf(focusedElement);
-
-    switch (event.key) {
-        case 'ArrowUp':
-        case 'Up':
-            event.preventDefault();
-            const prevIndex = (currentIndex - 1 + visibleButtons.length) % visibleButtons.length;
-            focusedElement = visibleButtons[prevIndex];
-            break;
-
-        case 'ArrowDown':
-        case 'Down':
-            event.preventDefault();
-            const nextIndex = (currentIndex + 1) % visibleButtons.length;
-            focusedElement = visibleButtons[nextIndex];
-            break;
-
-        case 'Enter':
-        case 'Return':
-            event.preventDefault();
-            focusedElement.click();
-            break;
-    }
-
-    focusedElement.focus();
-}
 
 // Открыть окно авторизации
 function openAuth() {
@@ -421,18 +372,9 @@ function renderPhotos() {
 function selectPhoto(index, baseUrl) {
     selectedIndex = index;
     const highResolutionUrl = `${baseUrl}=d`;
-    
-    // Сначала закрываем диалоговое окно
-    const dialog = document.getElementById('photo-dialog');
-    dialog.classList.remove('active');
-    document.removeEventListener('keydown', handlePhotoDialogNavigation);
-    
-    // После закрытия анимации устанавливаем фон и сохраняем в localStorage
-    setTimeout(() => {
-        dialog.style.display = 'none';
-        document.body.style.backgroundImage = `url(${highResolutionUrl})`;
-        localStorage.setItem('backgroundImage', highResolutionUrl);
-    }, 300);
+    document.body.style.backgroundImage = `url(${highResolutionUrl})`;
+    localStorage.setItem('backgroundImage', highResolutionUrl);
+    closePhotoDialog();
 }
 
 // Обновление выделения фотографий
@@ -449,6 +391,90 @@ function updateSelection() {
             item.classList.remove('selected');
         }
     });
+}
+
+// Функция для управления фокусом
+function handleGlobalNavigation(event) {
+    if (isDialogOpen) {
+        handlePhotoDialogNavigation(event);
+        return;
+    }
+
+    const visibleButtons = focusableElements
+        .map(id => document.getElementById(id))
+        .filter(element => element && element.style.display !== 'none');
+
+    if (!visibleButtons.length) return;
+
+    if (!focusedElement) {
+        focusedElement = visibleButtons[0];
+        focusedElement.focus();
+        return;
+    }
+
+    const currentIndex = visibleButtons.indexOf(focusedElement);
+
+    switch (event.key) {
+        case 'ArrowUp':
+        case 'Up':
+            event.preventDefault();
+            const prevIndex = (currentIndex - 1 + visibleButtons.length) % visibleButtons.length;
+            focusedElement = visibleButtons[prevIndex];
+            break;
+
+        case 'ArrowDown':
+        case 'Down':
+            event.preventDefault();
+            const nextIndex = (currentIndex + 1) % visibleButtons.length;
+            focusedElement = visibleButtons[nextIndex];
+            break;
+
+        case 'Enter':
+        case 'Return':
+            event.preventDefault();
+            focusedElement.click();
+            break;
+    }
+
+    focusedElement.focus();
+}
+
+// Навигация в диалоге фото
+function handlePhotoDialogNavigation(event) {
+    const columns = 3;
+    const oldIndex = selectedIndex;
+
+    switch (event.key) {
+        case 'ArrowRight':
+        case 'Right':
+            selectedIndex = Math.min(selectedIndex + 1, photos.length - 1);
+            break;
+        case 'ArrowLeft':
+        case 'Left':
+            selectedIndex = Math.max(selectedIndex - 1, 0);
+            break;
+        case 'ArrowDown':
+        case 'Down':
+            selectedIndex = Math.min(selectedIndex + columns, photos.length - 1);
+            break;
+        case 'ArrowUp':
+        case 'Up':
+            selectedIndex = Math.max(selectedIndex - columns, 0);
+            break;
+        case 'Enter':
+        case 'Return':
+            selectPhoto(selectedIndex, photos[selectedIndex].baseUrl);
+            return;
+        case 'Escape':
+        case 'Esc':
+            closePhotoDialog();
+            return;
+    }
+
+    if (oldIndex !== selectedIndex) {
+        event.preventDefault();
+        updateSelection();
+    }
 }
 
 // Открыть диалог выбора фото
@@ -472,42 +498,6 @@ function closePhotoDialog() {
         dialog.style.display = 'none';
     }, 300);
     document.getElementById('choose-photo-button').focus();
-}
-
-// Навигация в диалоге фото
-function handlePhotoDialogNavigation(event) {
-    const columns = 3;
-    const oldIndex = selectedIndex;
-
-    switch (event.key) {
-        case 'ArrowRight':
-        case 'Right':
-            selectedIndex = Math.min(selectedIndex + 1, photos.length - 1);
-            break;
-        case 'ArrowLeft':
-        case 'Left':
-            selectedIndex = Math.max(selectedIndex - 1, 0);
-            break;
-          selectedIndex = Math.min(selectedIndex + columns, photos.length - 1);
-            break;
-        case 'ArrowUp':
-        case 'Up':
-            selectedIndex = Math.max(selectedIndex - columns, 0);
-            break;
-        case 'Enter':
-        case 'Return':
-            selectPhoto(selectedIndex, photos[selectedIndex].baseUrl);
-            return;
-        case 'Escape':
-        case 'Esc':
-            closePhotoDialog();
-            return;
-    }
-
-    if (oldIndex !== selectedIndex) {
-        event.preventDefault();
-        updateSelection();
-    }
 }
 
 // Выйти из аккаунта
@@ -536,6 +526,7 @@ async function init() {
         document.getElementById('logout-button').style.display = 'none';
     } else {
         document.getElementById('auth-button').style.display = 'none';
+        document.getElementById('auth-button').style.display = 'none';
         document.getElementById('choose-photo-button').style.display = 'block';
         document.getElementById('logout-button').style.display = 'block';
         try {
@@ -558,8 +549,6 @@ document.getElementById('logout-button').addEventListener('click', logout);
 
 // Запуск приложения
 init();
-
-    
   </script>
 </body>
 
