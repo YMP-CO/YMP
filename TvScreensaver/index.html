@@ -387,7 +387,10 @@ function openPhotoDialog() {
   dialog.style.display = 'flex';
   setTimeout(() => {
     dialog.classList.add('active');
-    document.getElementById('close-button').focus();
+    const firstPhoto = dialog.querySelector('.photo-item');
+    if (firstPhoto) {
+      firstPhoto.focus();
+    }
   }, 10);
 }
 
@@ -441,7 +444,7 @@ document.getElementById('choose-photo-button').addEventListener('click', openPho
 document.getElementById('close-button').addEventListener('click', closePhotoDialog);
 document.getElementById('logout-button').addEventListener('click', logout);
 
-document.getElementById('photo-grid').addEventListener('keydown', (event) => {
+document.getElementById('photo-dialog').addEventListener('keydown', (event) => {
   const focusablePhotos = Array.from(document.querySelectorAll('.photo-item'));
   const currentIndex = focusablePhotos.indexOf(document.activeElement);
 
@@ -474,10 +477,10 @@ document.getElementById('photo-grid').addEventListener('keydown', (event) => {
         focusablePhotos[currentIndex + 3].focus();
       }
       break;
-  }
-});
-
-window.onload = init;
+    case 'Enter':
+    case 'Return':
+      event.preventDefault();
+      if (document.activeElement.classList.contains
                          </script>
 </body>
 
