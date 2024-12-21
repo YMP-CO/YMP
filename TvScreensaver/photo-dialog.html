@@ -3,119 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Выбор фотографий</title>
+  <title>Выбор изображения</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
     }
     .dialog {
       width: 90%;
       max-width: 600px;
       background: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 16px;
       display: flex;
       flex-direction: column;
     }
-    .dialog-header {
-      padding: 16px;
-      background: #4285f4;
-      color: white;
+    .title {
       font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 16px;
     }
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      padding: 16px;
     }
     .photo-grid img {
       width: 100%;
-      aspect-ratio: 1;
+      height: 100px;
       object-fit: cover;
-      cursor: pointer;
       border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s;
     }
-    .dialog-footer {
-      padding: 16px;
-      text-align: right;
-      background: #f5f5f5;
+    .photo-grid img:hover {
+      transform: scale(1.05);
     }
-    .dialog-footer button {
-      padding: 8px 16px;
-      font-size: 14px;
-      background: #4285f4;
+    .close-button {
+      margin-top: 16px;
+      align-self: center;
+      background-color: #6200ea;
       color: white;
       border: none;
       border-radius: 4px;
+      padding: 8px 16px;
       cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
     }
-    .dialog-footer button:hover {
-      background: #357ae8;
+    .close-button:hover {
+      background-color: #3700b3;
     }
   </style>
 </head>
 <body>
   <div class="dialog">
-    <div class="dialog-header">Выберите фотографию</div>
+    <div class="title">Выберите изображение:</div>
     <div class="photo-grid" id="photo-grid"></div>
-    <div class="dialog-footer">
-      <button id="confirm-button">Выбрать</button>
-    </div>
+    <button class="close-button" id="close-button">Закрыть</button>
   </div>
 
   <script>
-    const ACCESS_TOKEN = new URLSearchParams(window.location.hash.substring(1)).get('access_token');
+    // Получить фотографии из Google Photos
+    const photos = JSON.parse(localStorage.getItem('photos')) || [];
 
-    async function fetchPhotos() {
-      if (!ACCESS_TOKEN) {
-        alert('Ошибка: токен доступа отсутствует');
-        return;
-      }
-      const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
-        headers: {
-          Authorization: `Bearer ${ACCESS_TOKEN}`,
-        },
-      });
-      const data = await response.json();
-      return data.mediaItems || [];
-    }
+    const photoGrid = document.getElementById('photo-grid');
 
-    function renderPhotos(photos) {
-      const grid = document.getElementById('photo-grid');
-      grid.innerHTML = '';
-      photos.forEach(photo => {
+    function renderPhotos() {
+      photoGrid.innerHTML = '';
+      photos.forEach((photo, index) => {
         const img = document.createElement('img');
-        img.src = `${photo.baseUrl}=w300-h300-c`; // Central crop to square
-        img.alt = photo.filename;
-        img.addEventListener('click', () => {
-          document.body.dataset.selectedPhoto = photo.baseUrl;
-          alert('Вы выбрали фото');
+        img.src = `${photo.baseUrl}=w300-h300-c`; // Показывать середину изображения
+        img.alt = photo.filename || `Photo ${index + 1}`;
+        img.tabIndex = 0; // Для управления с клавиатуры
+
+        img.addEventListener('click', () => selectPhoto(photo.baseUrl));
+        img.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            selectPhoto(photo.baseUrl);
+          }
         });
-        grid.appendChild(img);
+
+        photoGrid.appendChild(img);
       });
     }
 
-    document.getElementById('confirm-button').addEventListener('click', () => {
-      const selectedPhoto = document.body.dataset.selectedPhoto;
-      if (!selectedPhoto) {
-        alert('Пожалуйста, выберите фото');
-        return;
-      }
-      localStorage.setItem('backgroundImage', selectedPhoto);
+    function selectPhoto(baseUrl) {
+      localStorage.setItem('backgroundImage', baseUrl);
       window.location.href = 'display.html';
+    }
+
+    // Закрыть диалог
+    document.getElementById('close-button').addEventListener('click', () => {
+      window.history.back(); // Вернуться назад
     });
 
-    fetchPhotos().then(renderPhotos).catch(err => {
-      console.error('Ошибка загрузки фотографий:', err);
-    });
+    renderPhotos();
   </script>
 </body>
 </html>
