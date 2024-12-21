@@ -261,235 +261,224 @@
     <div class="title">Выберите изображение из Google Фото:</div>
     <div class="photo-grid" id="photo-grid" tabindex="0"></div>
   </div>
+<script>
+const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
+const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
+const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
+const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
- <script>
-    const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
-    const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
-    const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
-    const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
+let accessToken = null;
+let photos = [];
+let selectedIndex = 0;
+let focusedElement = null;
+const focusableElements = ['auth-button', 'choose-photo-button', 'logout-button'];
 
-    let accessToken = null;
-    let photos = [];
-    let selectedIndex = 0;
-    let focusedElement = null;
-    const focusableElements = ['auth-button', 'choose-photo-button', 'logout-button'];
+function updateTime() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString('ru-RU', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  document.getElementById('clock').textContent = timeString;
+}
 
-    function updateTime() {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString('ru-RU', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      });
-      document.getElementById('clock').textContent = timeString;
+setInterval(updateTime, 1000);
+updateTime();
+
+function openAuth() {
+  const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
+  window.location.href = authUrl;
+}
+
+function getAccessToken() {
+  const hash = window.location.hash.substring(1);
+  const params = new URLSearchParams(hash);
+  return params.get('access_token');
+}
+
+async function fetchPhotos() {
+  const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`
     }
+  });
+  const data = await response.json();
+  return data.mediaItems || [];
+}
 
-    setInterval(updateTime, 1000);
-    updateTime();
+function renderPhotos() {
+  const photoGrid = document.getElementById('photo-grid');
+  photoGrid.innerHTML = '';
 
-    function openAuth() {
-      const authUrl = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`;
-      window.location.href = authUrl;
-    }
+  photos.forEach((photo, index) => {
+    const photoItem = document.createElement('div');
+    photoItem.classList.add('photo-item');
+    photoItem.tabIndex = 0;
 
-    function getAccessToken() {
-      const hash = window.location.hash.substring(1);
-      const params = new URLSearchParams(hash);
-      return params.get('access_token');
-    }
+    const img = document.createElement('img');
+    img.src = `${photo.baseUrl}=w300-h300-c`;
+    img.alt = photo.filename || `Фото ${index + 1}`;
 
-    async function fetchPhotos() {
-      const response = await fetch('https://photoslibrary.googleapis.com/v1/mediaItems', {
-        headers: {
-          'Authorization': `Bearer ${accessToken}`
-        }
-      });
-      const data = await response.json();
-      return data.mediaItems || [];
-    }
-
-    function renderPhotos() {
-      const photoGrid = document.getElementById('photo-grid');
-      photoGrid.innerHTML = '';
-
-      photos.forEach((photo, index) => {
-        const photoItem = document.createElement('div');
-        photoItem.classList.add('photo-item');
-        photoItem.tabIndex = 0;
-
-        const img = document.createElement('img');
-        img.src = `${photo.baseUrl}=w300-h300-c`;
-        img.alt = photo.filename || `Фото ${index + 1}`;
-
-        photoItem.appendChild(img);
-        photoItem.addEventListener('click', () => {
-          selectPhoto(index, photo.baseUrl);
-        });
-        photoItem.addEventListener('keydown', (event) => {
-          if (event.key === 'Enter') {
-            selectPhoto(index, photo.baseUrl);
-          }
-        });
-
-        photoGrid.appendChild(photoItem);
-      });
-    }
-
-    function selectPhoto(index, baseUrl) {
-      selectedIndex = index;
-      const highResolutionUrl = `${baseUrl}=d`;
-      document.body.style.backgroundImage = `url(${highResolutionUrl})`;
-      localStorage.setItem('backgroundImage', highResolutionUrl);
-      closePhotoDialog();
-    }
-
-    function handleGlobalNavigation(event) {
-      const visibleButtons = focusableElements
-        .map(id => document.getElementById(id))
-        .filter(element => element && element.style.display !== 'none');
-
-      if (!visibleButtons.length) return;
-
-      if (!focusedElement) {
-        focusedElement = visibleButtons[0];
-        focusedElement.focus();
-        return;
-      }
-
-      const currentIndex = visibleButtons.indexOf(focusedElement);
-
-      switch (event.key) {
-        case 'ArrowUp':
-        case 'Up':
-          event.preventDefault();
-          const prevIndex = (currentIndex - 1 + visibleButtons.length) % visibleButtons.length;
-          focusedElement = visibleButtons[prevIndex];
-          break;
-
-        case 'ArrowDown':
-        case 'Down':
-          event.preventDefault();
-          const nextIndex = (currentIndex + 1) % visibleButtons.length;
-          focusedElement = visibleButtons[nextIndex];
-          break;
-
-        case 'Enter':
-        case 'Return':
-          event.preventDefault();
-          focusedElement.click();
-          break;
-      }
-
-      focusedElement.focus();
-    }
-
-    function openPhotoDialog() {
-      const dialog = document.getElementById('photo-dialog');
-      dialog.style.display = 'flex';
-      setTimeout(() => {
-        dialog.classList.add('active');
-        document.getElementById('close-button').focus();
-      }, 10);
-    }
-
-    function closePhotoDialog() {
-      const dialog = document.getElementById('photo-dialog');
-      dialog.classList.remove('active');
-      setTimeout(() => {
-        dialog.style.display = 'none';
-      }, 300);
-      document.getElementById('choose-photo-button').focus();
-    }
-
-    function logout() {
-      localStorage.clear();
-      accessToken = null;
-      window.location.href = window.location.pathname;
-    }
-
-    function loadCachedBackground() {
-      const cachedBackground = localStorage.getItem('backgroundImage');
-      if (cachedBackground) {
-        document.body.style.backgroundImage = `url(${cachedBackground})`;
-      }
-    }
-
-    async function init() {
-      loadCachedBackground();
-      accessToken = getAccessToken();
-
-      if (!accessToken) {
-        document.getElementById('auth-button').style.display = 'block';
-        document.getElementById('choose-photo-button').style.display = 'none';
-        document.getElementById('logout-button').style.display = 'none';
-        } else {
-        document.getElementById('auth-button').style.display = 'none';
-        document.getElementById('choose-photo-button').style.display = 'block';
-        document.getElementById('logout-button').style.display = 'block';
-        try {
-          photos = await fetchPhotos();
-          renderPhotos();
-        } catch (error) {
-          console.error('Ошибка загрузки фотографий:', error);
-        }
-      }
-
-      document.addEventListener('keydown', handleGlobalNavigation);
-    }
-
-    document.getElementById('auth-button').addEventListener('click', openAuth);
-    document.getElementById('choose-photo-button').addEventListener('click', openPhotoDialog);
-    document.getElementById('close-button').addEventListener('click', closePhotoDialog);
-    document.getElementById('logout-button').addEventListener('click', logout);
-
-    // Добавляем обработчики для навигации в окне выбора фото
-    document.getElementById('photo-grid').addEventListener('keydown', (event) => {
-      const focusablePhotos = Array.from(document.querySelectorAll('.photo-item'));
-      const currentIndex = focusablePhotos.indexOf(document.activeElement);
-
-      switch (event.key) {
-        case 'ArrowLeft':
-          event.preventDefault();
-          if (currentIndex > 0) {
-            focusablePhotos[currentIndex - 1].focus();
-          }
-          break;
-        case 'ArrowRight':
-          event.preventDefault();
-          if (currentIndex < focusablePhotos.length - 1) {
-            focusablePhotos[currentIndex + 1].focus();
-          }
-          break;
-        case 'ArrowUp':
-          event.preventDefault();
-          if (currentIndex >= 3) {
-            focusablePhotos[currentIndex - 3].focus();
-          }
-          break;
-        case 'ArrowDown':
-          event.preventDefault();
-          if (currentIndex < focusablePhotos.length - 3) {
-            focusablePhotos[currentIndex + 3].focus();
-          }
-          break;
-        case 'Escape':
-          event.preventDefault();
-          closePhotoDialog();
-          break;
+    photoItem.appendChild(img);
+    photoItem.addEventListener('click', () => {
+      selectPhoto(index, photo.baseUrl);
+    });
+    photoItem.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        selectPhoto(index, photo.baseUrl);
       }
     });
 
-    // Добавляем обработчик для кнопки закрытия
-    document.getElementById('close-button').addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === 'Space') {
-        event.preventDefault();
-        closePhotoDialog();
+    photoGrid.appendChild(photoItem);
+  });
+}
+
+function selectPhoto(index, baseUrl) {
+  selectedIndex = index;
+  const highResolutionUrl = `${baseUrl}=d`;
+  document.body.style.backgroundImage = `url(${highResolutionUrl})`;
+  localStorage.setItem('backgroundImage', highResolutionUrl);
+  closePhotoDialog();
+}
+
+function handleGlobalNavigation(event) {
+  const visibleButtons = focusableElements
+    .map(id => document.getElementById(id))
+    .filter(element => element && element.style.display !== 'none');
+
+  if (!visibleButtons.length) return;
+
+  if (!focusedElement) {
+    focusedElement = visibleButtons[0];
+    focusedElement.focus();
+    return;
+  }
+
+  const currentIndex = visibleButtons.indexOf(focusedElement);
+
+  switch (event.key) {
+    case 'ArrowUp':
+    case 'Up':
+      event.preventDefault();
+      const prevIndex = (currentIndex - 1 + visibleButtons.length) % visibleButtons.length;
+      focusedElement = visibleButtons[prevIndex];
+      break;
+
+    case 'ArrowDown':
+    case 'Down':
+      event.preventDefault();
+      const nextIndex = (currentIndex + 1) % visibleButtons.length;
+      focusedElement = visibleButtons[nextIndex];
+      break;
+
+    case 'Enter':
+    case 'Return':
+      event.preventDefault();
+      focusedElement.click();
+      break;
+  }
+
+  focusedElement.focus();
+}
+
+function openPhotoDialog() {
+  const dialog = document.getElementById('photo-dialog');
+  dialog.style.display = 'flex';
+  setTimeout(() => {
+    dialog.classList.add('active');
+    document.getElementById('close-button').focus();
+  }, 10);
+}
+
+function closePhotoDialog() {
+  const dialog = document.getElementById('photo-dialog');
+  dialog.classList.remove('active');
+  setTimeout(() => {
+    dialog.style.display = 'none';
+  }, 300);
+  document.getElementById('choose-photo-button').focus();
+}
+
+function logout() {
+  localStorage.clear();
+  accessToken = null;
+  window.location.href = window.location.pathname;
+}
+
+function loadCachedBackground() {
+  const cachedBackground = localStorage.getItem('backgroundImage');
+  if (cachedBackground) {
+    document.body.style.backgroundImage = `url(${cachedBackground})`;
+  }
+}
+
+async function init() {
+  loadCachedBackground();
+  accessToken = getAccessToken();
+
+  if (!accessToken) {
+    document.getElementById('auth-button').style.display = 'block';
+    document.getElementById('choose-photo-button').style.display = 'none';
+    document.getElementById('logout-button').style.display = 'none';
+  } else {
+    document.getElementById('auth-button').style.display = 'none';
+    document.getElementById('choose-photo-button').style.display = 'block';
+    document.getElementById('logout-button').style.display = 'block';
+    try {
+      photos = await fetchPhotos();
+      renderPhotos();
+    } catch (error) {
+      console.error('Ошибка загрузки фотографий:', error);
+    }
+  }
+
+  document.addEventListener('keydown', handleGlobalNavigation);
+}
+
+document.getElementById('auth-button').addEventListener('click', openAuth);
+document.getElementById('choose-photo-button').addEventListener('click', openPhotoDialog);
+document.getElementById('close-button').addEventListener('click', closePhotoDialog);
+document.getElementById('logout-button').addEventListener('click', logout);
+
+document.getElementById('photo-grid').addEventListener('keydown', (event) => {
+  const focusablePhotos = Array.from(document.querySelectorAll('.photo-item'));
+  const currentIndex = focusablePhotos.indexOf(document.activeElement);
+
+  switch (event.key) {
+    case 'ArrowLeft':
+    case 'Left':
+      event.preventDefault();
+      if (currentIndex > 0) {
+        focusablePhotos[currentIndex - 1].focus();
       }
-    });
+      break;
+    case 'ArrowRight':
+    case 'Right':
+      event.preventDefault();
+      if (currentIndex < focusablePhotos.length - 1) {
+        focusablePhotos[currentIndex + 1].focus();
+      }
+      break;
+    case 'ArrowUp':
+    case 'Up':
+      event.preventDefault();
+      if (currentIndex >= 3) {
+        focusablePhotos[currentIndex - 3].focus();
+      }
+      break;
+    case 'ArrowDown':
+    case 'Down':
+      event.preventDefault();
+      if (currentIndex < focusablePhotos.length - 3) {
+        focusablePhotos[currentIndex + 3].focus();
+      }
+      break;
+  }
+});
 
-    init();
-
-  </script>
+window.onload = init;
+                         </script>
 </body>
 
 </html>
