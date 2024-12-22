@@ -478,13 +478,55 @@ function loadCachedBackground() {
     document.body.style.backgroundImage = `url(${cachedBackground})`;
   }
 }
-
 function updatePhotoSelection() {
   const photoItems = document.querySelectorAll('.photo-item');
   photoItems.forEach((item, index) => {
-    item.classList.toggle('selected', index === selectedIndex);
+    if (index === selectedIndex) {
+      item.classList.add('selected');
+    } else {
+      item.classList.remove('selected');
+    }
   });
 }
+
+// Initialization code
+document.addEventListener('DOMContentLoaded', async () => {
+  // Load cached background
+  loadCachedBackground();
+
+  // Get access token from URL if present
+  accessToken = getAccessToken();
+
+  const authButton = document.getElementById('auth-button');
+  const choosePhotoButton = document.getElementById('choose-photo-button');
+  const logoutButton = document.getElementById('logout-button');
+  const closeButton = document.getElementById('close-button');
+
+  // Set up event listeners
+  authButton.addEventListener('click', openAuth);
+  choosePhotoButton.addEventListener('click', openPhotoDialog);
+  logoutButton.addEventListener('click', logout);
+  closeButton.addEventListener('click', closePhotoDialog);
+
+  // Initialize keyboard navigation
+  document.addEventListener('keydown', handleGlobalNavigation);
+
+  if (accessToken) {
+    // User is authenticated
+    authButton.style.display = 'none';
+    choosePhotoButton.style.display = 'block';
+    logoutButton.style.display = 'block';
+
+    // Fetch photos
+    photos = await fetchPhotos();
+    renderPhotos();
+  } else {
+    // User is not authenticated
+    authButton.style.display = 'block';
+    choosePhotoButton.style.display = 'none';
+    logoutButton.style.display = 'none';
+  }
+});
 
 async function init() {
   loadCachedBackground();
