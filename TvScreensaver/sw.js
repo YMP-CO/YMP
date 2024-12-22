@@ -21,27 +21,22 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        
         return fetch(event.request).then(
           (response) => {
-            // Проверяем, является ли запрос изображением
-            if (response.headers.get('content-type')?.includes('image/')) {
-              const responseToCache = response.clone();
-              
-              caches.open(CACHE_NAME)
-                .then((cache) => {
-                  cache.put(event.request, responseToCache);
-                });
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
             }
+            
+            const responseToCache = response.clone();
+            
+            caches.open('photo-viewer-cache-v1')
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
             
             return response;
           }
         );
-      })
-      .catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
       })
   );
 });
