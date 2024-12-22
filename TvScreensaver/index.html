@@ -485,16 +485,20 @@ function selectPhoto(index, baseUrl) {
   const highResolutionUrl = `${baseUrl}=d`;
   
   fetch(highResolutionUrl)
-    .then(response => response.blob())
-    .then(blob => {
+    .then(response => response.clone().blob().then(blob => {
       const objectURL = URL.createObjectURL(blob);
       document.body.style.backgroundImage = `url(${objectURL})`;
       localStorage.setItem('backgroundImage', highResolutionUrl);
-    })
+      
+      // Сохраняем изображение в кэш
+      return caches.open('photo-viewer-cache-v1').then(cache => {
+        return cache.put(highResolutionUrl, response);
+      });
+    }))
     .catch(error => {
       console.error('Ошибка при загрузке изображения:', error);
     });
-    
+  
   updatePhotoSelection();
   closePhotoDialog();
 }
@@ -572,19 +576,30 @@ function logout() {
 function loadCachedBackground() {
   const cachedBackground = localStorage.getItem('backgroundImage');
   if (cachedBackground) {
+    // Сначала пробуем загрузить из кэша
     caches.match(cachedBackground)
       .then(response => {
         if (response) {
           return response.blob();
         }
-        return fetch(cachedBackground).then(res => res.blob());
+        // Если нет в кэше, загружаем по сети
+        return fetch(cachedBackground)
+          .then(response => response.blob())
+          .then(blob => {
+            // И сохраняем в кэш
+            caches.open('photo-viewer-cache-v1').then(cache => {
+              cache.put(cachedBackground, new Response(blob));
+            });
+            return blob;
+          });
       })
       .then(blob => {
         const objectURL = URL.createObjectURL(blob);
         document.body.style.backgroundImage = `url(${objectURL})`;
       })
-      .catch(error => {
-        console.error('Ошибка при загрузке фонового изображения:', error);
+      .catch(() => {
+        // Если всё failed, пробуем прямую загрузку
+        document.body.style.backgroundImage = `url(${cachedBackground})`;
       });
   }
 }
