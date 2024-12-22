@@ -345,10 +345,6 @@ function updateOnlineStatus() {
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 
-document.addEventListener('DOMContentLoaded', () => {
-  updateOnlineStatus();
-});
-
 const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
 const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
@@ -483,22 +479,27 @@ function renderPhotos() {
 function selectPhoto(index, baseUrl) {
   selectedIndex = index;
   const highResolutionUrl = `${baseUrl}=d`;
-  
+
   fetch(highResolutionUrl)
-    .then(response => response.clone().blob().then(blob => {
+    .then(response => response.blob())
+    .then(blob => {
       const objectURL = URL.createObjectURL(blob);
       document.body.style.backgroundImage = `url(${objectURL})`;
       localStorage.setItem('backgroundImage', highResolutionUrl);
-      
-      // Сохраняем изображение в кэш
-      return caches.open('photo-viewer-cache-v1').then(cache => {
-        return cache.put(highResolutionUrl, response);
-      });
-    }))
+
+      // Сохраняем в кэш
+      return fetch(highResolutionUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          caches.open(CACHE_NAME).then(cache => {
+cache.put(highResolutionUrl, new Response(blob));
+          });
+        });
+    })
     .catch(error => {
       console.error('Ошибка при загрузке изображения:', error);
     });
-  
+
   updatePhotoSelection();
   closePhotoDialog();
 }
@@ -549,7 +550,7 @@ function openPhotoDialog() {
       firstPhoto.focus();
     }
     
-   document.removeEventListener('keydown', handleGlobalNavigation);
+    document.removeEventListener('keydown', handleGlobalNavigation);
     document.addEventListener('keydown', handlePhotoNavigation);
   }, 10);
 }
@@ -576,18 +577,15 @@ function logout() {
 function loadCachedBackground() {
   const cachedBackground = localStorage.getItem('backgroundImage');
   if (cachedBackground) {
-    // Сначала пробуем загрузить из кэша
     caches.match(cachedBackground)
       .then(response => {
         if (response) {
           return response.blob();
         }
-        // Если нет в кэше, загружаем по сети
         return fetch(cachedBackground)
           .then(response => response.blob())
           .then(blob => {
-            // И сохраняем в кэш
-            caches.open('photo-viewer-cache-v1').then(cache => {
+            caches.open(CACHE_NAME).then(cache => {
               cache.put(cachedBackground, new Response(blob));
             });
             return blob;
@@ -598,7 +596,6 @@ function loadCachedBackground() {
         document.body.style.backgroundImage = `url(${objectURL})`;
       })
       .catch(() => {
-        // Если всё failed, пробуем прямую загрузку
         document.body.style.backgroundImage = `url(${cachedBackground})`;
       });
   }
@@ -617,6 +614,7 @@ function updatePhotoSelection() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   loadCachedBackground();
+  updateOnlineStatus();
   
   accessToken = getAccessToken();
 
