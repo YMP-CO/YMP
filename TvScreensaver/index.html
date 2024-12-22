@@ -45,7 +45,7 @@
   box-sizing: border-box;
 }
 
-  #offline-message {
+ #offline-message {
   display: none;
   position: fixed;
   top: 50%;
@@ -58,8 +58,22 @@
   font-size: 18px;
   text-align: center;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
+#offline-message.show {
+  display: block;
+  opacity: 1;
+}
+
+#offline-message.fade {
+  opacity: 0;
+}
+
+body.offline #auth-container {
+  display: none !important;
+}
 body.offline #auth-container {
   display: none !important;
 }
@@ -287,7 +301,6 @@ body.offline #offline-message {
     <div class="photo-grid" id="photo-grid" tabindex="0"></div>
   </div>
 <script>
-  // Регистрация Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js')
@@ -300,24 +313,42 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Функция проверки состояния подключения
+let offlineMessageTimeout;
+
+function showOfflineMessage() {
+  const message = document.getElementById('offline-message');
+  
+  if (offlineMessageTimeout) {
+    clearTimeout(offlineMessageTimeout);
+  }
+  
+  message.classList.add('show');
+  
+  offlineMessageTimeout = setTimeout(() => {
+    message.classList.add('fade');
+    setTimeout(() => {
+      message.classList.remove('show', 'fade');
+    }, 500);
+  }, 5000);
+}
+
 function updateOnlineStatus() {
   const body = document.body;
   if (navigator.onLine) {
     body.classList.remove('offline');
   } else {
     body.classList.add('offline');
+    showOfflineMessage();
   }
 }
 
-// Слушатели событий подключения
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 
-// Начальная проверка состояния подключения
 document.addEventListener('DOMContentLoaded', () => {
   updateOnlineStatus();
 });
+
 const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
 const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
@@ -452,8 +483,18 @@ function renderPhotos() {
 function selectPhoto(index, baseUrl) {
   selectedIndex = index;
   const highResolutionUrl = `${baseUrl}=d`;
-  document.body.style.backgroundImage = `url(${highResolutionUrl})`;
-  localStorage.setItem('backgroundImage', highResolutionUrl);
+  
+  fetch(highResolutionUrl)
+    .then(response => response.blob())
+    .then(blob => {
+      const objectURL = URL.createObjectURL(blob);
+      document.body.style.backgroundImage = `url(${objectURL})`;
+      localStorage.setItem('backgroundImage', highResolutionUrl);
+    })
+    .catch(error => {
+      console.error('Ошибка при загрузке изображения:', error);
+    });
+    
   updatePhotoSelection();
   closePhotoDialog();
 }
@@ -504,7 +545,7 @@ function openPhotoDialog() {
       firstPhoto.focus();
     }
     
-    document.removeEventListener('keydown', handleGlobalNavigation);
+   document.removeEventListener('keydown', handleGlobalNavigation);
     document.addEventListener('keydown', handlePhotoNavigation);
   }, 10);
 }
@@ -531,18 +572,23 @@ function logout() {
 function loadCachedBackground() {
   const cachedBackground = localStorage.getItem('backgroundImage');
   if (cachedBackground) {
-    // Предварительно загружаем изображение
-    const img = new Image();
-    img.onload = () => {
-      document.body.style.backgroundImage = `url(${cachedBackground})`;
-    };
-    img.onerror = () => {
-      // Если изображение не удалось загрузить, очищаем кэш
-      localStorage.removeItem('backgroundImage');
-    };
-    img.src = cachedBackground;
+    caches.match(cachedBackground)
+      .then(response => {
+        if (response) {
+          return response.blob();
+        }
+        return fetch(cachedBackground).then(res => res.blob());
+      })
+      .then(blob => {
+        const objectURL = URL.createObjectURL(blob);
+        document.body.style.backgroundImage = `url(${objectURL})`;
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке фонового изображения:', error);
+      });
   }
 }
+
 function updatePhotoSelection() {
   const photoItems = document.querySelectorAll('.photo-item');
   photoItems.forEach((item, index) => {
@@ -554,12 +600,9 @@ function updatePhotoSelection() {
   });
 }
 
-// Initialization code
 document.addEventListener('DOMContentLoaded', async () => {
-  // Load cached background
   loadCachedBackground();
-
-  // Get access token from URL if present
+  
   accessToken = getAccessToken();
 
   const authButton = document.getElementById('auth-button');
@@ -567,76 +610,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   const logoutButton = document.getElementById('logout-button');
   const closeButton = document.getElementById('close-button');
 
-  // Set up event listeners
   authButton.addEventListener('click', openAuth);
   choosePhotoButton.addEventListener('click', openPhotoDialog);
   logoutButton.addEventListener('click', logout);
   closeButton.addEventListener('click', closePhotoDialog);
 
-  // Initialize keyboard navigation
   document.addEventListener('keydown', handleGlobalNavigation);
 
   if (accessToken) {
-    // User is authenticated
     authButton.style.display = 'none';
     choosePhotoButton.style.display = 'block';
     logoutButton.style.display = 'block';
 
-    // Fetch photos
     photos = await fetchPhotos();
     renderPhotos();
   } else {
-    // User is not authenticated
     authButton.style.display = 'block';
     choosePhotoButton.style.display = 'none';
     logoutButton.style.display = 'none';
   }
 });
-
-async function init() {
-  loadCachedBackground();
-  accessToken = getAccessToken();
-
-  const authButton = document.getElementById('auth-button');
-  const choosePhotoButton = document.getElementById('choose-photo-button');
-  const logoutButton = document.getElementById('logout-button');
-
-  if (!accessToken) {
-    authButton.style.display = 'block';
-    choosePhotoButton.style.display = 'none';
-    logoutButton.style.display = 'none';
-  } else {
-    authButton.style.display = 'none';
-    choosePhotoButton.style.display = 'block';
-    logoutButton.style.display = 'block';
-    try {
-      photos = await fetchPhotos();
-      renderPhotos();
-    } catch (error) {
-      console.error('Ошибка загрузки фотографий:', error);
-    }
-  }
-
-  // Добавляем обработчик глобальной навигации
-  document.addEventListener('keydown', handleGlobalNavigation);
-
-  // Навешиваем обработчики событий
-  document.getElementById('auth-button').addEventListener('click', openAuth);
-  document.getElementById('choose-photo-button').addEventListener('click', openPhotoDialog);
-  document.getElementById('close-button').addEventListener('click', closePhotoDialog);
-  document.getElementById('logout-button').addEventListener('click', logout);
-
-  // Обработчик закрытия диалога по клику вне области
-  document.getElementById('photo-dialog').addEventListener('click', (event) => {
-    if (event.target === event.currentTarget) {
-      closePhotoDialog();
-    }
-  });
-}
-
-// Вызываем init при загрузке страницы
-document.addEventListener('DOMContentLoaded', init);
-
                          </script>
 </body>
 
