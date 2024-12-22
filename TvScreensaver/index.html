@@ -313,48 +313,47 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-let offlineMessageTimeout;
-
-function showOfflineMessage() {
-  const message = document.getElementById('offline-message');
-  
-  if (offlineMessageTimeout) {
-    clearTimeout(offlineMessageTimeout);
-  }
-  
-  message.classList.add('show');
-  
-  offlineMessageTimeout = setTimeout(() => {
-    message.classList.add('fade');
-    setTimeout(() => {
-      message.classList.remove('show', 'fade');
-    }, 500);
-  }, 5000);
-}
-
-function updateOnlineStatus() {
-  const body = document.body;
-  if (navigator.onLine) {
-    body.classList.remove('offline');
-  } else {
-    body.classList.add('offline');
-    showOfflineMessage();
-  }
-}
-
-window.addEventListener('online', updateOnlineStatus);
-window.addEventListener('offline', updateOnlineStatus);
-
 const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
 const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
 const AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
+const CACHE_NAME = 'photo-viewer-cache-v1';
 
 let accessToken = null;
 let photos = [];
 let selectedIndex = 0;
 let focusedElement = null;
 const focusableElements = ['auth-button', 'choose-photo-button', 'logout-button'];
+
+function showOfflineMessage() {
+  const message = document.getElementById('offline-message');
+  message.style.display = 'block';
+  message.style.opacity = '1';
+  
+  setTimeout(() => {
+    message.style.opacity = '0';
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 500);
+  }, 5000);
+}
+
+function updateOnlineStatus() {
+  const body = document.body;
+  const authContainer = document.getElementById('auth-container');
+  
+  if (navigator.onLine) {
+    body.classList.remove('offline');
+    authContainer.style.display = 'flex';
+  } else {
+    body.classList.add('offline');
+    authContainer.style.display = 'none';
+    showOfflineMessage();
+  }
+}
+
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
 
 function updateTime() {
   const now = new Date();
@@ -487,14 +486,9 @@ function selectPhoto(index, baseUrl) {
       document.body.style.backgroundImage = `url(${objectURL})`;
       localStorage.setItem('backgroundImage', highResolutionUrl);
 
-      // Сохраняем в кэш
-      return fetch(highResolutionUrl)
-        .then(response => response.blob())
-        .then(blob => {
-          caches.open(CACHE_NAME).then(cache => {
-cache.put(highResolutionUrl, new Response(blob));
-          });
-        });
+      caches.open(CACHE_NAME).then(cache => {
+        cache.put(highResolutionUrl, new Response(blob));
+      });
     })
     .catch(error => {
       console.error('Ошибка при загрузке изображения:', error);
