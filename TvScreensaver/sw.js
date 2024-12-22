@@ -17,27 +17,11 @@ self.addEventListener('install', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
+      .then((response) => response || fetch(event.request))
+      .catch(() => {
+        if (event.request.mode === 'navigate') {
+          return caches.match('./index.html');
         }
-
-        return fetch(event.request).then(
-          (response) => {
-            if (!response || response.status !== 200) {
-              return response;
-            }
-
-            const responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          }
-        );
       })
   );
 });
