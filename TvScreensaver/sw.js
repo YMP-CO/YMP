@@ -21,19 +21,20 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
+
         return fetch(event.request).then(
           (response) => {
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            if (!response || response.status !== 200) {
               return response;
             }
-            
+
             const responseToCache = response.clone();
-            
-            caches.open('photo-viewer-cache-v1')
+
+            caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
-            
+
             return response;
           }
         );
