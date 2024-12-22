@@ -44,6 +44,30 @@
   padding: 20px 20px;
   box-sizing: border-box;
 }
+
+  #offline-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000;
+}
+
+body.offline #auth-container {
+  display: none !important;
+}
+
+body.offline #offline-message {
+  display: block;
+}
+    
 #clock {
   position: relative;
   z-index: 1;
@@ -236,6 +260,7 @@
 </head>
 
 <body>
+  <div id="offline-message">Подключение к интернету отсутствует</div>
   <!-- Часы -->
   <div id="time-container">
     <div class="background"></div>
@@ -262,6 +287,37 @@
     <div class="photo-grid" id="photo-grid" tabindex="0"></div>
   </div>
 <script>
+  // Регистрация Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(registration => {
+        console.log('ServiceWorker registration successful');
+      })
+      .catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+
+// Функция проверки состояния подключения
+function updateOnlineStatus() {
+  const body = document.body;
+  if (navigator.onLine) {
+    body.classList.remove('offline');
+  } else {
+    body.classList.add('offline');
+  }
+}
+
+// Слушатели событий подключения
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+// Начальная проверка состояния подключения
+document.addEventListener('DOMContentLoaded', () => {
+  updateOnlineStatus();
+});
 const CLIENT_ID = '666120907144-uqjrqt97dja11m8qki68o83s0lt6j50k.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://ymp-co.github.io/TvScreensaver/index.html';
 const SCOPE = 'https://www.googleapis.com/auth/photoslibrary.readonly';
@@ -475,7 +531,16 @@ function logout() {
 function loadCachedBackground() {
   const cachedBackground = localStorage.getItem('backgroundImage');
   if (cachedBackground) {
-    document.body.style.backgroundImage = `url(${cachedBackground})`;
+    // Предварительно загружаем изображение
+    const img = new Image();
+    img.onload = () => {
+      document.body.style.backgroundImage = `url(${cachedBackground})`;
+    };
+    img.onerror = () => {
+      // Если изображение не удалось загрузить, очищаем кэш
+      localStorage.removeItem('backgroundImage');
+    };
+    img.src = cachedBackground;
   }
 }
 function updatePhotoSelection() {
